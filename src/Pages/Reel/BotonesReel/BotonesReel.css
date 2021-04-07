@@ -1,0 +1,38 @@
+.contenedorSubReel {
+    margin-left: 10px;
+    margin-right: 30px; /* TODO: Revisar margen */
+    display: flex;
+  }
+  .botonReelPlay{
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+  .iconoReel {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .iconoReel:hover{
+    font-size: 33px;
+    transition: all .3s;
+  }
+  
+  .reelDescarga {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+  .iconoDescarga {
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .iconoDescarga:hover{
+    font-size: 23px;
+    transition: all .3s;
+  }
+  
+  .Texto-Reel {
+    margin-left: 10px;
+    font: 22px Avenir-Medium;
+  }

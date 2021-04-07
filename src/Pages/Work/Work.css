@@ -1,0 +1,228 @@
+.work{
+  z-index: 1;
+  position: relative;
+}
+.contenedorVideosWork{
+  position: absolute;
+  background: url(../../Static/MANCHAWORK25.gif);
+  width: 0;
+  height: 100vh;
+  z-index: 3;
+  transition: all .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;                 
+}
+.aperturaComerciales{
+  opacity: 1 !important;
+  width: 100vw !important;
+}
+.marcoVideo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transition: all .5s;
+  border: 10px solid white;
+}
+.contenedorCerrarComercialesWork{
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.iconoCerrarComercialesWork{
+  color: white;
+  opacity: .5;
+  font-size: 50px;
+}
+.iconoCerrarComercialesWork:hover{
+  transition: opacity .3 ease;
+  opacity: 1;
+}
+.marcoRectangular{
+  border-radius: 0;
+}
+.contenidoVideo{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 1;
+  transition-delay: .5s;
+  transition: all 1s ease;
+}
+.body-Work {
+  position: absolute;
+  display: flex;
+  width: auto;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  /* background-color: #FBFBFB; */
+}
+
+.contenedorVerMas {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  width: 90px;
+  height: 60px;
+  cursor: pointer;
+}
+.textoMas {
+  position: absolute;
+  top: 60%;
+  left: -40px;
+  color: black;
+  font: 20px IntegralCF-Medium;
+}
+.manchaWork{
+  width: 60px;
+  height: 60px;
+}
+.botonMas {
+  position: absolute;
+  top: -10px;
+  left: 30px;
+}
+
+.contenedor-Texto-Work {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 20%;
+  right: 0;
+  height: 100px;
+}
+
+.Texto-Work {
+  width: 665px;
+  font: normal normal 200px/300px IntegralCF-ExtraBold;
+  color: black;
+  overflow: hidden;
+}
+
+
+.contenedor-Links {
+  position: absolute;
+  top: 22%;
+  left: 32%;
+  width: 355px;
+  height: 355px;
+  opacity: 1;
+  border-radius: 50%; /* 
+  transform: translate(-50%, -50%); */
+}
+
+.contenedorAudible{
+  background-color: tomato;
+}
+.cursorLink{
+  cursor: pointer;
+}
+.audible {
+  position: absolute;
+  top: 16px;
+  left: 27px;
+  width: 75px;
+  height: 75px;
+  transform: rotate(-42deg);
+}
+.avene {
+  position: absolute;
+  top:-14px;
+  right: 95px;
+  width: 63px;
+  height: 63px;
+  transform: rotate(181deg);
+}
+.coca {
+  position: absolute;
+  bottom:-19px;
+  left: 79px;
+  width: 90px;
+  height: 90px;
+  transform: rotate(155deg);
+}
+
+.disney{
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  bottom: 63px;
+  left: -22px;
+  transform: rotate(-33deg);
+}
+
+.fanta{
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  top: -12px;
+  left: 118px;
+  transform: rotate(-132deg);
+}
+.ladysoft{
+  position: absolute;
+  width: 87px;
+  height: 87px;
+  top: 30px;
+  left: 261px;
+  transform: rotate(-104deg);
+}
+.sprite {
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  top: 130px;
+  left: 315px;
+  transform: rotate(-5deg);
+}
+.honda {
+  position: absolute;
+  width: 77px;
+  height: 77px;
+  top: 294px;
+  left: 202px;
+  transform: rotate(71deg);
+}
+.pantene {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 215px;
+  left: 275px;
+  transform: rotate(-131deg);
+}
+.lays{
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  top: 111px;
+  left: -9px;
+  transform: rotate(-45deg);
+}
+.rotar {
+  animation: rotar 30s linear infinite;
+  /* transform: rotate(50deg) */
+}
+
+.rotar:hover{
+  animation-play-state: paused; 
+}
+
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

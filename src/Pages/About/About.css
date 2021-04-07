@@ -1,0 +1,70 @@
+.body-About {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  position: absolute;
+  overflow-y: hidden;
+}
+.color-Texto {
+  color: white;
+}
+
+.contenedor-LinkBio {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+.bio-Link {
+  text-decoration: none;
+  font: normal normal 20px IntegralCF-Bold;
+}
+
+.bio-circular {
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -10px;
+  left: 208px;
+}
+.texto-ON {
+  position: absolute;
+  top: 10px;
+}
+
+.contenedor-TextoMarco {
+  overflow: hidden;
+  display: flex;
+  width: 1350px;
+  height: 218px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;}
+
+.TextoMarco {
+  font: 200px IntegralCF-Bold;
+  margin-right: 30px;
+}
+.contenedor-Texto {
+  height: 200px;
+  width: 480px;
+  position: absolute;
+  top: 38%;
+  left: 43%;
+  /*   background-color: turquoise; */
+}
+.TextoLocutor {
+  font: normal normal 71px IntegralCF-Bold;
+}
+.Text-Voice {
+  position: absolute;
+  right: 105px;
+  font: normal normal 22px Avenir-Book;
+}
+.Texto-Info {
+  font: 17px Avenir-Book;
+  line-height: 23px;
+}

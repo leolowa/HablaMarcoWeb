@@ -1,0 +1,25 @@
+.App {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.contenedorIcono {
+  z-index: 2 ;
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.abrirMenu{
+  width: 100vw !important;
+}

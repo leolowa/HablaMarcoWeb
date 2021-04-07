@@ -1,0 +1,25 @@
+.botonImg{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color:transparent;
+}
+.imagenHome{
+    background: url(../Static/Mancha-home1.gif) no-repeat center;
+    width: 150px;
+    height: 150px;
+}
+.imagenAboutEsp{
+    background: url(../Static/BotonEspañol.gif) no-repeat center;
+}
+.imagenAboutIng{
+    background: url(../Static/BotonIngles.gif) no-repeat center;
+}
+.imagenAbout{
+    background: url(../Static/Mancha-home1.gif) no-repeat center;
+    width: 150px;
+    height: 150px;
+}

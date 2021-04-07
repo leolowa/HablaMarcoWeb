@@ -1,0 +1,29 @@
+.contenedorReel{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    /* background-color: #FBFBFB; */
+}
+.contenedorVideoReel{
+    width: 100vw;
+    height: 338px;
+    /* background-color: rgba(207, 207, 207, 0.473); */ /* contenedor de video Reel */
+}
+.playReel{
+    transition: all .5s;
+    opacity: .3;
+}
+.textoReel{
+    text-align: center;
+    font: 200px IntegralCF-ExtraBold;
+}
+
+.contenedorBotonesReel{
+    position: absolute;
+    bottom: 41px;
+    right: 65px;
+    display: flex;
+    width: auto;
+}
