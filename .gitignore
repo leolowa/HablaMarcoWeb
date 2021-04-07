@@ -8,7 +8,7 @@ lerna-debug.log*
 
 # Videos de work
 src/static/video/
-src/Static/Video/workEntrada.avi
+
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
