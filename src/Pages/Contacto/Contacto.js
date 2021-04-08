@@ -1,6 +1,6 @@
 import React from 'react';
 import VoiceOvers from '../../Static/voiceovers.gif';
-import Heladera from '../../Static/Circulo-Links/video_heladera.mp4';
+//import Heladera from '../../Static/Circulo-Links/video_heladera.mp4';
 import '../Contacto/Contacto.css';
 
 
@@ -11,9 +11,9 @@ const Contacto = () => {
         <>
             <div className="body-Contacto">
                 <div className="contenedorVideo">
-                    <video autoPlay={true} muted>
+                    {/* <video autoPlay={true} muted>
                         <source type="video/mp4" src={Heladera}></source>
-                    </video>
+                    </video> */}
                 </div>
                 <React.Fragment>
                     

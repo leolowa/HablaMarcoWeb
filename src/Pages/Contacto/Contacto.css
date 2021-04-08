@@ -1,8 +1,9 @@
 .body-Contacto {
   position: absolute;
+  width: 100vw;
   height: 100vh;
   max-height: 100vh;
-  background: black;
+  background: blue;
 }
 .contenedorVideo{
   width: 100vw;

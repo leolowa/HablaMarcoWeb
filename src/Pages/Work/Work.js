@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Audible from '../../Static/Circulo-Links/AUDIBLE.svg';
-import AudibleVideo from '../../Static/Video/AudibleEEUUSpanish.mp4'
+//import AudibleVideo from '../../Static/Video/AudibleEEUUSpanish.mp4'
 import Avene from '../../Static/Circulo-Links/AVENE.svg';
 import CocaCola from '../../Static/Circulo-Links/COCACOLA.svg';
 import Disney from '../../Static/Circulo-Links/DISNEY.svg';
@@ -20,7 +20,7 @@ const Work = () => {
     
     function mostrarVideo(id){
         switch(id){
-            case "Audible":{setVideoSeleccionado(AudibleVideo);}
+            case "Audible":{setVideoSeleccionado(/* AudibleVideo */);}
         } 
 
         document.querySelector('.contenedorVideosWork').classList.add("aperturaComerciales");;
@@ -45,9 +45,9 @@ const Work = () => {
 
                 <div className="marcoVideo">
 
-                    <video className="contenidoVideo" controls  muted>
+                    {/* <video className="contenidoVideo" controls  muted>
                         <source type="video/mp4" src={AudibleVideo}></source>
-                    </video>
+                    </video> */}
     
                 </div>
                 <button onClick={()=>cerrarComerciales()} className="contenedorCerrarComercialesWork">
