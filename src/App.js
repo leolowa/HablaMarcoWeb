@@ -6,17 +6,25 @@ import Work from './Pages/Work/Work';
 import About from './Pages/About/About';
 import Contacto from './Pages/Contacto/Contacto';
 import Reel from './Pages/Reel/Reel';
-import iconoMenu from './Static/MenuFill.svg';
+import iconoMenuNegro from './Static/MenuManchaNegro.gif';
+import iconoMenuBlanco from './Static/MANCHA-MENU-BLANCA.gif'
 
 export const App = () => {
 
     const [posicion, setPosicion] = useState(0);
+    const [iconoMenu, setIconoMenu] = useState(false)
 
     const abrirMenu = ()=>{
         const menu = document.querySelector(".Menu");
-        console.log(menu)
         menu.style.width="100%";
     };
+
+    const tipoIconoMenu =(tipoIcono)=>{
+        if(tipoIcono==="blanco")
+        setIconoMenu(true);
+        else
+        setIconoMenu(false);
+    }
 
    useEffect(() => {
     window.scrollTo(0,posicion);
@@ -32,9 +40,9 @@ export const App = () => {
         <div id="App" >
            
             <div onClick={()=>abrirMenu()} className="contenedorIcono">
-                <img alt="" src={iconoMenu}></img>
+                <img className="iconoMenu" alt="" src={iconoMenu?iconoMenuBlanco:iconoMenuNegro}></img>
             </div>
-            <Menu setPosicion={setPosicion}/> 
+            <Menu tipoIconoMenu={tipoIconoMenu} setPosicion={setPosicion}/> 
 
             <section> <Home/> </section>
                                   
@@ -50,32 +58,3 @@ export const App = () => {
      </div>
     )
 }
-
-{/* <div id="App" >
-               {
-                   isMenu
-                   ?
-                    <div onClick={()=>abrirCerrarApp()}>
-                        <Menu setIsMenu={setIsMenu} setPosicion={setPosicion}/>
-                    </div>
-                   :
-                   <React.Fragment>
-                        <div onClick={()=>abrirCerrarApp()}>
-                            <Menu setIsMenu={setIsMenu} setPosicion={setPosicion}/>
-                        </div>
-                        <section> <Home/> </section>
-                        
-                        <section></section>
-                        
-                        <section className="animate__animated animate__fadeIn animate__slow"> <Work/> </section>
-                        
-                        <section> <Reel/> </section>
-                        
-                        <section className="transicion2"></section>
-
-                        <section className="animate__animated animate__fadeIn animate__slow"> <About/> </section>
-
-                        <section className="animate__animated animate__fadeIn animate__slow"> <Contacto/> </section>
-                    </React.Fragment>
-               }
-            </div> */}
