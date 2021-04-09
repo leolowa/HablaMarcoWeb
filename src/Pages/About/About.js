@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ButtonImg } from '../../Components/ButtonImg';
-import HablaMarco from '../../Static/HablaMarco-Blanco.svg';
 import './About.css';
 
 const About = () => {
@@ -10,14 +9,15 @@ const About = () => {
         <React.Fragment>
             <div className="body-About">
 
-                <div className="contenedor-LinkBio ">
+                <div onClick={()=>setIsVersion(!isVersion)} className="contenedor-LinkBio ">
                     {
                         isVersion
                         ?
-                        <ButtonImg onClick={()=>setIsVersion(!isVersion)} tipoBoton={"imagenAboutEsp"}/>
+                        <h6 className="textoVersion color-Texto">Español</h6>
                         :
-                        <ButtonImg onClick={()=>setIsVersion(!isVersion)} tipoBoton={"imagenAboutIng"}/>
+                        <h6  className="textoVersion color-Texto">English</h6>
                     }
+                    <ButtonImg tipoBoton={"imagenAbout"}/>
                 </div>
                 {
                 isVersion

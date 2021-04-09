@@ -8,11 +8,17 @@
 .color-Texto {
   color: white;
 }
+.textoVersion{
+  font: normal normal 20px Avenir-Black;
+}
 
 .contenedor-LinkBio {
   position: absolute;
   top: 30px;
   left: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .bio-Link {
