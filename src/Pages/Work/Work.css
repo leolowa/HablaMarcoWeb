@@ -210,7 +210,7 @@
   transform: rotate(-45deg);
 }
 .rotar {
-  animation: rotar 30s linear infinite;
+  animation: rotar 50s linear infinite;
   /* transform: rotate(50deg) */
 }
 
