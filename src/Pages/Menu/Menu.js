@@ -3,15 +3,18 @@ import './Menu.css';
 import flechaMenu from '../../Static/flechaMenu.svg';
 
 
-const Menu = ({setPosicion}) => {
-
-    const [isOpen, setIsOpen] = useState(false);
+const Menu = ({setPosicion, tipoIconoMenu}) => {
 
     function redireccionar(pos){
         const menu = document.querySelector('.Menu');
         setPosicion(pos);
         menu.style.width="0vw";
-
+        if(pos>=1875){
+            tipoIconoMenu("blanco");
+        }
+        else{
+            tipoIconoMenu("menu Negro");
+        }
    }
 
    const cerrarMenu = ()=>{
@@ -22,7 +25,6 @@ const Menu = ({setPosicion}) => {
 
     return (
                 <div className="Menu">
-
                     <div onClick={()=>cerrarMenu()} className="iconoCerrar">
                          <img alt="" src={flechaMenu}></img>
                     </div>
@@ -50,8 +52,6 @@ const Menu = ({setPosicion}) => {
                         </div>
                         
                     </div>
-                    
-
                 </div>
     )
 }
