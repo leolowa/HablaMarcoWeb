@@ -36,10 +36,22 @@ export const App = () => {
       }); */
 }, [posicion]);
 
+    const eventoScroll =()=>{
+        window.addEventListener('scroll',()=>{
+            console.log(window.scrollY);
+            if(window.scrollY>1870){
+                setIconoMenu(true)
+            }
+            else{
+                setIconoMenu(false);
+            }
+        });
+    }
+
     return (
-        <div id="App" >
+        <div id="App" onScroll={eventoScroll()} >
            
-            <div onClick={()=>abrirMenu()} className="contenedorIcono">
+            <div onClick={(e)=>abrirMenu(e)} className="contenedorIcono">
                 <img className="iconoMenu" alt="" src={iconoMenu?iconoMenuBlanco:iconoMenuNegro}></img>
             </div>
             <Menu tipoIconoMenu={tipoIconoMenu} setPosicion={setPosicion}/> 
