@@ -3,12 +3,12 @@ import './Menu.css';
 import flechaMenu from '../../Static/flechaMenu.svg';
 
 
-const Menu = ({setPosicion, tipoIconoMenu}) => {
+const Menu = ({scrollMenu, tipoIconoMenu}) => {
 
     function redireccionar(pos){
         const menu = document.querySelector('.Menu');
-        setPosicion(pos);
         menu.style.width="0vw";
+        scrollMenu(pos)
         if(pos>=1875){
             tipoIconoMenu("blanco");
         }
