@@ -12,7 +12,7 @@
 .contenedor-TextoContacto {
   position: absolute;
   left: -20px;
-  top: 60px;
+  top: 25%;
   display: flex;
 }
 
@@ -20,51 +20,37 @@
   font: normal normal 200px/121px IntegralCF-Bold;
   color: white;
 }
-.segundo{
-  position: absolute;
-  left: 475px;
-}
-.tercero {
-  position: absolute;
-  left: 935px;
-  width: 200px;
-  height: 180px;
-  background-color: white;
-  border-radius: 45%;
-  overflow: hidden;
-}
-.TextoContactoTercero {
-  top: 10px;
-  left: -45px;
-  position: absolute;
-  margin-right: 30px;
-  color: black;
-  z-index: 1;
-}
-
-.contenedor-Nombre {
-  position: absolute;
-  top: 35%;
-  left: 307px;
-}
-.Nombre {
-  font: normal normal 26px/30px Avenir-Book;
-  color: white;
-}
 
 .contenedor-InfoContacto {
   position: absolute;
-  bottom: 68px;
+  top: 51%;
   left: 76px;
-}
-.right{
-  text-align:right;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
 }
 .Texto-InfoContacto {
-  font: 30px/37px Avenir-Black;
+  font: normal normal 30px Avenir-Book;
   color: white;
 }
+.contenedorEquipamiento{
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  overflow: hidden;
+}
+.Texto-Equipamiento {
+  font: 30px/30px Avenir-Book;
+  color: white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 .Texto-Tecnologia{
+  top: 0;
   font:  18px/24px Avenir-Medium;
   color: white;
 }
@@ -72,14 +58,13 @@
 .contenedor-VoiceOvers {
   position: absolute;
   bottom: 50px;
-  right: 80px;
+  left: 350px;
 }
 .contenedor-TextoTecnologia{
-  width: 316px;
-  position: absolute;
-  bottom:0;
-  right: 0;
+  max-height: 0;
+  transition: all 1s ease-in-out;
 }
+
 .contenedor-ImgVoiceOvers{
   position: absolute;
   right: -10px;
@@ -96,4 +81,12 @@
 video{
   width: 100vw;
   height: 100vh;
+}
+.iconoEquipamiento{
+  width: 25px;
+  height: 25px;
+}
+.iconoEquipamientoDown{
+  width: 25px;
+  height: 25px;
 }

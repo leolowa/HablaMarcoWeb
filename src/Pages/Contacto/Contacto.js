@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import VoiceOvers from '../../Static/voiceovers.gif';
+import iconoEquipamientoUp from '../../Static/iconoEquipamiento.svg';
+import iconoEquipamientoDown from '../../Static/iconoEquipamientoDown.svg';
+
 //import Heladera from '../../Static/Circulo-Links/video_heladera.mp4';
 import '../Contacto/Contacto.css';
 
 
 const Contacto = () => {
+    const [isColapsado, setIsColapsado] = useState(false);
 
-    
+    const mostrarTecnología = () =>{
+        if(isColapsado!==true){
+            const elementoColapsable = document.querySelector(".contenedor-TextoTecnologia");
+            elementoColapsable.style.maxHeight= elementoColapsable.scrollHeight + "px";
+            setIsColapsado(true);
+        }
+        else{
+            const elementoColapsable = document.querySelector(".contenedor-TextoTecnologia");
+            elementoColapsable.style.maxHeight="0";
+            setIsColapsado(false);
+        }
+    }
     return (
         <>
             <div className="body-Contacto">
@@ -18,12 +33,7 @@ const Contacto = () => {
                 <React.Fragment>
                     
                     <div className="contenedor-TextoContacto">
-                        <div className="primero"> <h1 className="TextoContacto">CON</h1> </div>
-                        <div className="segundo"> <h1 className="TextoContacto">TAC</h1> </div>
-                        <div className="tercero"> <h1 className="TextoContacto TextoContactoTercero">TO</h1> </div>
-                    </div>
-                    <div className="contenedor-Nombre">
-                        <h1 className="Nombre">MARCO TIRABOSCHI</h1>
+                        <div className="primero"> <h1 className="TextoContacto">CONTACTO</h1></div>
                     </div>
 
                     <div className="contenedor-InfoContacto">
@@ -32,21 +42,39 @@ const Contacto = () => {
                         <div className="Texto-InfoContacto"> <h6>instagram.com/habla.marco</h6> </div>
                     </div>
 
-                    <div className="contenedor-VoiceOvers">
+                    {/* <div className="contenedor-VoiceOvers">
+                        <button onClick={()=>mostrarTecnología()} className="Texto-Equipamiento">Equipamiento</button>
                         <div className="contenedor-TextoTecnologia">
-                            <h6 className="Texto-InfoContacto right">Tecnología</h6>
                             <p className="Texto-Tecnologia">
                                 Antelope Zen Tour synergy core.<br/> 
                                 Sennheiser mkh 416.<br/> Neumann TLM 103.<br/> 
                                 MacBook Air M1.
                             </p>
                         </div>
-                        
-                        <div className="contenedor-ImgVoiceOvers">
+                    </div> */}
+
+                    <div className="contenedorEquipamiento">
+                        <button onClick={()=>mostrarTecnología()} className="Texto-Equipamiento">Equipamiento
+                            {
+                                isColapsado
+                                ?
+                                    <img className="iconoEquipamientoDown" src={iconoEquipamientoDown}></img>
+                                :
+                                    <img className="iconoEquipamiento" src={iconoEquipamientoUp}></img>
+                            }
+                        </button>
+                        <div className="contenedor-TextoTecnologia">
+                            <p className="Texto-Tecnologia">
+                                Antelope Zen Tour synergy core.<br/> 
+                                Sennheiser mkh 416.<br/> Neumann TLM 103.<br/> 
+                                MacBook Air M1.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="contenedor-ImgVoiceOvers">
                             <img alt="" className="imagenVoiceOvers" src={VoiceOvers}></img>
                         </div>
-                        
-                    </div>
                 </React.Fragment>
                 
             </div>
