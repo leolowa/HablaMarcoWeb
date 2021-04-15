@@ -9,15 +9,20 @@ import Reel from './Pages/Reel/Reel';
 import iconoMenuNegro from './Static/MenuManchaNegro.gif';
 import iconoMenuBlanco from './Static/MANCHA-MENU-BLANCA.gif'
 
+
 export const App = () => {
 
-    const [posicion, setPosicion] = useState(0);
-    const [iconoMenu, setIconoMenu] = useState(false)
-
+    //const [mostrarSection, setMostrarSection] = useState("");
+    
+    const [iconoMenu, setIconoMenu] = useState(false);
+    const [posicionScrollApp, setPosicionScrollApp] = useState(0);
     const abrirMenu = ()=>{
         const menu = document.querySelector(".Menu");
         menu.style.width="100%";
     };
+    const scrollMenu = (posicion)=>{
+        window.scrollTo(0,posicion);
+    }
 
     const tipoIconoMenu =(tipoIcono)=>{
         if(tipoIcono==="blanco")
@@ -26,19 +31,42 @@ export const App = () => {
         setIconoMenu(false);
     }
 
-   useEffect(() => {
-    window.scrollTo(0,posicion);
-    /* window.scroll({
-        top: posicion,
-        left: 0,
-        duration: 2000,
-        behavior: 'smooth'
-      }); */
-}, [posicion]);
 
     const eventoScroll =()=>{
-        window.addEventListener('scroll',()=>{
-            console.log(window.scrollY);
+        
+        window.addEventListener('wheel',(e)=>{
+           console.log(e.deltaY)
+            
+            if(e.deltaY>0){
+                window.scroll({
+                    top:posicionScrollApp+625,
+                    left:0,
+                    behavior:"smooth"
+                });
+                setPosicionScrollApp(posicionScrollApp+625);
+            }
+            else{
+                window.scroll({
+                    top:posicionScrollApp-625,
+                    left:0,
+                    behavior:"smooth"
+                });
+                setPosicionScrollApp(posicionScrollApp-625);
+            }
+            /* window.scroll({
+                top:posicionScrollApp,
+                left:0,
+                behavior:"smooth"
+            }) */
+            /* if(window.scrollY>400){
+                window.scroll({
+                    top:625,
+                    left:0,
+                    behavior:'smooth',
+                })
+                window.scrollTo(0,625)
+                setMostrarSection("aparecer")
+            } */
             if(window.scrollY>1870){
                 setIconoMenu(true)
             }
@@ -54,19 +82,21 @@ export const App = () => {
             <div onClick={(e)=>abrirMenu(e)} className="contenedorIcono">
                 <img className="iconoMenu" alt="" src={iconoMenu?iconoMenuBlanco:iconoMenuNegro}></img>
             </div>
-            <Menu tipoIconoMenu={tipoIconoMenu} setPosicion={setPosicion}/> 
+            <Menu tipoIconoMenu={tipoIconoMenu} scrollMenu={scrollMenu}/> 
 
             <section> <Home/> </section>
                                   
-            <section className="animate__animated animate__fadeIn animate__slow"> <Work/> </section>
+            <section id="Work" className=""> <Work/> </section>
                  
-            <section className="animate__animated animate__fadeIn animate__slow"> <Reel/> </section>
+            <section className="aparecer"> <Reel/> </section>
                  
-            <section className="animate__animated animate__fadeIn animate__slow"> <About/> </section>
+            <section className="aparecer"> <About/> </section>
 
-            <section className="animate__animated animate__fadeIn animate__slow"> <Contacto/> </section>
+            <section className="aparecer"> <Contacto/> </section>
         
             
      </div>
     )
 }
+
+/* className="animate__animated animate__fadeIn animate__slow" */
