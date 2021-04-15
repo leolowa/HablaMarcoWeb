@@ -19,7 +19,6 @@ const Menu = ({scrollMenu, tipoIconoMenu}) => {
 
    const cerrarMenu = ()=>{
     const menu = document.querySelector('.Menu');
-    console.log(menu)
     menu.style.width="0vw"; 
    };
 
