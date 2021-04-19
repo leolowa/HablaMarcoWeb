@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Home from './Pages/Home/Home';
 import Menu from './Pages/Menu/Menu';
@@ -12,18 +12,24 @@ import iconoMenuBlanco from './Static/MANCHA-MENU-BLANCA.gif'
 
 export const App = () => {
 
-    //const [mostrarSection, setMostrarSection] = useState("");
     
     const [iconoMenu, setIconoMenu] = useState(false);
-    const [posicionScrollApp, setPosicionScrollApp] = useState(0);
+    const [posicionAnteriorScrollApp, setPosicionAnteriorScrollApp] = useState(0);
+    const [posicionActualScrollApp, setPosicionActualScrollApp] = useState(0);
+    const [direccionScroll, setDireccionScroll] = useState('');
+
     const abrirMenu = ()=>{
         const menu = document.querySelector(".Menu");
         menu.style.width="100%";
     };
     const scrollMenu = (posicion)=>{
         window.scrollTo(0,posicion);
+        /* window.scroll({
+            top:posicion,
+            left:0,
+            behavior:"smooth",
+        }); */
     }
-
     const tipoIconoMenu =(tipoIcono)=>{
         if(tipoIcono==="blanco")
         setIconoMenu(true);
@@ -32,52 +38,50 @@ export const App = () => {
     }
 
 
-    const eventoScroll =()=>{
-        
-        window.addEventListener('wheel',(e)=>{
-           console.log(e.deltaY)
-            
-            if(e.deltaY>0){
+    const eventoScroll =(e)=>{
+
+        console.log(e.pageYOffset)
+        if(window.scrollY>1600)
+            setIconoMenu(true);
+        else
+            setIconoMenu(false);
+
+        //Navegación de página//
+        /* if(e.deltaY < 0){
+   
+            if(direccionScroll !== 'up'){
+               console.log("up")
+                setDireccionScroll('up');
                 window.scroll({
-                    top:posicionScrollApp+625,
+                    top:posicionActualScrollApp-625,
                     left:0,
-                    behavior:"smooth"
+                    behavior:"smooth",
                 });
-                setPosicionScrollApp(posicionScrollApp+625);
+                setPosicionActualScrollApp(posicionActualScrollApp-625);
             }
-            else{
+
+        }
+        else{
+
+            if(direccionScroll !== 'down'){
+                console.log("down")
+                setDireccionScroll('down');
                 window.scroll({
-                    top:posicionScrollApp-625,
+                    top:posicionActualScrollApp+625,
                     left:0,
-                    behavior:"smooth"
+                    behavior:"smooth",
                 });
-                setPosicionScrollApp(posicionScrollApp-625);
-            }
-            /* window.scroll({
-                top:posicionScrollApp,
-                left:0,
-                behavior:"smooth"
-            }) */
-            /* if(window.scrollY>400){
-                window.scroll({
-                    top:625,
-                    left:0,
-                    behavior:'smooth',
-                })
-                window.scrollTo(0,625)
-                setMostrarSection("aparecer")
-            } */
-            if(window.scrollY>1870){
-                setIconoMenu(true)
-            }
-            else{
-                setIconoMenu(false);
-            }
-        });
+                setPosicionActualScrollApp(posicionActualScrollApp+625);
+            } 
+
+        } */
     }
 
+    
+    
+
     return (
-        <div id="App" onScroll={eventoScroll()} >
+        <div id="App" onWheel={(e)=>eventoScroll(e)} >
            
             <div onClick={(e)=>abrirMenu(e)} className="contenedorIcono">
                 <img className="iconoMenu" alt="" src={iconoMenu?iconoMenuBlanco:iconoMenuNegro}></img>
@@ -86,16 +90,15 @@ export const App = () => {
 
             <section> <Home/> </section>
                                   
-            <section id="Work" className=""> <Work/> </section>
+            <section id="Work"> <Work/> </section>
                  
-            <section className="aparecer"> <Reel/> </section>
+            <section> <Reel/> </section>
                  
-            <section className="aparecer"> <About/> </section>
+            <section> <About/> </section>
 
-            <section className="aparecer"> <Contacto/> </section>
-        
-            
-     </div>
+            <section> <Contacto/> </section>
+
+        </div>
     )
 }
 
