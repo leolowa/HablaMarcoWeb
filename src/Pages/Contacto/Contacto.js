@@ -58,9 +58,9 @@ const Contacto = () => {
                             {
                                 isColapsado
                                 ?
-                                    <img className="iconoEquipamientoDown" src={iconoEquipamientoDown}></img>
+                                    <img alt="" className="iconoEquipamientoDown" src={iconoEquipamientoDown}></img>
                                 :
-                                    <img className="iconoEquipamiento" src={iconoEquipamientoUp}></img>
+                                    <img alt="" className="iconoEquipamiento" src={iconoEquipamientoUp}></img>
                             }
                         </button>
                         <div className="contenedor-TextoTecnologia">
