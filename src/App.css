@@ -8,7 +8,6 @@
 section {
   width: 100vw;
   height: 100vh;
-  transition: all 3s ease-in-out;
 }
 
 .contenedorIcono {
@@ -26,10 +25,4 @@ section {
 }
 .abrirMenu{
   width: 100vw !important;
-}
-.opacidadCero{
-  opacity: 0 !important;
-}
-.aparecer{
-  opacity: 1 !important;
 }
