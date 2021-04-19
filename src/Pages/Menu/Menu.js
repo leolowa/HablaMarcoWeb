@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Menu.css';
 import flechaMenu from '../../Static/flechaMenu.svg';
 
@@ -34,19 +34,19 @@ const Menu = ({scrollMenu, tipoIconoMenu}) => {
                             <h1 className="TextoMenu subrayado">HOME</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(625)}> 
+                        <div onClick={()=>redireccionar(629)}> 
                             <h1 className="TextoMenu subrayado">WORK</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(1250)} > 
+                        <div onClick={()=>redireccionar(1258)} > 
                             <h1 className="TextoMenu subrayado">REEL</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(1875)} > 
+                        <div onClick={()=>redireccionar(1887)} > 
                             <h1 className="TextoMenu subrayado">MARCO</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(2500)} > 
+                        <div onClick={()=>redireccionar(2516)} > 
                             <h1 className="TextoMenu subrayado">CONTACTO</h1>
                         </div>
                         
