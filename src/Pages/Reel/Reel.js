@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Reel.css';
 import './BotonesReel/BotonesReel.css';
-import videoPerro from '../../Static/Video/Baile_con_perro_sobre_fondo_blanco.mov';
+import videoPerro from '../../Static/Video/Baile_perro_fondo_blanco.mp4';
 import reelLatam from '../../Static/Sound/habla-marco-reel-latam-2.mp3';
 import reelArg from '../../Static/Sound/habla-marco-reelArg.mp3';
 import { BotonesReel } from './BotonesReel/BotonesReel';
@@ -10,36 +10,32 @@ import ElementoVideo from '../../Components/ElementoVideo/ElementoVideo';
 const Reel = () => {
 
     const [isPlayReel, setIsPlayReel] = useState(false);
-    const [elementoVideo, setElementoVideo] = useState();
-    let audioLatam = new Audio(reelLatam);
-    
-    audioLatam.onpause = function(){
-        console.log("onPaused");
-    };
-    audioLatam.onplay = function(){
-        console.log("onPlay")
-    };
+    const [isReelLatam, setIsReelLatam] = useState(false);
+    const [isReelArg, setIsReelArg] = useState(false);
 
-    let audioArg = new Audio(reelArg);
+    /* let audioLatam = new Audio(reelLatam);
+    let audioArg = new Audio(reelArg); */
 
     const reproducirReel =(idReel)=>{
 
         const element= document.querySelector('#playReel')
         const elementoVideo = document.querySelector('#videoReel');
 
-        if(idReel==="Latam"){
+        
+        if(idReel==="Latam"){   
+            const elementoAudio=document.querySelector('#audioLatam');
+
             if(isPlayReel !== true){
-                audioLatam.play();
-                
+                element.classList.add("playReel");
                 elementoVideo.style.opacity="1";
                 elementoVideo.play();
-                element.classList.add("playReel");
+                elementoAudio.play();
+                setIsReelLatam(true);
                 setIsPlayReel(true);
             }
             else{
-                
-                audioLatam.pause();
-                //console.log(audioLatam.pause())
+                setIsReelLatam(false);
+                elementoAudio.pause()
                 element.classList.remove("playReel");
                 elementoVideo.pause();
                 setIsPlayReel(false);
@@ -47,24 +43,24 @@ const Reel = () => {
         }
 
         if(idReel==="Arg"){
+            const elementoAudio=document.querySelector('#audioArg');
             if(isPlayReel !== true){
-                audioArg.play();
-                
+                element.classList.add("playReel");
+                setIsReelArg(true)
+                elementoAudio.play();
                 elementoVideo.style.opacity="1";
                 elementoVideo.play();
                 element.classList.add("playReel");
                 setIsPlayReel(true);
             }
             else{
-                audioArg.pause();
-
+                setIsReelArg(false)
                 element.classList.remove("playReel");
                 elementoVideo.pause();
+                elementoAudio.pause()
                 setIsPlayReel(false);
             }
         }
-
-        
     }
     
     const finalizacionVideo = () =>{
@@ -74,6 +70,14 @@ const Reel = () => {
         element.classList.remove("playReel");
         elementoVideo.style.opacity="0";
         setIsPlayReel(false);
+    }
+    const finalizacionAudio = (idReel) =>{
+        if(idReel==="Latam"){
+            setIsReelLatam(false);
+        }
+        else{
+            setIsReelArg(false);
+        }
     }
     return (
         <React.Fragment>
@@ -88,10 +92,11 @@ const Reel = () => {
                 />
                 <h1 id="playReel" className="textoReel">REEL</h1>
                 <div className="contenedorBotonesReel">
-                    <BotonesReel isPaused={isPlayReel} onPlay={()=>reproducirReel("Latam")} TextoReel="REEL LATAM" tipoReel="ReelLatam"/>
-                    <BotonesReel isPaused={false}  onPlay={()=>reproducirReel("Arg")} TextoReel="REEL ARG" tipoReel="ReelArg"/>
+                    <BotonesReel isPaused={isReelLatam} onPlay={()=>reproducirReel("Latam")} TextoReel="REEL LATAM" tipoReel="ReelLatam"/>
+                    <BotonesReel isPaused={isReelArg}  onPlay={()=>reproducirReel("Arg")} TextoReel="REEL ARG" tipoReel="ReelArg"/>
                 </div>
-                {/* <audio id="audio" src={`${audioSeleccionado}#t=0,30`}></audio> */}
+                <audio onPause={()=>finalizacionAudio("Latam")} id="audioLatam" src={`${reelLatam}#t=0,29`}></audio>
+                <audio onPause={()=>finalizacionAudio("Arg")} id="audioArg" src={`${reelArg}#t=0,29`}></audio>
             </div>
         </React.Fragment>
     )
