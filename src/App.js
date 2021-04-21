@@ -14,68 +14,30 @@ export const App = () => {
 
     
     const [iconoMenu, setIconoMenu] = useState(false);
-    const [posicionAnteriorScrollApp, setPosicionAnteriorScrollApp] = useState(0);
-    const [posicionActualScrollApp, setPosicionActualScrollApp] = useState(0);
-    const [direccionScroll, setDireccionScroll] = useState('');
 
     const abrirMenu = ()=>{
         const menu = document.querySelector(".Menu");
         menu.style.width="100%";
     };
+
     const scrollMenu = (posicion)=>{
         window.scrollTo(0,posicion);
-        /* window.scroll({
-            top:posicion,
-            left:0,
-            behavior:"smooth",
-        }); */
-    }
+    };
+
     const tipoIconoMenu =(tipoIcono)=>{
         if(tipoIcono==="blanco")
         setIconoMenu(true);
         else
         setIconoMenu(false);
-    }
+    };
 
 
-    const eventoScroll =(e)=>{
-
-        console.log(e.pageYOffset)
-        if(window.scrollY>1600)
+    const eventoScroll =()=>{
+        if(window.scrollY>3600)
             setIconoMenu(true);
         else
             setIconoMenu(false);
-
-        //Navegación de página//
-        /* if(e.deltaY < 0){
-   
-            if(direccionScroll !== 'up'){
-               console.log("up")
-                setDireccionScroll('up');
-                window.scroll({
-                    top:posicionActualScrollApp-625,
-                    left:0,
-                    behavior:"smooth",
-                });
-                setPosicionActualScrollApp(posicionActualScrollApp-625);
-            }
-
-        }
-        else{
-
-            if(direccionScroll !== 'down'){
-                console.log("down")
-                setDireccionScroll('down');
-                window.scroll({
-                    top:posicionActualScrollApp+625,
-                    left:0,
-                    behavior:"smooth",
-                });
-                setPosicionActualScrollApp(posicionActualScrollApp+625);
-            } 
-
-        } */
-    }
+    };
 
     
     
@@ -83,18 +45,22 @@ export const App = () => {
     return (
         <div id="App" onWheel={(e)=>eventoScroll(e)} >
            
-            <div onClick={(e)=>abrirMenu(e)} className="contenedorIcono">
+            <div onClick={()=>abrirMenu()} className="contenedorIcono">
                 <img className="iconoMenu" alt="" src={iconoMenu?iconoMenuBlanco:iconoMenuNegro}></img>
             </div>
             <Menu tipoIconoMenu={tipoIconoMenu} scrollMenu={scrollMenu}/> 
 
             <section> <Home/> </section>
-                                  
+            <section></section>
+
             <section id="Work"> <Work/> </section>
-                 
+            <section></section>
+
             <section> <Reel/> </section>
-                 
+            <section></section>
+            
             <section> <About/> </section>
+            <section style={{background:"black"}}></section>
 
             <section> <Contacto/> </section>
 

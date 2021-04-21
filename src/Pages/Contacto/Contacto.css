@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   max-height: 100vh;
-  background: blue;
+  background: black;
 }
 .contenedorVideo{
   width: 100vw;
@@ -12,7 +12,7 @@
 .contenedor-TextoContacto {
   position: absolute;
   left: -20px;
-  top: 25%;
+  top: 22%;
   display: flex;
 }
 
