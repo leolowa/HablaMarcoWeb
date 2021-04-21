@@ -9,7 +9,7 @@ const Menu = ({scrollMenu, tipoIconoMenu}) => {
         const menu = document.querySelector('.Menu');
         menu.style.width="0vw";
         scrollMenu(pos)
-        if(pos>=1875){
+        if(pos>=3750){
             tipoIconoMenu("blanco");
         }
         else{
@@ -34,19 +34,19 @@ const Menu = ({scrollMenu, tipoIconoMenu}) => {
                             <h1 className="TextoMenu subrayado">HOME</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(629)}> 
+                        <div onClick={()=>redireccionar(1250)}> 
                             <h1 className="TextoMenu subrayado">WORK</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(1258)} > 
+                        <div onClick={()=>redireccionar(2500)} > 
                             <h1 className="TextoMenu subrayado">REEL</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(1887)} > 
+                        <div onClick={()=>redireccionar(3750)} > 
                             <h1 className="TextoMenu subrayado">MARCO</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(2516)} > 
+                        <div onClick={()=>redireccionar(5000)} > 
                             <h1 className="TextoMenu subrayado">CONTACTO</h1>
                         </div>
                         

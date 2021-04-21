@@ -2,22 +2,29 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
+    z-index: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
-    /* background-color: #FBFBFB; */
+    background-color:white;
 }
-.contenedorVideoReel{
-    width: 100vw;
-    height: 338px;
-    /* background-color: rgba(207, 207, 207, 0.473); */ /* contenedor de video Reel */
+.estilosVideoReel{
+    opacity: 1;
+    z-index: 0;
+    background-color: transparent;
 }
+
 .playReel{
-    transition: all .5s;
-    opacity: .3;
+    transition: all 1s ease-in-out !important;
+    opacity: .3 !important;
 }
 .textoReel{
+    position: absolute;
+    z-index: 2;
     text-align: center;
     font: 200px IntegralCF-ExtraBold;
+    opacity: 1;
+    transition: all 1s ease-in-out;
 }
 
 .contenedorBotonesReel{

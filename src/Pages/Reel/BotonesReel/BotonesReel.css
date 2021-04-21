@@ -7,10 +7,12 @@
     border: none;
     background: transparent;
     outline: none;
+    color: black;
   }
   .iconoReel {
     font-size: 30px;
     cursor: pointer;
+    transition: all .3s;
   }
   .iconoReel:hover{
     font-size: 33px;
@@ -24,8 +26,10 @@
     height: auto;
   }
   .iconoDescarga {
+    margin-left: 10px;
     cursor: pointer;
     font-size: 20px;
+    transition: all .3s;
   }
   .iconoDescarga:hover{
     font-size: 23px;

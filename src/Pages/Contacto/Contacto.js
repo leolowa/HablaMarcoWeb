@@ -25,12 +25,7 @@ const Contacto = () => {
     return (
         <>
             <div className="body-Contacto">
-                <div className="contenedorVideo">
-                    {/* <video autoPlay={true} muted>
-                        <source type="video/mp4" src={Heladera}></source>
-                    </video> */}
-                </div>
-                <React.Fragment>
+                
                     
                     <div className="contenedor-TextoContacto">
                         <div className="primero"> <h1 className="TextoContacto">CONTACTO</h1></div>
@@ -42,17 +37,7 @@ const Contacto = () => {
                         <div className="Texto-InfoContacto"> <h6>instagram.com/habla.marco</h6> </div>
                     </div>
 
-                    {/* <div className="contenedor-VoiceOvers">
-                        <button onClick={()=>mostrarTecnología()} className="Texto-Equipamiento">Equipamiento</button>
-                        <div className="contenedor-TextoTecnologia">
-                            <p className="Texto-Tecnologia">
-                                Antelope Zen Tour synergy core.<br/> 
-                                Sennheiser mkh 416.<br/> Neumann TLM 103.<br/> 
-                                MacBook Air M1.
-                            </p>
-                        </div>
-                    </div> */}
-
+                    
                     <div className="contenedorEquipamiento">
                         <button onClick={()=>mostrarTecnología()} className="Texto-Equipamiento">Equipamiento
                             {
@@ -75,7 +60,6 @@ const Contacto = () => {
                     <div className="contenedor-ImgVoiceOvers">
                             <img alt="" className="imagenVoiceOvers" src={VoiceOvers}></img>
                         </div>
-                </React.Fragment>
                 
             </div>
         </>

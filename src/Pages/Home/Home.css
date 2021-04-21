@@ -87,7 +87,7 @@
   left: 76px;
   text-align: center;
   opacity: 0;
-  animation: fade 2s linear;
+  animation: fade 5s linear;
   animation-iteration-count: infinite;
   z-index: 3;
 }
@@ -110,10 +110,10 @@
 
 @keyframes fade {
   0%,
-  100% {
+  30% {
     opacity: 0;
   }
-  50% {
+  15% {
     opacity: 1;
   }
 }

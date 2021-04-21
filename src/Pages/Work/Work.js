@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React/* , { useState }  */from 'react';
 import Audible from '../../Static/Circulo-Links/AUDIBLE.svg';
 //import AudibleVideo from '../../Static/Video/AudibleEEUUSpanish.mp4'
 import Avene from '../../Static/Circulo-Links/AVENE.svg';
@@ -15,13 +15,14 @@ import './Work.css';
 
 const Work = () => {
     
-    const [videoSeleccionado, setVideoSeleccionado] = useState("");
+    //const [videoSeleccionado, setVideoSeleccionado] = useState("");
     
     
     function mostrarVideo(id){
-        switch(id){
-            case "Audible":{setVideoSeleccionado(/* AudibleVideo */);}
-        } 
+        /* switch(id){
+            case "Audible":{setVideoSeleccionado(AudibleVideo);}
+        } */
+         
 
         document.querySelector('.contenedorVideosWork').classList.add("aperturaComerciales");;
         document.querySelector('.contenidoVideo').volume = 0.1;
@@ -59,7 +60,7 @@ const Work = () => {
             
                 <div className="contenedorVerMas">
                     <div className="botonMas">
-                        <a href="https://www.youtube.com/channel/UCq9CudVe_LrZR48Ls2wb8LA/videos" target="_blank" className="botonHome">
+                        <a rel = "noreferrer" href="https://www.youtube.com/channel/UCq9CudVe_LrZR48Ls2wb8LA/videos" target="_blank" className="botonHome">
                             <p className="textoMas">mas</p>
                             <img alt="" className="manchaWork" src={manchaWork}></img>
                         </a>
