@@ -4,11 +4,11 @@
 }
 .contenedorVideosWork{
   position: absolute;
-  background: url(../../Static/MANCHAWORK25.gif);
+  background-color: black;
   width: 0;
   height: 100vh;
   z-index: 3;
-  transition: all .5s;
+  transition: all 1s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,9 +121,7 @@
   transform: translate(-50%, -50%); */
 }
 
-.contenedorAudible{
-  background-color: tomato;
-}
+
 .cursorLink{
   cursor: pointer;
 }
