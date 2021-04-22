@@ -7,7 +7,10 @@ yarn-error.log*
 lerna-debug.log*
 
 # V ideos de work
-src/static/video/
+src/Static/Video
+
+#Audio Reel
+src/Static/Sound
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
