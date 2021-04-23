@@ -59,7 +59,7 @@ const Contacto = () => {
 
                     <div className="contenedor-ImgVoiceOvers">
                             <img alt="" className="imagenVoiceOvers" src={VoiceOvers}></img>
-                        </div>
+                    </div>
                 
             </div>
         </>

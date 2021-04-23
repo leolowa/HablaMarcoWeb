@@ -83,8 +83,9 @@ video{
   height: 100vh;
 }
 .iconoEquipamiento{
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
+  padding-left: 10px;
 }
 .iconoEquipamientoDown{
   width: 25px;
