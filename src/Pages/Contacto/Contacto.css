@@ -42,7 +42,7 @@
   overflow: hidden;
 }
 .Texto-Equipamiento {
-  font: 30px/30px Avenir-Book;
+  font:25px/30px Avenir-Black;
   color: white;
   background-color: transparent;
   border: none;
@@ -67,8 +67,8 @@
 
 .contenedor-ImgVoiceOvers{
   position: absolute;
-  right: -10px;
-  bottom: 0;
+  right: 40px;
+  bottom: 30px;
 }
 .imagenVoiceOvers {
   width: 150px;
