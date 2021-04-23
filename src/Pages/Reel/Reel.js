@@ -38,6 +38,7 @@ const Reel = () => {
                 elementoAudio.pause()
                 element.classList.remove("playReel");
                 elementoVideo.pause();
+                elementoVideo.style.opacity="0";
                 setIsPlayReel(false);
             }
         }
