@@ -12,21 +12,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;                 
+  opacity: 1;                 
 }
 .aperturaComerciales{
-  opacity: 1 !important;
   width: 100vw !important;
 }
 .marcoVideo{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  transition: all .5s;
-  border: 10px solid black;
+  width: 70%;
+  height: 70%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  transition-delay: .5s;
 }
 .contenedorCerrarComercialesWork{
   background: transparent;
@@ -45,16 +44,10 @@
   transition: opacity .3 ease;
   opacity: 1;
 }
-.marcoRectangular{
-  border-radius: 0;
-}
 .contenidoVideo{
   width: 100%;
   height: 100%;
   outline: none;
-  opacity: 0;
-  transition-delay: 2s;
-  transition: all 1s ease-in-out;
 }
 .body-Work {
   position: absolute;

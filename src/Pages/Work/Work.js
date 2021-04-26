@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Audible from '../../Static/Circulo-Links/AUDIBLE.svg';
 import Avene from '../../Static/Circulo-Links/AVENE.svg';
 import CocaCola from '../../Static/Circulo-Links/COCACOLA.svg';
@@ -19,22 +19,17 @@ const Work = () => {
     
     function mostrarVideo(){
         
-        const marcoVideoComercial =document.querySelector('.marcoVideo');
         
         document.querySelector('.contenedorVideosWork').classList.add("aperturaComerciales");
-        document.querySelector('.contenidoVideo').style.opacity = "1";
         document.querySelector('.contenidoVideo').volume = 0.1;
         
-        marcoVideoComercial.style.width ="70%";
-        marcoVideoComercial.style.height ="70%";
-        marcoVideoComercial.style.display ="initial";
-        marcoVideoComercial.style.borderradius ="0";
-        marcoVideoComercial.classList.add("marcoRectangular");
+        document.querySelector('.marcoVideo').style.opacity =1;
     };
 
     const cerrarComerciales = () =>{
-        document.querySelector('.contenedorVideosWork').classList.remove("aperturaComerciales");
+        document.querySelector('.marcoVideo').style.opacity=0;
         document.querySelector('.contenidoVideo').pause();
+        document.querySelector('.contenedorVideosWork').classList.remove("aperturaComerciales");
     };
 
     
