@@ -21,7 +21,8 @@ const Work = () => {
         
         const marcoVideoComercial =document.querySelector('.marcoVideo');
         
-        document.querySelector('.contenedorVideosWork').classList.add("aperturaComerciales");;
+        document.querySelector('.contenedorVideosWork').classList.add("aperturaComerciales");
+        document.querySelector('.contenidoVideo').style.opacity = "1";
         document.querySelector('.contenidoVideo').volume = 0.1;
         
         marcoVideoComercial.style.width ="70%";
@@ -51,13 +52,10 @@ const Work = () => {
             <div className="contenedorVideosWork">
 
                 <div className="marcoVideo">
-
                     <video className="contenidoVideo" controls>
                         <source type="video/mp4" src={CocaColaVideo}></source>
                     </video>
                     
-
-    
                 </div>
                 <button onClick={()=>cerrarComerciales()} className="contenedorCerrarComercialesWork">
                     <i className="bi bi-x iconoCerrarComercialesWork"></i>
