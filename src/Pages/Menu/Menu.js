@@ -34,19 +34,19 @@ const Menu = ({scrollMenu, tipoIconoMenu}) => {
                             <h1 className="TextoMenu subrayado">HOME</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(1250)}> 
+                        <div onClick={()=>redireccionar(1258)}> 
                             <h1 className="TextoMenu subrayado">WORK</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(2500)} > 
+                        <div onClick={()=>redireccionar(2516)} > 
                             <h1 className="TextoMenu subrayado">REEL</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(3750)} > 
+                        <div onClick={()=>redireccionar(3774)} > 
                             <h1 className="TextoMenu subrayado">MARCO</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(5000)} > 
+                        <div onClick={()=>redireccionar(5032)} > 
                             <h1 className="TextoMenu subrayado">CONTACTO</h1>
                         </div>
                         
