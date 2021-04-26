@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import HablaMarco from '../../Static/HablaMarco.svg';
 //import marcoNadando from '../../Static/Video/marcoNadando.mov';
 import './Home.css';
