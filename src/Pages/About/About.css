@@ -106,5 +106,7 @@
   }
 }
 @media screen and (max-width:768px) {
-  
+  .Text-Voice{
+    right: -105px;
+  }
 }
