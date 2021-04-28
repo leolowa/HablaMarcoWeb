@@ -3,13 +3,13 @@
   height: 100vh;
   background: black;
   position: absolute;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .color-Texto {
   color: white;
 }
 .textoVersion{
-  font: normal normal 20px Avenir-Black;
+  font: normal normal 1.47vw Avenir-Black;
 }
 
 .contenedor-LinkBio {
@@ -21,56 +21,90 @@
   cursor: pointer;
 }
 
-.bio-Link {
-  text-decoration: none;
-  font: normal normal 20px IntegralCF-Bold;
-}
-
-.bio-circular {
-  background: white;
-  color: black;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: -10px;
-  left: 208px;
-}
-.texto-ON {
-  position: absolute;
-  top: 10px;
-}
-
 .contenedor-TextoMarco {
   overflow: hidden;
   display: flex;
-  width: 1350px;
-  height: 240px;
+  width: 95%;
+  height: 19.75rem;
   position: absolute;
   bottom: -10px;
-  left: 0;}
+  left: 0;
+}
 
 .TextoMarco {
-  font: 200px IntegralCF-Bold;
+  font: 14.641288433382138vw IntegralCF-Bold;
   margin-right: 30px;
 }
 .contenedor-Texto {
-  height: 200px;
-  width: 480px;
-  position: absolute;
-  top: 38%;
-  left: 43%;
-  /*   background-color: turquoise; */
+  position: sticky;
+  margin-left: 43%;
+  /* top: 38%;
+  left: 43%; */
 }
 .TextoLocutor {
-  font: normal normal 71px IntegralCF-Bold;
+  position: relative;
+  font: normal normal 5.20vw IntegralCF-Bold;
 }
 .Text-Voice {
-  position: absolute;
-  right: 105px;
-  font: normal normal 22px Avenir-Book;
+  position: relative;
+  width: auto;
+  bottom: -18px;
 }
 .Texto-Info {
-  font: 17px Avenir-Book;
+  font: 1.29vw Avenir-Book;
   line-height: 23px;
+}
+
+@media screen and (max-width:1920px) {
+  .contenedor-Texto{
+    max-width:420px;
+    top: 39%;
+    margin-left: 45%;
+  }
+  .contenedor-TextoMarco{
+    width: 89%;
+  }
+  .Text-Voice{
+    right: -310px;
+    font: 2em Avenir-Book;
+  }
+}
+@media screen and (max-width:1366px) {
+  .contenedor-Texto{
+    top: 20%;
+    margin-left: 43%;
+  }
+  .Text-Voice{
+    right: -230px;
+    font: 1.4em Avenir-Book;
+  }
+}
+@media screen and (max-width:1024px) {
+  .contenedor-Texto{
+    max-width: 340px;
+    top: 21%;
+    margin-left: 34%;
+  }
+  .Text-Voice{
+    right: -180px;
+    font: 1em Avenir-Book;
+  }
+  .Texto-Info {
+    font: 1.6vw Avenir-Book;
+  }
+  .contenedor-TextoMarco{
+    width: 95% !important;
+  }
+}
+@media screen and (max-width:834px) {
+  .contenedor-Texto{
+    top:28%;
+    margin-left: 38%;
+  }
+  .Texto-Info {
+    font-size: 1.7vw;
+  }
+}
+@media screen and (max-width:768px) {
+  
 }
