@@ -17,20 +17,20 @@
 }
 
 .TextoContacto {
-  font: normal normal 200px/121px IntegralCF-Bold;
+  font: normal normal 14.65vw/8.86vw IntegralCF-Bold;
   color: white;
 }
 
 .contenedor-InfoContacto {
   position: absolute;
-  top: 51%;
+  top:48%;
   left: 76px;
   width: 60%;
   display: flex;
   justify-content: space-around;
 }
 .Texto-InfoContacto {
-  font: normal normal 30px Avenir-Book;
+  font: normal normal 2.2vw Avenir-Book;
   color: white;
 }
 .contenedorEquipamiento{
@@ -42,7 +42,7 @@
   overflow: hidden;
 }
 .Texto-Equipamiento {
-  font:25px/30px Avenir-Black;
+  font:1.8vw/2.2vw Avenir-Black;
   color: white;
   background-color: transparent;
   border: none;
