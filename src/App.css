@@ -10,7 +10,7 @@ section {
   height: 100vh;
 }
 
-.contenedorIcono {
+.contenedorIconoMenu {
   z-index: 2 ;
   position: fixed;
   top: 30px;

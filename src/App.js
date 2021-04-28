@@ -45,7 +45,7 @@ export const App = () => {
     return (
         <div id="App" onWheel={(e)=>eventoScroll(e)} >
            
-            <div onClick={()=>abrirMenu()} className="contenedorIcono">
+            <div onClick={()=>abrirMenu()} className="contenedorIconoMenu">
                 <img className="iconoMenu" alt="" src={iconoMenu?iconoMenuBlanco:iconoMenuNegro}></img>
             </div>
             <Menu tipoIconoMenu={tipoIconoMenu} scrollMenu={scrollMenu}/> 
