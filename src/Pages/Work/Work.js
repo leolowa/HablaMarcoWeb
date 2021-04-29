@@ -68,9 +68,7 @@ const Work = () => {
                     </div>
                 </div>
                 
-                <div className="contenedor-Texto-Work">
-                    <h1 className="Texto-Work">WORK</h1>
-                </div>
+                <span className="Texto-Work">WORK</span>
 
                 <div className="contenedor-Links rotar">
                     <div><img id="audible" onClick={(e)=>mostrarVideo(e.target.id)} className="audible cursorLink" alt="#" src={Audible}></img></div>
