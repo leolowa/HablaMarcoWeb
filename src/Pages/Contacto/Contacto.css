@@ -23,8 +23,6 @@
 
 .contenedor-InfoContacto {
   position: absolute;
-  top:48%;
-  left: 76px;
   width: 60%;
   display: flex;
   justify-content: space-around;
@@ -90,4 +88,44 @@ video{
 .iconoEquipamientoDown{
   width: 25px;
   height: 25px;
+}
+
+@media screen and (max-width:1920px) {
+  .contenedor-InfoContacto {
+    top:46%;
+    left: 76px;  
+  }
+}
+@media screen and (max-width:1366px) {
+  .contenedor-InfoContacto {
+    top:47%;
+  }
+  .Texto-InfoContacto{
+    font-size: 2.5vw;
+  }
+}
+@media screen and (max-width:1024px) {
+  .contenedor-TextoContacto{
+    top:30%;
+  }
+  .contenedor-InfoContacto {
+    width:65% ;
+    top:49.5%
+  }
+  .Texto-InfoContacto{
+    font-size: 2.7vw;
+  }
+}
+@media screen and (max-width:834px) {
+  .contenedor-TextoContacto{
+    top:35%;
+  }
+  .contenedor-InfoContacto {
+    top:50.5%;
+    width: 80%;
+    left: 0px;
+  }
+  .Texto-InfoContacto{
+    font-size: 3vw;
+  }
 }
