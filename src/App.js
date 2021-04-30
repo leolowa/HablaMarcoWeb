@@ -51,10 +51,10 @@ export const App = () => {
             <Menu tipoIconoMenu={tipoIconoMenu} scrollMenu={scrollMenu}/> 
 
             <section> <Home/> </section>
-            <section></section>
+            <section className="slideBlanco"></section>
 
             <section id="Work"> <Work/> </section>
-            <section></section>
+            <section className="slideBlanco"></section>
 
             <section> <Reel/> </section>
             <section></section>
