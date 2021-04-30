@@ -15,32 +15,21 @@ import './Work.css';
 
 const Work = () => {
     
-    
-    
     function mostrarVideo(){
-        
-        
+        setTimeout(()=>{
+            document.querySelector('.iconoMenu').style.display='none';
+        },790);    
         document.querySelector('.contenedorVideosWork').classList.add("aperturaComerciales");
         document.querySelector('.contenidoVideo').volume = 0.1;
-        
         document.querySelector('.marcoVideo').style.opacity =1;
     };
 
     const cerrarComerciales = () =>{
+        document.querySelector('.iconoMenu').style.display='initial';
         document.querySelector('.marcoVideo').style.opacity=0;
         document.querySelector('.contenidoVideo').pause();
         document.querySelector('.contenedorVideosWork').classList.remove("aperturaComerciales");
     };
-
-    
-    /* const retornaVideoComercial = (url) => {
-
-        return (
-            <video className="contenidoVideo" controls>
-                <source type="video/mp4" src={url}></source>
-            </video>
-        )
-    } */
 
     return (
         <div className="work">

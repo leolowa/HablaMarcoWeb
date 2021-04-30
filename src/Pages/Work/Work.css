@@ -33,15 +33,16 @@
   outline: none;
   position: absolute;
   top: 5%;
-  left: 5%;
+  right: 5%;
 }
 .iconoCerrarComercialesWork{
   color: white;
   opacity: .5;
-  font-size: 50px;
+  font-size: 70px;
+  transition: all .5s ease-in-out;
 }
 .iconoCerrarComercialesWork:hover{
-  transition: opacity .3 ease;
+  transition: all .5s ease-in-out;
   opacity: 1;
 }
 .contenidoVideo{
