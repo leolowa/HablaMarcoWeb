@@ -16,7 +16,6 @@ const Home = () => {
           </div>
           
           <div className="contenedor-Scroll">
-            <p className="texto-Scroll">Scroll</p>
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
           </div>
             
