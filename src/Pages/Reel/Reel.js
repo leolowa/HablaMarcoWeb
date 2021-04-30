@@ -12,16 +12,10 @@ const Reel = () => {
     const [isPlayReel, setIsPlayReel] = useState(false);
     const [isReelLatam, setIsReelLatam] = useState(false);
     const [isReelArg, setIsReelArg] = useState(false);
-
-    /* let audioLatam = new Audio(reelLatam);
-    let audioArg = new Audio(reelArg); */
-
+    
     const reproducirReel =(idReel)=>{
-
         const element= document.querySelector('#playReel')
         const elementoVideo = document.querySelector('#videoReel');
-
-        
         if(idReel==="Latam"){   
             const elementoAudio=document.querySelector('#audioLatam');
 
@@ -37,8 +31,8 @@ const Reel = () => {
                 setIsReelLatam(false);
                 elementoAudio.pause()
                 element.classList.remove("playReel");
-                elementoVideo.pause();
                 elementoVideo.style.opacity="0";
+                elementoVideo.pause();
                 setIsPlayReel(false);
             }
         }
@@ -56,9 +50,10 @@ const Reel = () => {
             }
             else{
                 setIsReelArg(false)
-                element.classList.remove("playReel");
-                elementoVideo.pause();
                 elementoAudio.pause()
+                element.classList.remove("playReel");
+                elementoVideo.style.opacity="0";
+                elementoVideo.pause();
                 setIsPlayReel(false);
             }
         }
