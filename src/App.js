@@ -39,9 +39,6 @@ export const App = () => {
             setIconoMenu(false);
     };
 
-    
-    
-
     return (
         <div id="App" onWheel={(e)=>eventoScroll(e)} >
            
