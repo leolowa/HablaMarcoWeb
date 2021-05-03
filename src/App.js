@@ -11,17 +11,11 @@ import iconoMenuBlanco from './Static/MANCHA-MENU-BLANCA.gif'
 
 
 export const App = () => {
-
-    
     const [iconoMenu, setIconoMenu] = useState(false);
 
     const abrirMenu = ()=>{
         const menu = document.querySelector(".Menu");
         menu.style.width="100%";
-    };
-
-    const scrollMenu = (posicion)=>{
-        window.scrollTo(0,posicion);
     };
 
     const tipoIconoMenu =(tipoIcono)=>{
@@ -31,35 +25,27 @@ export const App = () => {
         setIconoMenu(false);
     };
 
-
-    const eventoScroll =()=>{
-        if(window.scrollY>3600)
-            setIconoMenu(true);
-        else
-            setIconoMenu(false);
-    };
-
     return (
-        <div id="App" onWheel={(e)=>eventoScroll(e)} >
+        <div id="App">
            
             <div onClick={()=>abrirMenu()} className="contenedorIconoMenu">
                 <img className="iconoMenu" alt="" src={iconoMenu?iconoMenuBlanco:iconoMenuNegro}></img>
             </div>
-            <Menu tipoIconoMenu={tipoIconoMenu} scrollMenu={scrollMenu}/> 
+            <Menu tipoIconoMenu={tipoIconoMenu}/> 
 
-            <section> <Home/> </section>
+            <section id="home"> <Home/> </section>
             <section className="slideBlanco"></section>
 
-            <section id="Work"> <Work/> </section>
+            <section id="work"> <Work/> </section>
             <section className="slideBlanco"></section>
 
-            <section> <Reel/> </section>
+            <section id="reel"> <Reel/> </section>
             <section></section>
             
-            <section> <About/> </section>
+            <section id="about"> <About/> </section>
             <section style={{background:"black"}}></section>
 
-            <section> <Contacto/> </section>
+            <section id="contacto"> <Contacto/> </section>
 
         </div>
     )

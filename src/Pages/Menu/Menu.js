@@ -3,17 +3,19 @@ import './Menu.css';
 import flechaMenu from '../../Static/flechaMenu.svg';
 
 
-const Menu = ({scrollMenu, tipoIconoMenu}) => {
+const Menu = ({tipoIconoMenu}) => {
 
-    function redireccionar(pos){
+    function redireccionar(id){
         const menu = document.querySelector('.Menu');
         menu.style.width="0vw";
-        scrollMenu(pos)
-        if(pos>=3750){
-            tipoIconoMenu("blanco");
+        const redireccionar = document.querySelector(`#${id}`);
+        redireccionar.scrollIntoView();
+        console.log(redireccionar.id)
+        if((redireccionar.id==='about') || (redireccionar.id==='about')){
+            tipoIconoMenu('blanco');
         }
         else{
-            tipoIconoMenu("menu Negro");
+            tipoIconoMenu('negro')
         }
    }
 
@@ -30,23 +32,23 @@ const Menu = ({scrollMenu, tipoIconoMenu}) => {
 
                     <div className="bodyMenu">
 
-                        <div onClick={()=>redireccionar(0)} >
+                        <div onClick={()=>redireccionar("home")} >
                             <h1 className="TextoMenu subrayado">HOME</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(1258)}> 
+                        <div onClick={()=>redireccionar("work")}> 
                             <h1 className="TextoMenu subrayado">WORK</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(2516)} > 
+                        <div onClick={()=>redireccionar("reel")} > 
                             <h1 className="TextoMenu subrayado">REEL</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(3774)} > 
+                        <div onClick={()=>redireccionar("about")} > 
                             <h1 className="TextoMenu subrayado">MARCO</h1>
                         </div>
 
-                        <div onClick={()=>redireccionar(5032)} > 
+                        <div onClick={()=>redireccionar("contacto")} > 
                             <h1 className="TextoMenu subrayado">CONTACTO</h1>
                         </div>
                         
