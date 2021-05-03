@@ -211,8 +211,8 @@
     left:51%;
   }
   .contenedor-Links {
-    top: 28%;
-    left: calc(100vw -  115%);
+    top: 32%;
+    left: calc(100vw -  112%);
   }
 }
 @media screen and (max-width:1366px) {
