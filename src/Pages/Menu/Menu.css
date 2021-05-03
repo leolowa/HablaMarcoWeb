@@ -31,7 +31,7 @@
 }
 
 .TextoMenu {
-  font: normal normal 86px IntegralCF-Bold;
+  font: normal normal 6.3vw IntegralCF-Bold;
   line-height: 100px;
   margin-right: 30px;
   cursor: pointer;
@@ -53,4 +53,17 @@
 
 .subrayado:hover::after {
   width: 100%;
+}
+
+@media screen and (max-width:1920px) {
+  .TextoMenu {
+    font-size: 8vw;
+    line-height: 180px;
+  }
+}
+@media screen and (max-width:1366px) {
+  .TextoMenu {
+    font-size: 6.3vw;
+    line-height: 100px;
+  }
 }
