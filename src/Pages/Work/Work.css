@@ -207,12 +207,12 @@
 }
 @media screen and (max-width:1920px) {
   .Texto-Work{
-    top:20%;
+    top:30%;
     left:51%;
   }
   .contenedor-Links {
-    top: 22%;
-    left: calc(100vw -  112%);
+    top: 28%;
+    left: calc(100vw -  115%);
   }
 }
 @media screen and (max-width:1366px) {
