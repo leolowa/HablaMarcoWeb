@@ -20,7 +20,6 @@
   align-items: center;
   cursor: pointer;
 }
-
 .contenedor-TextoMarco {
   overflow: hidden;
   display: flex;
@@ -30,16 +29,13 @@
   bottom: -10px;
   left: 0;
 }
-
 .TextoMarco {
   font: 14.641288433382138vw IntegralCF-Bold;
   margin-right: 30px;
 }
 .contenedor-Texto {
-  position: sticky;
+  position: absolute;
   margin-left: 43%;
-  /* top: 38%;
-  left: 43%; */
 }
 .TextoLocutor {
   position: relative;
@@ -53,6 +49,15 @@
 .Texto-Info {
   font: 1.29vw Avenir-Book;
   line-height: 23px;
+}
+#español{
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+#ingles{
+  opacity: 0;
+  transition-delay: 2s;
+  transition: all 1s ease-in-out;
 }
 
 @media screen and (max-width:1920px) {

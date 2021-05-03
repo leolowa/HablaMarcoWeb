@@ -4,12 +4,31 @@ import './About.css';
 
 const About = () => {
     const [isVersion, setIsVersion] = useState(false);
-
+    const transicionDeTexto = () =>{
+        const ingles = document.querySelectorAll('#ingles');
+        const español = document.querySelectorAll('#español');
+        
+        if(isVersion!==true){
+            setIsVersion(true);   
+            español[0].style.opacity=0;
+            español[1].style.opacity=0;
+            ingles[0].style.opacity=1;
+            ingles[1].style.opacity=1;
+            ingles[0].style.display="inherit";
+            ingles[1].style.display="inherit";
+        }else{
+            setIsVersion(false)
+            ingles[0].style.opacity=0;
+            ingles[1].style.opacity=0;
+            español[0].style.opacity=1;
+            español[1].style.opacity=1;
+        }
+    }
     return (
         <React.Fragment>
             <div className="body-About">
 
-                <div onClick={()=>setIsVersion(!isVersion)} className="contenedor-LinkBio ">
+                <div onClick={()=>transicionDeTexto()} className="contenedor-LinkBio ">
                     {
                         isVersion
                         ?
@@ -19,11 +38,8 @@ const About = () => {
                     }
                     <ButtonImg tipoBoton={"imagenAbout"}/>
                 </div>
-                {
-                isVersion
-                ?
                 <React.Fragment>
-                    <div className="contenedor-Texto">
+                    <div id='ingles' className="contenedor-Texto">
                         <h5 className="color-Texto Text-Voice">VOICE TALENT</h5>
                         <h1 className="color-Texto TextoLocutor">ANNONCER</h1>
                         <h5 className="color-Texto Texto-Info">Neutral and regional spanish</h5>
@@ -32,7 +48,7 @@ const About = () => {
             
                     <div className="contenedor-TextoMarco color-Texto">
                         <h1 className="TextoMarco color-Texto">MARCO</h1>
-                        <h5 className="color-Texto Texto-Info">
+                        <h5 id='ingles' className="color-Texto Texto-Info">
                             Original voices for animated characters<br/>
                             Voices overs for marketing<br/>
                             Voices for in-company material.<br/>
@@ -43,18 +59,16 @@ const About = () => {
                         </h5>
                     </div>
                 </React.Fragment>
-                :
                 <React.Fragment>
-                    <div className="contenedor-Texto">
+                    <div  id='español' className="contenedor-Texto">
                         <h5 className="color-Texto Text-Voice">VOICE TALENT</h5>
                         <h1 className="color-Texto TextoLocutor">LOCUTOR</h1>
                         <h5 className="color-Texto Texto-Info">Español neutro y Rioplatense</h5>
                         <h5 className="color-Texto Texto-Info">Con formación como actor y músico, y en constante búsqueda, me dedico desde hace 10 años a ponerle la voz a todo tipo de proyectos:</h5>
                     </div>
-                
                     <div className="contenedor-TextoMarco">
                         <h1 className="TextoMarco color-Texto">MARCO</h1>
-                        <h5 className="color-Texto Texto-Info">
+                        <h5 id='español' className="color-Texto Texto-Info">
                             Locuciones Comerciales.<br/>
                             Voces originales para personajes animados.<br/>
                             Voces para contenidos institucionales.<br/>
@@ -65,7 +79,6 @@ const About = () => {
                         </h5>
                     </div>
                     </React.Fragment>
-                }
             </div>
             
         </React.Fragment>
