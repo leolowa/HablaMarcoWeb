@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Audible from '../../Static/Circulo-Links/AUDIBLE.svg';
 import Avene from '../../Static/Circulo-Links/AVENE.svg';
 import CocaCola from '../../Static/Circulo-Links/COCACOLA.svg';
@@ -11,11 +11,23 @@ import Honda from '../../Static/Circulo-Links/HONDA.svg';
 import Pantene from '../../Static/Circulo-Links/PANTENE.svg';
 import manchaWork from '../../Static/Mancha-home1.gif';
 import CocaColaVideo from '../../Static/Video/CocaCola.mp4';
+import SpriteVideo from '../../Static/Video/Sprite.mp4';
+import FantaVideo from '../../Static/Video/FantaVideo.mp4';
+import AudibleVideo from '../../Static/Video/AudibleVideoSpanish.mp4';
+import LaysVideo from '../../Static/Video/LaysVideo.mp4';
+import PanteneVideo from '../../Static/Video/PanteneVideo.mp4';
+import HondaVideo from '../../Static/Video/HondaVideo.mp4';
+import DisneyVideo from '../../Static/Video/DisneyVideo.mp4';
+import LadysoftVideo from '../../Static/Video/LadysoftVideo.mp4';
+import AveneVideo from '../../Static/Video/AveneVideo.mp4';
+
 import './Work.css';
 
 const Work = () => {
-    
-    function mostrarVideo(){
+
+    const [videoSeleccionado, setVideoSeleccionado] = useState();
+    function mostrarVideo(url){
+        setVideoSeleccionado(url);
         setTimeout(()=>{
             document.querySelector('.iconoMenu').style.display='none';
         },790);    
@@ -36,8 +48,8 @@ const Work = () => {
             <div className="contenedorVideosWork">
 
                 <div className="marcoVideo">
-                    <video className="contenidoVideo" controls>
-                        <source type="video/mp4" src={CocaColaVideo}></source>
+                    <video key={videoSeleccionado} className="contenidoVideo" controls>
+                        <source type="video/mp4" src={videoSeleccionado}></source>
                     </video>
                     
                 </div>
@@ -60,16 +72,16 @@ const Work = () => {
                 <span className="Texto-Work">WORK</span>
 
                 <div className="contenedor-Links rotar">
-                    <div><img id="audible" onClick={(e)=>mostrarVideo(e.target.id)} className="audible cursorLink" alt="#" src={Audible}></img></div>
-                    <div><img id="avene" onClick={(e)=>mostrarVideo(e.target.id)} className="avene cursorLink" alt="#" src={Avene}></img></div>
-                    <div><img id="cocacola" onClick={(e)=>mostrarVideo(e.target.id)} className="coca cursorLink" alt="#" src={CocaCola}></img></div>
-                    <div><img id="disney" onClick={(e)=>mostrarVideo(e.target.id)} className="disney cursorLink" alt="#" src={Disney}></img></div>
-                    <div><img id="fanta" onClick={(e)=>mostrarVideo(e.target.id)} className="fanta cursorLink" alt="#" src={Fanta}></img></div>
-                    <div><img id="ladysoft" onClick={(e)=>mostrarVideo(e.target.id)} className="ladysoft cursorLink" alt="#" src={Ladysoft}></img></div>
-                    <div><img id="lays" onClick={(e)=>mostrarVideo(e.target.id)} className="lays cursorLink" alt="#" src={Lays}></img></div>
-                    <div><img id="sprite" onClick={(e)=>mostrarVideo(e.target.id)} className="sprite cursorLink" alt="#" src={Sprite}></img></div>
-                    <div><img id="honda" onClick={()=>mostrarVideo()} className="honda cursorLink" alt="#" src={Honda}></img></div>
-                    <div><img id="pantene" onClick={(e)=>mostrarVideo(e.target.id)} className="pantene cursorLink" alt="#" src={Pantene}></img></div>
+                    <div><img id="audible" onClick={()=>mostrarVideo(AudibleVideo)} className="audible cursorLink" alt="#" src={Audible}></img></div>
+                    <div><img id="avene" onClick={()=>mostrarVideo(AveneVideo)} className="avene cursorLink" alt="#" src={Avene}></img></div>
+                    <div><img id="cocacola" onClick={()=>mostrarVideo(CocaColaVideo)} className="coca cursorLink" alt="#" src={CocaCola}></img></div>
+                    <div><img id="disney" onClick={()=>mostrarVideo(DisneyVideo)} className="disney cursorLink" alt="#" src={Disney}></img></div>
+                    <div><img id="fanta" onClick={()=>mostrarVideo(FantaVideo)} className="fanta cursorLink" alt="#" src={Fanta}></img></div>
+                    <div><img id="ladysoft" onClick={()=>mostrarVideo(LadysoftVideo)} className="ladysoft cursorLink" alt="#" src={Ladysoft}></img></div>
+                    <div><img id="lays" onClick={()=>mostrarVideo(LaysVideo)} className="lays cursorLink" alt="#" src={Lays}></img></div>
+                    <div><img id="sprite" onClick={()=>mostrarVideo(SpriteVideo)} className="sprite cursorLink" alt="#" src={Sprite}></img></div>
+                    <div><img id="honda" onClick={()=>mostrarVideo(HondaVideo)} className="honda cursorLink" alt="#" src={Honda}></img></div>
+                    <div><img id="pantene" onClick={()=>mostrarVideo(PanteneVideo)} className="pantene cursorLink" alt="#" src={Pantene}></img></div>
                 </div>
             </div>
         </div>
