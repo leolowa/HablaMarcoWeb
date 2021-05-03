@@ -9,7 +9,7 @@
   color: white;
 }
 .textoVersion{
-  font: normal normal 1.47vw Avenir-Black;
+  font: 1.47vw Avenir-Black;
 }
 
 .contenedor-LinkBio {
@@ -75,8 +75,11 @@
   }
 }
 @media screen and (max-width:1366px) {
+  .contenedor-TextoMarco{
+    bottom: -60px;
+  }
   .contenedor-Texto{
-    top: 20%;
+    top: 27%;
     margin-left: 43%;
   }
   .Text-Voice{
@@ -85,10 +88,13 @@
   }
 }
 @media screen and (max-width:1024px) {
+  .textoVersion{
+    font-size: 2vw;
+  }
   .contenedor-Texto{
     max-width: 340px;
-    top: 21%;
-    margin-left: 34%;
+    top: 29%;
+    margin-left: 44%;
   }
   .Text-Voice{
     right: -180px;
@@ -102,15 +108,31 @@
   }
 }
 @media screen and (max-width:834px) {
+  .textoVersion{
+    font-size: 2.3vw;
+  }
   .contenedor-Texto{
-    top:28%;
-    margin-left: 38%;
+    max-width: 320px;
+    top:32%;
+    margin-left: 45%;
   }
   .Texto-Info {
-    font-size: 1.7vw;
+    font-size: 1.85vw;
+  }
+  .Text-Voice{
+    right: -118px;
   }
 }
 @media screen and (max-width:768px) {
+  
+  .contenedor-Texto{
+    max-width: 280px;
+    top:34%;
+    margin-left: 41%;
+  }
+  .Texto-Info {
+    font-size: 2vw;
+  }
   .Text-Voice{
     right: -105px;
   }
