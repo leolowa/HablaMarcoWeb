@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Home from './Pages/Home/Home';
 import Menu from './Pages/Menu/Menu';
@@ -12,18 +12,26 @@ import iconoMenuBlanco from './Static/MANCHA-MENU-BLANCA.gif'
 
 export const App = () => {
     const [iconoMenu, setIconoMenu] = useState(false);
-
     const abrirMenu = ()=>{
         const menu = document.querySelector(".Menu");
         menu.style.width="100%";
     };
-
     const tipoIconoMenu =(tipoIcono)=>{
         if(tipoIcono==="blanco")
         setIconoMenu(true);
         else
         setIconoMenu(false);
     };
+    
+    useEffect(() => { 
+        const tag = document.querySelectorAll("section");
+        const callback = (entries) =>{
+            console.log(entries)
+        }
+        const observer = new IntersectionObserver(callback);
+        tag.forEach(elemento => observer.observe(elemento))
+    })
+    
 
     return (
         <div id="App">
