@@ -1,6 +1,7 @@
 .work{
   z-index: 1;
   position: relative;
+  overflow: hidden;
 }
 .contenedorVideosWork{
   position: absolute;
