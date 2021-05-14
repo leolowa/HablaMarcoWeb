@@ -24,15 +24,27 @@ export const App = () => {
     };
     
     useEffect(() => { 
-        const tag = document.querySelectorAll("section");
+        const tag = document.querySelectorAll("#iconoBlanco");
+
         const callback = (entries) =>{
-            console.log(entries)
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    tipoIconoMenu("blanco")
+                }
+                else{
+                    tipoIconoMenu("negro")
+                }
+            });  
         }
-        const observer = new IntersectionObserver(callback);
+        const options = {
+            threshold: 0.25
+        }
+        const observer = new IntersectionObserver(callback, options);
         tag.forEach(elemento => observer.observe(elemento))
+        //observer.observe(tag);
+        
     })
     
-
     return (
         <div id="App">
            
@@ -50,10 +62,12 @@ export const App = () => {
             <section id="reel"> <Reel/> </section>
             <section></section>
             
-            <section id="about"> <About/> </section>
-            <section style={{background:"black"}}></section>
-
-            <section id="contacto"> <Contacto/> </section>
+            <div id="iconoBlanco">
+                <section> <About/> </section>
+                <section style={{background:"black"}}></section>
+                <section> <Contacto/> </section>
+            </div>
+            
 
         </div>
     )
