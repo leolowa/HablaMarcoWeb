@@ -10,7 +10,6 @@ const Menu = ({tipoIconoMenu}) => {
         menu.style.width="0vw";
         const redireccionar = document.querySelector(`#${id}`);
         redireccionar.scrollIntoView();
-        console.log(redireccionar.id)
         if((redireccionar.id==='about') || (redireccionar.id==='contacto')){
             tipoIconoMenu('blanco');
         }
