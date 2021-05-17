@@ -28,15 +28,26 @@
   transition: opacity 1s ease-in-out;
   transition-delay: .5s;
 }
-.contenedorCerrarComercialesWork{
+.botonAccionesVideosComerciales{
   background: transparent;
   border: none;
   outline: none;
+}
+.posicionIconoCerrar{
   position: absolute;
   top: 5%;
   right: 5%;
 }
+.posicionSiguienteLeft{
+  position: absolute;
+  left: 5%;
+}
+.posicionSiguienteRight{
+  position: absolute;
+  right: 5%;
+}
 .iconoCerrarComercialesWork{
+  cursor: pointer;
   color: white;
   opacity: .5;
   font-size: 70px;

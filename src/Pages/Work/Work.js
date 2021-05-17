@@ -20,20 +20,22 @@ import HondaVideo from '../../Static/Video/HondaVideo.mp4';
 import DisneyVideo from '../../Static/Video/DisneyVideo.mp4';
 import LadysoftVideo from '../../Static/Video/LadysoftVideo.mp4';
 import AveneVideo from '../../Static/Video/AveneVideo.mp4';
+import arregloUrl from'./enlacesWork';
 
 import './Work.css';
 
 const Work = () => {
+    console.log(arregloUrl)
+    const [videoSeleccionado, setVideoSeleccionado] = useState({url:"",index:undefined});
 
-    const [videoSeleccionado, setVideoSeleccionado] = useState();
     function mostrarVideo(url){
-        setVideoSeleccionado(url);
         setTimeout(()=>{
             document.querySelector('.iconoMenu').style.display='none';
         },790);    
         document.querySelector('.contenedorVideosWork').classList.add("aperturaComerciales");
         document.querySelector('.contenidoVideo').volume = 0.1;
         document.querySelector('.marcoVideo').style.opacity =1;
+        cargarVideo(url);
     };
 
     const cerrarComerciales = () =>{
@@ -42,24 +44,105 @@ const Work = () => {
         document.querySelector('.contenidoVideo').pause();
         document.querySelector('.contenedorVideosWork').classList.remove("aperturaComerciales");
     };
+    const cargarVideo = (url) =>{
+        setVideoSeleccionado({...videoSeleccionado,url:url});
+    }
 
+    const proximo = (proximo) =>{
+        if(proximo !== -1){
+           /* DERECHA */
+           if(videoSeleccionado.index === undefined){
+            let proxVideo = {};
+            proxVideo.url = arregloUrl[0];
+            proxVideo.index=0;
+            setVideoSeleccionado(proxVideo)
+           }
+           else{
+               if(videoSeleccionado.index < arregloUrl.length-1){
+                console.log("existe indice")
+                let proxVideo = {};
+                proxVideo.url = arregloUrl[videoSeleccionado.index+1];
+                proxVideo.index=videoSeleccionado.index+1;
+                setVideoSeleccionado(proxVideo);
+               }
+               else{
+                console.log("superó arreglo")
+                let proxVideo = {};
+                proxVideo.url = arregloUrl[0];
+                proxVideo.index=0;
+                setVideoSeleccionado(proxVideo)
+               }
+           }
+        }
+        else{
+            /* IZQUIERDA */
+            if(videoSeleccionado.index === undefined){
+                let proxVideo = {};
+                proxVideo.url = arregloUrl[0];
+                proxVideo.index=0;
+                setVideoSeleccionado(proxVideo)
+               }
+               else{
+                   if(videoSeleccionado.index < arregloUrl.length-1){
+                    console.log("existe indice")
+                    let proxVideo = {};
+                    proxVideo.url = arregloUrl[videoSeleccionado.index+1];
+                    proxVideo.index=videoSeleccionado.index+1;
+                    setVideoSeleccionado(proxVideo);
+                   }
+                   else{
+                    console.log("superó arreglo")
+                    let proxVideo = {};
+                    proxVideo.url = arregloUrl[0];
+                    proxVideo.index=0;
+                    setVideoSeleccionado(proxVideo)
+                   }
+               }
+
+        }
+        
+    }
+
+    /* console.log(videoSeleccionado)
+        if(videoSeleccionado.index === undefined){
+            console.log("no existe indice");
+            console.log(videoSeleccionado);
+            if(proximo !== -1){
+                console.log("derecha")
+                let proxVideo = {};
+                proxVideo.url = arregloUrl[0];
+                proxVideo.index=0;
+                setVideoSeleccionado(proxVideo)
+            }
+            else{
+
+            }
+
+        }
+        else{
+            console.log("existe index")
+        } */
     return (
         <div className="work">
             <div className="contenedorVideosWork">
-
                 <div className="marcoVideo">
-                    <video key={videoSeleccionado} className="contenidoVideo" controls>
-                        <source type="video/mp4" src={videoSeleccionado}></source>
+                    <video key={videoSeleccionado.url} className="contenidoVideo" controls>
+                        <source type="video/mp4" src={videoSeleccionado.url}></source>
                     </video>
                     
                 </div>
-                <button onClick={()=>cerrarComerciales()} className="contenedorCerrarComercialesWork">
+                <button onClick={()=>cerrarComerciales()} className="botonAccionesVideosComerciales posicionIconoCerrar">
                     <i className="bi bi-x iconoCerrarComercialesWork"></i>
+                </button>
+                <button onClick={()=>proximo(-1)} className="botonAccionesVideosComerciales posicionSiguienteLeft">
+                    <i className="bi bi-arrow-left-short iconoCerrarComercialesWork"></i>
+                </button>
+                <button onClick={()=>proximo(1)} className="botonAccionesVideosComerciales posicionSiguienteRight">
+                    <i className="bi bi-arrow-right-short iconoCerrarComercialesWork"></i>
                 </button>
             </div>
             
             <div className="body-Work">
-            
                 <div className="contenedorVerMas">
                     <div className="botonMas">
                         <a rel = "noreferrer" href="https://www.youtube.com/channel/UCq9CudVe_LrZR48Ls2wb8LA/videos" target="_blank" className="botonHome">
