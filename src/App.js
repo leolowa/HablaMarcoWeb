@@ -41,7 +41,6 @@ export const App = () => {
         }
         const observer = new IntersectionObserver(callback, options);
         tag.forEach(elemento => observer.observe(elemento))
-        //observer.observe(tag);
         
     })
     
@@ -63,9 +62,9 @@ export const App = () => {
             <section></section>
             
             <div id="iconoBlanco">
-                <section> <About/> </section>
+                <section id="about"> <About/> </section>
                 <section style={{background:"black"}}></section>
-                <section> <Contacto/> </section>
+                <section id="contacto"> <Contacto/> </section>
             </div>
             
 
