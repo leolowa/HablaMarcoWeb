@@ -117,3 +117,12 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width:480px) {
+  .contenedor-Scroll{
+    left: 10%;
+  }
+  .Marca{
+    width: 80%;
+  }
+}
