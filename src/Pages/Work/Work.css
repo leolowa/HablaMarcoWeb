@@ -28,6 +28,7 @@
   transition: opacity 1s ease-in-out;
   transition-delay: .5s;
 }
+
 .botonAccionesVideosComerciales{
   background: transparent;
   border: none;
@@ -110,8 +111,7 @@
   width: 355px;
   height: 355px;
   opacity: 1;
-  border-radius: 50%; /* 
-  transform: translate(-50%, -50%); */
+  border-radius: 50%; 
 }
 
 
@@ -245,5 +245,42 @@
   .contenedor-Links {
     top: 19%;
     left: calc(100vw -  128.5%);
+  }
+}
+@media screen and (max-width:480px) {
+  .Texto-Work{
+    position: absolute;
+    top:42%;
+    font-size: 30.641288433382138vw;
+    transform: rotate(-90deg);
+    left:35%;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .contenedor-Links {
+    top: 30%;
+    left: calc(100vw -  92.5%);
+  }
+  img{
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .iconoCerrarComercialesWork{
+    font-size: 40px;
+    transition: all .5s ease-in-out;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .contenedorVideosWork{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    opacity: 1;                 
+  }
+  .marcoVideo{
+    margin-bottom: 10%;
+    width: 90%;
+    height: 50%;
   }
 }
