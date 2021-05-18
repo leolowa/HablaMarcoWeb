@@ -67,3 +67,27 @@
     line-height: 100px;
   }
 }
+@media screen and (max-width:480px){
+
+  .iconoCerrar {
+    margin-left: 40px;
+    height: 4%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .iconoCerrar:hover{
+    height: 6%;
+  }
+  .bodyMenu{
+    padding-top:2vh;
+  }
+  .TextoMenu {
+    font-size: 12vw; 
+    line-height:60px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    user-select: none;
+  }
+  h1{
+    -webkit-tap-highlight-color: transparent;
+  }
+}
