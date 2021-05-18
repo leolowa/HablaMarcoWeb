@@ -91,8 +91,8 @@ const Reel = () => {
                     <BotonesReel isPaused={isReelLatam} onPlay={()=>reproducirReel("Latam")} TextoReel="REEL LATAM" tipoReel="ReelLatam"/>
                     <BotonesReel isPaused={isReelArg}  onPlay={()=>reproducirReel("Arg")} TextoReel="REEL ARG" tipoReel="ReelArg"/>
                 </div>
-                <audio onPause={()=>finalizacionAudio("Latam")} id="audioLatam" src={`${reelLatam}#t=0,29`}></audio>
-                <audio onPause={()=>finalizacionAudio("Arg")} id="audioArg" src={`${reelArg}#t=0,29`}></audio>
+                <audio onPause={()=>finalizacionAudio("Latam")} id="audioLatam" src={`${reelLatam}#t=0,28`}></audio>
+                <audio onPause={()=>finalizacionAudio("Arg")} id="audioArg" src={`${reelArg}#t=0,28`}></audio>
             </div>
         </React.Fragment>
     )

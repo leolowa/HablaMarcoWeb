@@ -29,8 +29,19 @@
 
 .contenedorBotonesReel{
     position: absolute;
-    bottom: 41px;
-    right: 65px;
+    bottom: 40px;
+    right: 0;
     display: flex;
-    width: auto;
+    justify-content: flex-end;
+    width: 100%;
+}
+@media screen and (max-width:480px) {
+    .textoReel{
+        margin-left: 2%;
+        font: 28vw IntegralCF-ExtraBold;
+    }
+    .contenedorBotonesReel{
+        right: -2%;
+        justify-content: center;
+    }
 }
