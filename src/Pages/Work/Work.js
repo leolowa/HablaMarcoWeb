@@ -98,30 +98,8 @@ const Work = () => {
                     setVideoSeleccionado(proxVideo)
                    }
                }
-
-        }
-        
+        }   
     }
-
-    /* console.log(videoSeleccionado)
-        if(videoSeleccionado.index === undefined){
-            console.log("no existe indice");
-            console.log(videoSeleccionado);
-            if(proximo !== -1){
-                console.log("derecha")
-                let proxVideo = {};
-                proxVideo.url = arregloUrl[0];
-                proxVideo.index=0;
-                setVideoSeleccionado(proxVideo)
-            }
-            else{
-
-            }
-
-        }
-        else{
-            console.log("existe index")
-        } */
     return (
         <div className="work">
             <div className="contenedorVideosWork">
