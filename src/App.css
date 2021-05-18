@@ -20,6 +20,7 @@ section {
   cursor: pointer;
 }
 .iconoMenu{
+  transition: all .5s ease-in-out;
   width: 90px;
   height: 90px;
 }
@@ -28,4 +29,18 @@ section {
 }
 .slideBlanco{
   height: 52vh;
+}
+@media screen and (max-width:480px) {
+  .contenedorIconoMenu{
+    -webkit-tap-highlight-color: transparent;
+    right: 20%;
+  }
+  .iconoMenu{
+    width: 70px;
+    height: 70px;
+  }
+  .contenedorIconoMenu:hover .iconoMenu{
+    width: 80px;
+    height: 80px;
+  }
 }
