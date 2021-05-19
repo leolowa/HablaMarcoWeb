@@ -52,12 +52,6 @@
   font:  1.32vw/1.8vw Avenir-Medium;
   color: white;
 }
-
-.contenedor-VoiceOvers {
-  position: absolute;
-  bottom: 50px;
-  left: 350px;
-}
 .contenedor-TextoTecnologia{
   max-height: 0;
   transition: all 1s ease-in-out;
@@ -127,5 +121,38 @@ video{
   }
   .Texto-InfoContacto{
     font-size: 3vw;
+  }
+}
+@media screen and (max-width:480px) {
+  .contenedor-TextoContacto {
+    left: 10%;
+    top: 50%;
+    transform: rotate(-90deg);
+  }
+  .TextoContacto {
+    font: normal normal 25vw IntegralCF-Bold;
+  }
+  .contenedor-ImgVoiceOvers{
+    bottom: 20%;
+    left: 10%;
+  }
+  .imagenVoiceOvers {
+    width: 90px;
+  }
+  .contenedor-InfoContacto {
+    top: 30%;
+    left: 15%;
+    flex-direction:column;
+    width: 50%;
+    height: 20%;
+  }
+  .Texto-InfoContacto {
+    font: normal normal 6.5vw Avenir-Book;
+  }
+  .Texto-Equipamiento {
+    font:4vw Avenir-Black;
+  }
+  .Texto-Tecnologia{
+    font:  4vw Avenir-Medium;
   }
 }

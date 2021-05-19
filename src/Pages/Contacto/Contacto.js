@@ -56,7 +56,7 @@ const Contacto = () => {
                             </p>
                         </div>
                     </div>
-
+                    contenedor-VoiceOvers
                     <div className="contenedor-ImgVoiceOvers">
                             <img alt="" className="imagenVoiceOvers" src={VoiceOvers}></img>
                     </div>
