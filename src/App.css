@@ -33,6 +33,7 @@ section {
 @media screen and (max-width:480px) {
   .contenedorIconoMenu{
     -webkit-tap-highlight-color: transparent;
+    top:18px;
     right: 20%;
   }
   .iconoMenu{
