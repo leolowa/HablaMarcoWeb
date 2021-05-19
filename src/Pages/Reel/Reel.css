@@ -41,6 +41,7 @@
         font: 28vw IntegralCF-ExtraBold;
     }
     .contenedorBotonesReel{
+        bottom: 60px;
         right: -2%;
         justify-content: center;
     }
