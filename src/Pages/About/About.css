@@ -1,8 +1,8 @@
 .body-About {
   width: 100vw;
-  height: 100vh;
+  height: 100vh !important;
   background: black;
-  position: absolute;
+  position: relative;
   overflow: hidden;
 }
 .color-Texto {
@@ -29,25 +29,39 @@
   bottom: -10px;
   left: 0;
 }
+.contenedor-TextoInfo{
+  position: absolute;
+  width: 25%;
+  bottom: -1%;
+  right: 8%;
+  display: flex;
+  height: 33.7%;
+}
 .TextoMarco {
   font: 14.641288433382138vw IntegralCF-Bold;
   margin-right: 30px;
 }
 .contenedor-Texto {
+  max-width:30%;
+  top: 41%;
+  margin-left: 45%;
   position: absolute;
-  margin-left: 43%;
 }
 .TextoLocutor {
   position: relative;
   font: normal normal 5.20vw IntegralCF-Bold;
 }
 .Text-Voice {
+  overflow: hidden;
+  font: 1.6vw Avenir-Book;
+  top: 40px;
+  width: calc(100% - 2vw);
   position: relative;
-  width: auto;
-  bottom: -18px;
+  display: flex;
+  justify-content: flex-end;
 }
 .Texto-Info {
-  font: 1.29vw Avenir-Book;
+  font: 1.2vw Avenir-Book;
   line-height: 23px;
 }
 #español{
@@ -62,78 +76,128 @@
 
 @media screen and (max-width:1920px) {
   .contenedor-Texto{
-    max-width:420px;
-    top: 39%;
-    margin-left: 45%;
+    top: 36%;
   }
-  .contenedor-TextoMarco{
-    width: 89%;
+  .contenedor-TextoInfo{
+    bottom: 3%;
   }
   .Text-Voice{
-    right: -310px;
-    font: 2em Avenir-Book;
+    top:30px;
+  }
+}
+@media screen and (max-width:1680px) {
+  .contenedor-Texto{
+    top: 41%;
+  }
+}
+@media screen and (max-width:1536px) {
+  .contenedor-Texto{
+    top: 33%;
   }
 }
 @media screen and (max-width:1366px) {
-  .contenedor-TextoMarco{
-    bottom: -60px;
-  }
   .contenedor-Texto{
-    top: 27%;
-    margin-left: 43%;
+    top: 25%;
+  }
+  .contenedor-TextoInfo{
+    bottom: 9%;
   }
   .Text-Voice{
-    right: -230px;
-    font: 1.4em Avenir-Book;
+    top:26px;
   }
 }
-@media screen and (max-width:1024px) {
-  .textoVersion{
-    font-size: 2vw;
-  }
+@media screen and (max-width:1024px) and (orientation: landscape) {
   .contenedor-Texto{
-    max-width: 340px;
-    top: 29%;
-    margin-left: 44%;
+    max-width: 36%;
+    top: 37%;
+    margin-left: 40%;
   }
-  .Text-Voice{
-    right: -180px;
-    font: 1em Avenir-Book;
+  .contenedor-TextoInfo{
+    bottom: 9%;
   }
   .Texto-Info {
-    font: 1.6vw Avenir-Book;
+    font: 1.5vw Avenir-Book;
   }
-  .contenedor-TextoMarco{
-    width: 95% !important;
+  .Text-Voice{
+    top:20px;
   }
 }
 @media screen and (max-width:834px) {
   .textoVersion{
-    font-size: 2.3vw;
+    font: 3vw Avenir-Black;
   }
   .contenedor-Texto{
-    max-width: 320px;
-    top:32%;
-    margin-left: 45%;
+    max-width: 60%;
+    top:45%;
+    margin-left:22%;
   }
   .Texto-Info {
-    font-size: 1.85vw;
+    font-size: 2.4vw;
   }
   .Text-Voice{
-    right: -118px;
+    font: 2vw Avenir-Book;
+    width: calc(100% - 29vw);
+    top:17px;
+  }
+  .TextoLocutor {
+    font: normal normal 5.8vw IntegralCF-Bold;
+  }
+  .contenedor-TextoInfo{
+    width: 35%;
+    bottom: -1%;
+    right: 2%;
+    height: 40%;
   }
 }
-@media screen and (max-width:768px) {
-  
+@media screen and (max-width:480px) {
+  .contenedor-LinkBio {
+    top: 20px;
+    left: 20px;
+  }
+  .textoVersion{
+    font: 4vw Avenir-Black;
+  }
+  .noSeleccionable{
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .contenedor-TextoMarco {
+    width: min-content;
+    height: min-content;
+    position: absolute;
+    bottom: 40%;
+    left: 36%;
+    transform: rotate(-90deg);
+  }
+  .TextoMarco {
+    font:25vw IntegralCF-Bold;
+  }
   .contenedor-Texto{
-    max-width: 280px;
-    top:34%;
-    margin-left: 41%;
+    max-width: 60%;
+    top:16.5%;
+    margin-left:5%;
   }
   .Texto-Info {
-    font-size: 2vw;
+    font-size: 3.5vw;
   }
   .Text-Voice{
-    right: -105px;
+    font: 4vw Avenir-Book;
+    width: calc(100% - 7vw);
+    top:15px;
+  }
+  .TextoLocutor {
+    font: normal normal 10vw IntegralCF-Bold;
+  }
+  .contenedor-TextoInfo{
+    width: 60%;
+    bottom: 15%;
+    right: 35%;
+    height: 40%;
   }
 }
+
+/* @media screen and (min-width:411px) {
+  .contenedor-Texto{
+    top:17%;
+  }
+}  */

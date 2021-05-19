@@ -28,7 +28,7 @@ const About = () => {
         <React.Fragment>
             <div className="body-About">
 
-                <div onClick={()=>transicionDeTexto()} className="contenedor-LinkBio ">
+                <div onClick={()=>transicionDeTexto()} className="contenedor-LinkBio noSeleccionable">
                     {
                         isVersion
                         ?
@@ -42,13 +42,15 @@ const About = () => {
                     <div id='ingles' className="contenedor-Texto">
                         <h5 className="color-Texto Text-Voice">VOICE TALENT</h5>
                         <h1 className="color-Texto TextoLocutor">ANNONCER</h1>
-                        <h5 className="color-Texto Texto-Info">Neutral and regional spanish</h5>
+                        <h5 className="color-Texto Texto-Info">Neutral and regional spanish <br/></h5>
                         <h5 className="color-Texto Texto-Info">With background in the music and acting. I am always a corious learner, and am the voice of all kinds of projects. I bring to life:</h5>
                     </div>
             
                     <div className="contenedor-TextoMarco color-Texto">
                         <h1 className="TextoMarco color-Texto">MARCO</h1>
-                        <h5 id='ingles' className="color-Texto Texto-Info">
+                    </div>
+                    <div className="contenedor-TextoInfo">
+                    <h5 id='ingles' className="color-Texto Texto-Info">
                             Original voices for animated characters<br/>
                             Voices overs for marketing<br/>
                             Voices for in-company material.<br/>
@@ -63,11 +65,13 @@ const About = () => {
                     <div  id='español' className="contenedor-Texto">
                         <h5 className="color-Texto Text-Voice">VOICE TALENT</h5>
                         <h1 className="color-Texto TextoLocutor">LOCUTOR</h1>
-                        <h5 className="color-Texto Texto-Info">Español neutro y Rioplatense</h5>
+                        <h5 className="color-Texto Texto-Info">Español neutro y Rioplatense. <br/></h5>
                         <h5 className="color-Texto Texto-Info">Con formación como actor y músico, y en constante búsqueda, me dedico desde hace 10 años a ponerle la voz a todo tipo de proyectos:</h5>
                     </div>
                     <div className="contenedor-TextoMarco">
-                        <h1 className="TextoMarco color-Texto">MARCO</h1>
+                        <h1 className="TextoMarco color-Texto noSeleccionable">MARCO</h1>
+                    </div>
+                    <div className="contenedor-TextoInfo">
                         <h5 id='español' className="color-Texto Texto-Info">
                             Locuciones Comerciales.<br/>
                             Voces originales para personajes animados.<br/>
