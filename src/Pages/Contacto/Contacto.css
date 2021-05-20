@@ -4,6 +4,7 @@
   height: 100vh;
   max-height: 100vh;
   background: black;
+  overflow: hidden;
 }
 .contenedorVideo{
   width: 100vw;
@@ -30,6 +31,22 @@
 .Texto-InfoContacto {
   font: normal normal 2.2vw Avenir-Book;
   color: white;
+}
+.hoverInfoContacto{
+  transition: all .5s ease-in-out;
+}
+.hoverInfoContacto:hover{
+  color: rgb(138, 138, 138) ;
+  transition: all 5.s ease-in-out;
+
+}
+.linksContacto{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color:white;
+  text-decoration: none;
 }
 .contenedorEquipamiento{
   width: auto;
@@ -86,16 +103,25 @@ video{
 
 @media screen and (max-width:1920px) {
   .contenedor-InfoContacto {
-    top:46%;
-    left: 76px;  
+    top:47%;
+    left: 9%;  
+  }
+  .Texto-InfoContacto{
+    font-size: 2.2vw;
+  }
+}
+@media screen and (max-width:1536px) {
+  .contenedor-InfoContacto{
+    top:49%;
   }
 }
 @media screen and (max-width:1366px) {
   .contenedor-InfoContacto {
-    top:47%;
+    top:49%;
+    left: 9%;
   }
   .Texto-InfoContacto{
-    font-size: 2.5vw;
+    font-size: 2.2vw;
   }
 }
 @media screen and (max-width:1024px) {
@@ -104,10 +130,11 @@ video{
   }
   .contenedor-InfoContacto {
     width:65% ;
-    top:49.5%
+    top:47%;
+    left: 7%;
   }
   .Texto-InfoContacto{
-    font-size: 2.7vw;
+    font-size: 2.2vw;
   }
 }
 @media screen and (max-width:834px) {
@@ -115,44 +142,59 @@ video{
     top:35%;
   }
   .contenedor-InfoContacto {
-    top:50.5%;
+    top:45%;
     width: 80%;
     left: 0px;
   }
   .Texto-InfoContacto{
     font-size: 3vw;
   }
+  .Texto-Equipamiento {
+    font:2.5vw Avenir-Black;
+  }
+  .Texto-Tecnologia{
+    font:  2vw Avenir-Medium;
+  }
 }
 @media screen and (max-width:480px) {
   .contenedor-TextoContacto {
-    left: 10%;
+    left: 12%;
     top: 50%;
     transform: rotate(-90deg);
   }
   .TextoContacto {
     font: normal normal 25vw IntegralCF-Bold;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
   .contenedor-ImgVoiceOvers{
-    bottom: 20%;
-    left: 10%;
+    bottom: 55%;
+    left: 15%;
   }
   .imagenVoiceOvers {
     width: 90px;
   }
   .contenedor-InfoContacto {
-    top: 30%;
+    top: 20%;
     left: 15%;
     flex-direction:column;
     width: 50%;
     height: 20%;
   }
   .Texto-InfoContacto {
+    -webkit-tap-highlight-color: transparent;
     font: normal normal 6.5vw Avenir-Book;
   }
   .Texto-Equipamiento {
+    -webkit-tap-highlight-color: transparent;
     font:4vw Avenir-Black;
   }
   .Texto-Tecnologia{
+    -webkit-tap-highlight-color: transparent;
     font:  4vw Avenir-Medium;
+  }
+  .contenedorEquipamiento{
+    bottom: 8%;
+    left: 15%;
   }
 }

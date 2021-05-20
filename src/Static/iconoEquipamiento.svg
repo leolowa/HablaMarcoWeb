@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="32" viewBox="0 0 36 32">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 36 32">
   <g id="icon_navigation_expand_more_24px" data-name="icon/navigation/expand_more_24px" transform="translate(36 32) rotate(180)">
-    <rect id="Boundary" width="32" height="32" fill="none"/>
+    <rect id="Boundary" width="20" height="20" fill="none"/>
     <path id="_Color" data-name=" ↳Color" d="M22.945,0,13,9.91,3.055,0,0,3.051,13,16.033,26,3.051Z" transform="translate(10 12.745)" fill="#fff"/>
   </g>
 </svg>

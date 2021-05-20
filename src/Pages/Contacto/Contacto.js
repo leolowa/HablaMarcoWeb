@@ -32,9 +32,9 @@ const Contacto = () => {
                     </div>
 
                     <div className="contenedor-InfoContacto">
-                        <div className="Texto-InfoContacto"> <h6>hola@hablamarco.com</h6> </div>
-                        <div className="Texto-InfoContacto"> <h6>+ 54 9 11 6748 5924</h6> </div>
-                        <div className="Texto-InfoContacto"> <h6>instagram.com/habla.marco</h6> </div>
+                        <div className="Texto-InfoContacto"> <a href="mailto:hola@hablamarco.com" className="linksContacto"><h6 className="hoverInfoContacto">hola@hablamarco.com</h6></a></div>
+                        <div className="Texto-InfoContacto"> <a rel="noreferrer" href="https://api.whatsapp.com/send?phone=5491167485924" target="_blank" className="linksContacto"> <h6 className="hoverInfoContacto"> +54 9 11 6748 5924</h6></a> </div>
+                        <div className="Texto-InfoContacto"><a rel="author" href="https://www.instagram.com/habla.marco/" target="_blank" className="linksContacto"> <h6 className="hoverInfoContacto">instagram.com/habla.marco</h6> </a></div>
                     </div>
 
                     
