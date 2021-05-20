@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Audible from '../../Static/Circulo-Links/AUDIBLE.svg';
 import Avene from '../../Static/Circulo-Links/AVENE.svg';
 import CocaCola from '../../Static/Circulo-Links/COCACOLA.svg';
@@ -27,7 +27,7 @@ import './Work.css';
 const Work = () => {
     console.log(arregloUrl)
     const [videoSeleccionado, setVideoSeleccionado] = useState({url:"",index:undefined});
-
+    /* const [cursor, setCursor] = useState(); */
     function mostrarVideo(url){
         const contenedorVideosWork = document.querySelector('.contenedorVideosWork');
 
@@ -51,6 +51,7 @@ const Work = () => {
         setVideoSeleccionado({...videoSeleccionado,url:url});
     }
 
+    
     const proximo = (proximo) =>{
         if(proximo !== -1){
            /* DERECHA */
@@ -103,6 +104,22 @@ const Work = () => {
                }
         }   
     }
+    /* const obtenerElementoCursor = (elemento) =>{
+        setCursor(elemento);
+        
+    }
+    useEffect(() => {
+        const cursor = document.querySelector('.cursor');
+        obtenerElementoCursor(cursor);
+        document.addEventListener('mousemove', (e) =>{
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top= e.pageY + 'px';
+        });
+        return () => {
+            document.removeEventListener('mousemove',()=>{})
+        }
+    }) */
+    
     return (
         <div className="work">
             <div id="contenedorVideosWork" className="contenedorVideosWork">
@@ -147,6 +164,7 @@ const Work = () => {
                     <div><img id="honda" onClick={()=>mostrarVideo(HondaVideo)} className="honda cursorLink" alt="#" src={Honda}></img></div>
                     <div><img id="pantene" onClick={()=>mostrarVideo(PanteneVideo)} className="pantene cursorLink" alt="#" src={Pantene}></img></div>
                 </div>
+                <div className="cursor"></div>
             </div>
         </div>
     )

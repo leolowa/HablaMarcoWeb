@@ -209,6 +209,23 @@
   animation-play-state: paused; 
 }
 
+/* .contenedor-Links img{
+  transition: .2s;
+}
+.cursor{
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  transition: .1s;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+.contenedor-Links img:hover ~ .cursor{
+  transform: scale(6);
+} */
 @keyframes rotar {
   from {
     transform: rotate(0deg);
