@@ -29,10 +29,13 @@ const Work = () => {
     const [videoSeleccionado, setVideoSeleccionado] = useState({url:"",index:undefined});
 
     function mostrarVideo(url){
+        const contenedorVideosWork = document.querySelector('.contenedorVideosWork');
+
         setTimeout(()=>{
             document.querySelector('.iconoMenu').style.display='none';
         },790);    
-        document.querySelector('.contenedorVideosWork').classList.add("aperturaComerciales");
+        contenedorVideosWork.classList.add("aperturaComerciales");
+        contenedorVideosWork.scrollIntoView();
         document.querySelector('.contenidoVideo').volume = 0.1;
         document.querySelector('.marcoVideo').style.opacity =1;
         cargarVideo(url);
@@ -102,7 +105,7 @@ const Work = () => {
     }
     return (
         <div className="work">
-            <div className="contenedorVideosWork">
+            <div id="contenedorVideosWork" className="contenedorVideosWork">
                 <div className="marcoVideo">
                     <video key={videoSeleccionado.url} className="contenidoVideo" controls>
                         <source type="video/mp4" src={videoSeleccionado.url}></source>
