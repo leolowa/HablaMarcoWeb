@@ -28,7 +28,11 @@ section {
   width: 100vw !important;
 }
 .slideBlanco{
-  height: 52vh;
+  height: 35vh;
+}
+.slideNegro{
+  background-color: black;
+  height: 30vh;
 }
 @media screen and (max-width:480px) {
   .contenedorIconoMenu{

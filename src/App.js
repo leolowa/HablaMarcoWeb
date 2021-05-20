@@ -59,11 +59,13 @@ export const App = () => {
             <section className="slideBlanco"></section>
 
             <section id="reel"> <Reel/> </section>
-            <section></section>
+            <section className="slideBlanco"></section>
+
             
             <div id="iconoBlanco">
+                <section className="slideNegro"></section>
                 <section id="about"> <About/> </section>
-                <section style={{background:"black"}}></section>
+                <section className="slideNegro"></section>
                 <section id="contacto"> <Contacto/> </section>
             </div>
             
