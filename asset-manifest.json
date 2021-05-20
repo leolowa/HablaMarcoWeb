@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/HablaMarcoWeb/static/css/main.0a8b9703.chunk.css",
-    "main.js": "/HablaMarcoWeb/static/js/main.069de6dc.chunk.js",
-    "main.js.map": "/HablaMarcoWeb/static/js/main.069de6dc.chunk.js.map",
+    "main.css": "/HablaMarcoWeb/static/css/main.715d125b.chunk.css",
+    "main.js": "/HablaMarcoWeb/static/js/main.c583f9d2.chunk.js",
+    "main.js.map": "/HablaMarcoWeb/static/js/main.c583f9d2.chunk.js.map",
     "runtime-main.js": "/HablaMarcoWeb/static/js/runtime-main.6edc2827.js",
     "runtime-main.js.map": "/HablaMarcoWeb/static/js/runtime-main.6edc2827.js.map",
     "static/js/2.35752e73.chunk.js": "/HablaMarcoWeb/static/js/2.35752e73.chunk.js",
     "static/js/2.35752e73.chunk.js.map": "/HablaMarcoWeb/static/js/2.35752e73.chunk.js.map",
     "index.html": "/HablaMarcoWeb/index.html",
-    "static/css/main.0a8b9703.chunk.css.map": "/HablaMarcoWeb/static/css/main.0a8b9703.chunk.css.map",
+    "static/css/main.715d125b.chunk.css.map": "/HablaMarcoWeb/static/css/main.715d125b.chunk.css.map",
     "static/js/2.35752e73.chunk.js.LICENSE.txt": "/HablaMarcoWeb/static/js/2.35752e73.chunk.js.LICENSE.txt",
     "static/media/AUDIBLE.ba89946d.svg": "/HablaMarcoWeb/static/media/AUDIBLE.ba89946d.svg",
     "static/media/AVENE.90a8fe56.svg": "/HablaMarcoWeb/static/media/AVENE.90a8fe56.svg",
@@ -38,14 +38,14 @@
     "static/media/flechaMenu.767b2e01.svg": "/HablaMarcoWeb/static/media/flechaMenu.767b2e01.svg",
     "static/media/habla-marco-reel-latam-2.a8afe4d9.mp3": "/HablaMarcoWeb/static/media/habla-marco-reel-latam-2.a8afe4d9.mp3",
     "static/media/habla-marco-reelArg.5a7485f8.mp3": "/HablaMarcoWeb/static/media/habla-marco-reelArg.5a7485f8.mp3",
-    "static/media/iconoEquipamiento.f80c5293.svg": "/HablaMarcoWeb/static/media/iconoEquipamiento.f80c5293.svg",
-    "static/media/iconoEquipamientoDown.66f44f6b.svg": "/HablaMarcoWeb/static/media/iconoEquipamientoDown.66f44f6b.svg",
+    "static/media/iconoEquipamiento.a55333fb.svg": "/HablaMarcoWeb/static/media/iconoEquipamiento.a55333fb.svg",
+    "static/media/iconoEquipamientoDown.bec6bd9e.svg": "/HablaMarcoWeb/static/media/iconoEquipamientoDown.bec6bd9e.svg",
     "static/media/iconoPause.8c8ec0a2.svg": "/HablaMarcoWeb/static/media/iconoPause.8c8ec0a2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.6edc2827.js",
     "static/js/2.35752e73.chunk.js",
-    "static/css/main.0a8b9703.chunk.css",
-    "static/js/main.069de6dc.chunk.js"
+    "static/css/main.715d125b.chunk.css",
+    "static/js/main.c583f9d2.chunk.js"
   ]
 }
