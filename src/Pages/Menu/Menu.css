@@ -67,6 +67,12 @@
     line-height: 100px;
   }
 }
+@media screen and (max-width:1536px) {
+  .TextoMenu {
+    font-size: 6.3vw;
+    line-height: 120px;
+  }
+}
 @media screen and (max-width:480px){
 
   .iconoCerrar {
