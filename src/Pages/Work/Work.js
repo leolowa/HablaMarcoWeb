@@ -123,7 +123,7 @@ const Work = () => {
             <div className="body-Work">
                 <div className="contenedorVerMas">
                     <div className="botonMas">
-                        <a rel = "noreferrer" href="https://www.youtube.com/channel/UCq9CudVe_LrZR48Ls2wb8LA/videos" target="_blank" className="botonHome">
+                        <a rel = "author" href="https://www.youtube.com/channel/UCq9CudVe_LrZR48Ls2wb8LA/videos" target="_blank" className="botonHome">
                             <p className="textoMas">mas</p>
                             <img alt="" className="manchaWork" src={manchaWork}></img>
                         </a>
