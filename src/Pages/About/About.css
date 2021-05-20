@@ -119,6 +119,7 @@
     font: 1.5vw Avenir-Book;
   }
   .Text-Voice{
+    width: calc(100% - 8vw);
     top:20px;
   }
 }
