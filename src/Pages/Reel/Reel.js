@@ -88,8 +88,8 @@ const Reel = () => {
                 />
                 <h1 id="playReel" className="textoReel">REEL</h1>
                 <div className="contenedorBotonesReel">
-                    <BotonesReel isPaused={isReelLatam} onPlay={()=>reproducirReel("Latam")} TextoReel="REEL LATAM" tipoReel="ReelLatam"/>
-                    <BotonesReel isPaused={isReelArg}  onPlay={()=>reproducirReel("Arg")} TextoReel="REEL ARG" tipoReel="ReelArg"/>
+                    <BotonesReel isDisabled={isReelArg} isPaused={isReelLatam} onPlay={()=>reproducirReel("Latam")} TextoReel="REEL LATAM" tipoReel="ReelLatam"/>
+                    <BotonesReel isDisabled={isReelLatam} isPaused={isReelArg}  onPlay={()=>reproducirReel("Arg")} TextoReel="REEL ARG" tipoReel="ReelArg"/>
                 </div>
                 <audio onPause={()=>finalizacionAudio("Latam")} id="audioLatam" src={`${reelLatam}#t=0,28`}></audio>
                 <audio onPause={()=>finalizacionAudio("Arg")} id="audioArg" src={`${reelArg}#t=0,28`}></audio>

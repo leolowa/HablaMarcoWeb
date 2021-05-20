@@ -5,7 +5,7 @@ import reelArg from '../../../Static/Sound/habla-marco-reelArg.mp3';
 
 
 
-export const BotonesReel = ({onPlay, TextoReel="Reel", isPaused=false, tipoReel=''}) => {
+export const BotonesReel = ({onPlay, isDisabled, TextoReel="Reel", isPaused=false, tipoReel=''}) => {
     const   descargarArchivoReel =  (tipo) =>{
         if(tipo !== 'ReelLatam'){
             return reelLatam;}
@@ -13,7 +13,7 @@ export const BotonesReel = ({onPlay, TextoReel="Reel", isPaused=false, tipoReel=
     }
     return (
         <div className="contenedorSubReel">
-            <button onClick={onPlay} className="botonReelPlay">
+            <button disabled={isDisabled} onClick={onPlay} className="botonReelPlay">
                 {
                     isPaused
                     ?
