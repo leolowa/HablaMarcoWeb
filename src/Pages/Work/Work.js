@@ -9,7 +9,7 @@ import Lays from '../../Static/Circulo-Links/LAYS.svg';
 import Sprite from '../../Static/Circulo-Links/SPRITE.svg';
 import Honda from '../../Static/Circulo-Links/HONDA.svg';
 import Pantene from '../../Static/Circulo-Links/PANTENE.svg';
-import manchaWork from '../../Static/Mancha-home1.gif';
+import manchaWork from '../../Static/MenuManchaNegro.gif';/* Mancha-home1.gif */
 import CocaColaVideo from '../../Static/Video/CocaCola.mp4';
 import SpriteVideo from '../../Static/Video/Sprite.mp4';
 import FantaVideo from '../../Static/Video/FantaVideo.mp4';
@@ -143,7 +143,7 @@ const Work = () => {
             <div className="body-Work">
                 <div className="contenedorVerMas">
                     <div className="botonMas">
-                        <a rel = "author" href="https://www.youtube.com/channel/UCq9CudVe_LrZR48Ls2wb8LA/videos" target="_blank" className="botonHome">
+                        <a rel = "author" href="https://www.youtube.com/channel/UCq9CudVe_LrZR48Ls2wb8LA/videos" target="_blank" className="botonMas">
                             <p className="textoMas">mas</p>
                             <img alt="" className="manchaWork" src={manchaWork}></img>
                         </a>
