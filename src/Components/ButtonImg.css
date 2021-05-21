@@ -8,15 +8,7 @@
     cursor: pointer;
     background-color:transparent;
 }
-.imagenHome{
-    background: url(../Static/Mancha-home1.gif) no-repeat center;
-}
-.imagenAboutEsp{
-    background: url(../Static/BotonEspañol.gif) no-repeat center;
-}
-.imagenAboutIng{
-    background: url(../Static/BotonIngles.gif) no-repeat center;
-}
+
 .imagenAbout{
     background: url(../Static/boton_About.gif) no-repeat center;
     width: 50px;
