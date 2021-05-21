@@ -62,7 +62,7 @@ export const App = () => {
             <section className="slideBlanco"></section>
 
             
-            <div id="iconoBlanco">
+            <div id="iconoBlanco" style={{background:"black"}}>
                 <section className="slideNegro"></section>
                 <section id="about"> <About/> </section>
                 <section className="slideNegro"></section>
