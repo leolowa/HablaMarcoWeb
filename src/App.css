@@ -11,40 +11,40 @@ section {
 }
 
 .contenedorIconoMenu {
-  z-index: 2 ;
+  z-index: 2;
   position: fixed;
   top: 30px;
-  right: 100px;
+  right: 150px;
   width: 10px;
   height: 10px;
   cursor: pointer;
 }
-.iconoMenu{
-  transition: all .5s ease-in-out;
+.iconoMenu {
+  transition: all 0.5s ease-in-out;
   width: 90px;
   height: 90px;
 }
-.abrirMenu{
+.abrirMenu {
   width: 100vw !important;
 }
-.slideBlanco{
+.slideBlanco {
   height: 35vh;
 }
-.slideNegro{
+.slideNegro {
   background-color: black;
   height: 30vh;
 }
-@media screen and (max-width:480px) {
-  .contenedorIconoMenu{
+@media screen and (max-width: 480px) {
+  .contenedorIconoMenu {
     -webkit-tap-highlight-color: transparent;
-    top:18px;
+    top: 18px;
     right: 20%;
   }
-  .iconoMenu{
+  .iconoMenu {
     width: 70px;
     height: 70px;
   }
-  .contenedorIconoMenu:hover .iconoMenu{
+  .contenedorIconoMenu:hover .iconoMenu {
     width: 80px;
     height: 80px;
   }

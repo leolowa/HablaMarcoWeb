@@ -2,17 +2,17 @@
   margin: 0;
   padding: 0;
 }
-body{
+body {
   width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-body::-webkit-scrollbar{
-  width: 4px;
+body::-webkit-scrollbar {
+  width: 0;
   background-color: transparent;
 }
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background-color: rgb(37, 37, 37);
   border-radius: 20%;
 }
@@ -20,36 +20,35 @@ body::-webkit-scrollbar-thumb{
   background-color: rgba(0, 0, 0, 0.801);
 } */
 
-
 @font-face {
-  font-family: "IntegralCF-Medium";
+  font-family: 'IntegralCF-Medium';
   src: url(/src/Static/Fonts/IntegralCF-Medium.woff);
   font-style: normal;
 }
 @font-face {
-  font-family: "IntegralCF-Bold";
+  font-family: 'IntegralCF-Bold';
   src: url(/src/Static/Fonts/IntegralCF-Bold.woff);
   font-style: normal;
 }
 @font-face {
-  font-family: "IntegralCF-ExtraBold";
+  font-family: 'IntegralCF-ExtraBold';
   src: url(/src/Static/Fonts/IntegralCF-ExtraBold.otf);
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Avenir-Book";
+  font-family: 'Avenir-Book';
   src: url(/src/Static/Fonts/avenir-lt-std-45-book.otf);
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Avenir-Medium";
+  font-family: 'Avenir-Medium';
   src: url(/src/Static/Fonts/AvenirLTStd-Medium.otf);
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir-Black";
+  font-family: 'Avenir-Black';
   src: url(/src/Static/Fonts/AvenirLTStd-Black.otf);
   font-style: normal;
 }
