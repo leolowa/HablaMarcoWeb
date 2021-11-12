@@ -10,7 +10,10 @@ import Paramount from '../../Static/Circulo-Links/PARAMOUNT.svg';
 import Stella from '../../Static/Circulo-Links/STELLA.svg';
 import Ypf from '../../Static/Circulo-Links/YPF.svg';
 import discovery from '../../Static/Circulo-Links/DISCOVERY.svg';
-import manchaWork from '../../Static/MenuManchaNegro.gif'; /* 
+import manchaWork from '../../Static/MenuManchaNegro.gif';
+import schweppes from '../../Static/Circulo-Links/SCHWEPPES.svg';
+import pantene from '../../Static/Circulo-Links/PANTENE.svg';
+/* 
 import CocaColaVideo from '../../Static/Video/CocaCola.mp4';
 import SpriteVideo from '../../Static/Video/Sprite.mp4';
 import FantaVideo from '../../Static/Video/FantaVideo.mp4';
@@ -171,9 +174,9 @@ const Work = () => {
           </div>
           <div>
             <img
-              id="avene"
+              id="ypf"
               /* onClick={() => mostrarVideo(AveneVideo)} */
-              className="avene cursorLink"
+              className="ypf cursorLink"
               alt="#"
               src={Ypf}
             ></img>
@@ -198,36 +201,36 @@ const Work = () => {
           </div>
           <div>
             <img
-              id="fanta"
+              id="espn"
               /* onClick={() => mostrarVideo(FantaVideo)} */
-              className="fanta cursorLink"
+              className="espn cursorLink"
               alt="#"
               src={espn}
             ></img>
           </div>
           <div>
             <img
-              id="ladysoft"
+              id="gloomy"
               /*  onClick={() => mostrarVideo(LadysoftVideo)} */
-              className="ladysoft cursorLink"
+              className="gloomy cursorLink"
               alt="#"
               src={gloomy}
             ></img>
           </div>
           <div>
             <img
-              id="lays"
+              id="ingravide"
               /* onClick={() => mostrarVideo(LaysVideo)} */
-              className="lays cursorLink"
+              className="ingravide cursorLink"
               alt="#"
               src={ingravide}
             ></img>
           </div>
           <div>
             <img
-              id="sprite"
+              id="Paramount"
               /* onClick={() => mostrarVideo(SpriteVideo)} */
-              className="sprite cursorLink"
+              className="Paramount cursorLink"
               alt="#"
               src={Paramount}
             ></img>
@@ -247,17 +250,11 @@ const Work = () => {
               /* onClick={() => mostrarVideo(PanteneVideo)} */
               className="pantene cursorLink"
               alt="#"
-              src={Stella}
+              src={pantene}
             ></img>
           </div>
           <div>
-            <img
-              id="fanta"
-              /* onClick={() => mostrarVideo(FantaVideo)} */
-              className="fanta cursorLink"
-              alt="#"
-              src={discovery}
-            ></img>
+            <img id="discovery" className="discovery cursorLink" alt="#" src={discovery}></img>
           </div>
         </div>
         <div className="cursor"></div>
