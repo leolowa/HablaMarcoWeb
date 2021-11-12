@@ -123,6 +123,9 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .contenedorVideoInicio {
+    right: 15%;
+  }
   .contenedor-Scroll {
     left: 10%;
   }
@@ -130,6 +133,7 @@
     width: 80%;
   }
   .circuloRojo-Inicio {
-    display: none;
+    width: 150px;
+    height: 150px;
   }
 }
