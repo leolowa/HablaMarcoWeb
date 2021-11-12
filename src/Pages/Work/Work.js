@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
 import Audible from '../../Static/Circulo-Links/AUDIBLE.svg';
-import Avene from '../../Static/Circulo-Links/AVENE.svg';
 import CocaCola from '../../Static/Circulo-Links/COCACOLA.svg';
 import Disney from '../../Static/Circulo-Links/DISNEY.svg';
-import Fanta from '../../Static/Circulo-Links/FANTA.svg';
-import Ladysoft from '../../Static/Circulo-Links/LADYSOFT.svg';
-import Lays from '../../Static/Circulo-Links/LAYS.svg';
-import Sprite from '../../Static/Circulo-Links/SPRITE.svg';
+import espn from '../../Static/Circulo-Links/ESPN.svg';
+import gloomy from '../../Static/Circulo-Links/GLOOMY.svg';
+import ingravide from '../../Static/Circulo-Links/INGRAVIDE.svg';
 import Honda from '../../Static/Circulo-Links/HONDA.svg';
-import Pantene from '../../Static/Circulo-Links/PANTENE.svg';
+import Paramount from '../../Static/Circulo-Links/PARAMOUNT.svg';
+import Stella from '../../Static/Circulo-Links/STELLA.svg';
+import Ypf from '../../Static/Circulo-Links/YPF.svg';
+import discovery from '../../Static/Circulo-Links/DISCOVERY.svg';
 import manchaWork from '../../Static/MenuManchaNegro.gif'; /* 
 import CocaColaVideo from '../../Static/Video/CocaCola.mp4';
 import SpriteVideo from '../../Static/Video/Sprite.mp4';
@@ -174,7 +175,7 @@ const Work = () => {
               /* onClick={() => mostrarVideo(AveneVideo)} */
               className="avene cursorLink"
               alt="#"
-              src={Avene}
+              src={Ypf}
             ></img>
           </div>
           <div>
@@ -201,7 +202,7 @@ const Work = () => {
               /* onClick={() => mostrarVideo(FantaVideo)} */
               className="fanta cursorLink"
               alt="#"
-              src={Fanta}
+              src={espn}
             ></img>
           </div>
           <div>
@@ -210,7 +211,7 @@ const Work = () => {
               /*  onClick={() => mostrarVideo(LadysoftVideo)} */
               className="ladysoft cursorLink"
               alt="#"
-              src={Ladysoft}
+              src={gloomy}
             ></img>
           </div>
           <div>
@@ -219,7 +220,7 @@ const Work = () => {
               /* onClick={() => mostrarVideo(LaysVideo)} */
               className="lays cursorLink"
               alt="#"
-              src={Lays}
+              src={ingravide}
             ></img>
           </div>
           <div>
@@ -228,7 +229,7 @@ const Work = () => {
               /* onClick={() => mostrarVideo(SpriteVideo)} */
               className="sprite cursorLink"
               alt="#"
-              src={Sprite}
+              src={Paramount}
             ></img>
           </div>
           <div>
@@ -246,7 +247,16 @@ const Work = () => {
               /* onClick={() => mostrarVideo(PanteneVideo)} */
               className="pantene cursorLink"
               alt="#"
-              src={Pantene}
+              src={Stella}
+            ></img>
+          </div>
+          <div>
+            <img
+              id="fanta"
+              /* onClick={() => mostrarVideo(FantaVideo)} */
+              className="fanta cursorLink"
+              alt="#"
+              src={discovery}
             ></img>
           </div>
         </div>

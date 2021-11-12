@@ -1,9 +1,9 @@
-.work{
+.work {
   z-index: 1;
   position: relative;
   overflow: hidden;
 }
-.contenedorVideosWork{
+.contenedorVideosWork {
   position: absolute;
   background-color: black;
   width: 0;
@@ -13,12 +13,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1;                 
+  opacity: 1;
 }
-.aperturaComerciales{
+.aperturaComerciales {
   width: 100vw !important;
 }
-.marcoVideo{
+.marcoVideo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,39 +26,39 @@
   height: 70%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  transition-delay: .5s;
+  transition-delay: 0.5s;
 }
 
-.botonAccionesVideosComerciales{
+.botonAccionesVideosComerciales {
   background: transparent;
   border: none;
   outline: none;
 }
-.posicionIconoCerrar{
+.posicionIconoCerrar {
   position: absolute;
   top: 5%;
   right: 5%;
 }
-.posicionSiguienteLeft{
+.posicionSiguienteLeft {
   position: absolute;
   left: 5%;
 }
-.posicionSiguienteRight{
+.posicionSiguienteRight {
   position: absolute;
   right: 5%;
 }
-.iconoCerrarComercialesWork{
+.iconoCerrarComercialesWork {
   cursor: pointer;
   color: white;
-  opacity: .5;
+  opacity: 0.5;
   font-size: 70px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.iconoCerrarComercialesWork:hover{
-  transition: all .5s ease-in-out;
+.iconoCerrarComercialesWork:hover {
+  transition: all 0.5s ease-in-out;
   opacity: 1;
 }
-.contenidoVideo{
+.contenidoVideo {
   width: 100%;
   height: 100%;
   outline: none;
@@ -89,15 +89,15 @@
   color: black;
   font: 20px IntegralCF-Medium;
 }
-.botonMas{
+.botonMas {
   width: 50px;
   height: 50px;
   border: none;
   outline: none;
   cursor: pointer;
-  background-color:transparent;
+  background-color: transparent;
 }
-.manchaWork{
+.manchaWork {
   width: 50px;
   height: 50px;
 }
@@ -113,17 +113,15 @@
   position: relative;
 }
 
-
 .contenedor-Links {
   position: relative;
   width: 355px;
   height: 355px;
   opacity: 1;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
-
-.cursorLink{
+.cursorLink {
   cursor: pointer;
 }
 .audible {
@@ -136,7 +134,7 @@
 }
 .avene {
   position: absolute;
-  top:-14px;
+  top: -14px;
   right: 95px;
   width: 63px;
   height: 63px;
@@ -144,14 +142,14 @@
 }
 .coca {
   position: absolute;
-  bottom:-19px;
+  bottom: -19px;
   left: 79px;
   width: 90px;
   height: 90px;
   transform: rotate(155deg);
 }
 
-.disney{
+.disney {
   position: absolute;
   width: 96px;
   height: 96px;
@@ -160,7 +158,7 @@
   transform: rotate(-33deg);
 }
 
-.fanta{
+.fanta {
   position: absolute;
   width: 52px;
   height: 52px;
@@ -168,7 +166,7 @@
   left: 118px;
   transform: rotate(-132deg);
 }
-.ladysoft{
+.ladysoft {
   position: absolute;
   width: 87px;
   height: 87px;
@@ -200,7 +198,7 @@
   left: 275px;
   transform: rotate(-131deg);
 }
-.lays{
+.lays {
   position: absolute;
   width: 47px;
   height: 47px;
@@ -213,8 +211,8 @@
   /* transform: rotate(50deg) */
 }
 
-.rotar:hover{
-  animation-play-state: paused; 
+.rotar:hover {
+  animation-play-state: paused;
 }
 
 /* .contenedor-Links img{
@@ -234,76 +232,77 @@
 .contenedor-Links img:hover ~ .cursor{
   transform: scale(6);
 } */
-@keyframes rotar {
+/* @keyframes rotar {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
-@media screen and (max-width:1920px) {
-  .Texto-Work{
-    top:30%;
-    left:51%;
+} */
+@media screen and (max-width: 1920px) {
+  .Texto-Work {
+    top: 30%;
+    left: 51%;
   }
   .contenedor-Links {
     top: 32%;
-    left: calc(100vw -  112%);
+    left: calc(100vw - 112%);
   }
 }
-@media screen and (max-width:1366px) {
-  .Texto-Work{
-    top:26%;
+@media screen and (max-width: 1366px) {
+  .Texto-Work {
+    top: 30%;
+    left: 45%;
   }
   .contenedor-Links {
     top: 22%;
-    left: calc(100vw -  119%);
+    left: calc(100vw - 119%);
   }
 }
-@media screen and (max-width:1024px) {
-  .Texto-Work{
-    top:32%;
+@media screen and (max-width: 1024px) {
+  .Texto-Work {
+    top: 32%;
     font-size: 15.641288433382138vw;
     left: 48%;
   }
   .contenedor-Links {
     top: 19%;
-    left: calc(100vw -  128.5%);
+    left: calc(100vw - 128.5%);
   }
 }
-@media screen and (max-width:480px) {
-  .Texto-Work{
+@media screen and (max-width: 480px) {
+  .Texto-Work {
     position: absolute;
-    top:42%;
+    top: 42%;
     font-size: 30.641288433382138vw;
     transform: rotate(-90deg);
-    left:35%;
+    left: 35%;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
   }
   .contenedor-Links {
     top: 30%;
-    left: calc(100vw -  92.5%);
+    left: calc(100vw - 92.5%);
   }
-  img{
+  img {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
   }
-  .iconoCerrarComercialesWork{
+  .iconoCerrarComercialesWork {
     font-size: 40px;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
   }
-  .contenedorVideosWork{
+  .contenedorVideosWork {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    opacity: 1;                 
+    opacity: 1;
   }
-  .marcoVideo{
+  .marcoVideo {
     margin-bottom: 10%;
     width: 90%;
     height: 50%;
