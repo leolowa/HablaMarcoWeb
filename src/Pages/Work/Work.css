@@ -9,7 +9,7 @@
   width: 0;
   height: 100vh;
   z-index: 3;
-  transition: all 1s;
+  transition: all 1s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,8 +25,8 @@
   width: 70%;
   height: 70%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-  transition-delay: 0.5s;
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0.8s;
 }
 
 .botonAccionesVideosComerciales {
@@ -62,7 +62,10 @@
   width: 100%;
   height: 100%;
   outline: none;
+
+  transition: all 0.1s ease;
 }
+
 .body-Work {
   position: relative;
   display: flex;
@@ -119,104 +122,17 @@
   height: 400px;
   opacity: 1;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cursorLink {
   cursor: pointer;
 }
-.audible {
-  position: absolute;
-  top: 30px;
-  left: 25px;
-  width: 75px;
-  height: 75px;
-  transform: rotate(-47deg);
-}
-.ypf {
-  position: absolute;
-  top: -10px;
-  right: 85px;
-  width: 70px;
-  height: 70px;
-  transform: rotate(170deg);
-}
-.coca {
-  position: absolute;
-  bottom: 15px;
-  left: 50px;
-  width: 80px;
-  height: 80px;
-  transform: rotate(172deg);
-}
-
-.disney {
-  position: absolute;
-  width: 170px;
-  height: 170px;
-  bottom: 45px;
-  left: -53px;
-  transform: rotate(205deg);
-}
-
-.discovery {
-  position: absolute;
-  width: 170px;
-  height: 170px;
-  top: -68px;
-  left: 90px;
-  transform: rotate(163deg);
-}
-.gloomy {
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  top: 25px;
-  right: -15px;
-  transform: rotate(88deg);
-}
-.Paramount {
-  position: absolute;
-  width: 145px;
-  height: 145px;
-  top: 150px;
-  right: -53px;
-  transform: rotate(7deg);
-}
-.honda {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  top: 335px;
-  left: 130px;
-  transform: rotate(275deg);
-}
-.pantene {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  top: 328px;
-  left: 240px;
-  transform: rotate(265deg);
-}
-.espn {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  bottom: -10px;
-  right: -35px;
-  transform: rotate(65deg);
-}
-.ingravide {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  top: 105px;
-  left: -45px;
-  transform: rotate(-13deg);
-}
 .rotar {
   animation: rotar 50s linear infinite;
-  /* transform: rotate(50deg) */
+  transform: rotate(50deg);
 }
 
 .rotar:hover {
@@ -240,59 +156,70 @@
 .contenedor-Links img:hover ~ .cursor{
   transform: scale(6);
 } */
-@keyframes rotar {
+/* @keyframes rotar {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 @media screen and (max-width: 1920px) {
   .Texto-Work {
     top: 30%;
-    left: 51%;
+    left: 46%;
   }
   .contenedor-Links {
-    top: 32%;
-    left: calc(100vw - 112%);
+    top: 30.5%;
+    left: calc(100vw - 115.29%);
   }
 }
 @media screen and (max-width: 1366px) {
   .Texto-Work {
     top: 30%;
-    left: 45%;
+    left: 46%;
   }
   .contenedor-Links {
     top: 22%;
-    left: calc(100vw - 121%);
+    left: calc(100vw - 119%);
   }
 }
 @media screen and (max-width: 1024px) {
   .Texto-Work {
-    top: 32%;
+    top: 25%;
     font-size: 15.641288433382138vw;
-    left: 48%;
+    left: 41%;
   }
   .contenedor-Links {
     top: 19%;
-    left: calc(100vw - 128.5%);
+    left: calc(100vw - 132.5%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .Texto-Work {
+    top: 40%;
+    font-size: 16.641288433382138vw;
+    left: 37%;
+  }
+  .contenedor-Links {
+    top: 30%;
+    left: calc(100vw - 138.5%);
   }
 }
 @media screen and (max-width: 480px) {
   .Texto-Work {
     position: absolute;
-    top: 42%;
-    font-size: 30.641288433382138vw;
+    top: 49%;
+    font-size: 32.641288433382138vw;
     transform: rotate(-90deg);
-    left: 35%;
+    left: 22%;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
   }
   .contenedor-Links {
     top: 30%;
-    left: calc(100vw - 92.5%);
+    left: calc(100vw - 80.5%);
   }
   img {
     user-select: none;
@@ -315,5 +242,19 @@
     margin-bottom: 10%;
     width: 90%;
     height: 50%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .Texto-Work {
+    top: 49%;
+    font-size: 30.641288433382138vw;
+    transform: rotate(-90deg);
+    left: 26%;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .contenedor-Links {
+    top: 23.5%;
+    left: 30%;
   }
 }
