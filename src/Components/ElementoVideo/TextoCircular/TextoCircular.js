@@ -1,14 +1,5 @@
 import React from 'react';
 import './TextoCircular.css';
-import videoAUDIBLE from '../../../Static/Video/AUDIBLE_1.mp4';
-import videoPARAMOUNT from '../../../Static/Video/Paramount+.mp4';
-import videoCOCACOLA from '../../../Static/Video/Coca-Cola.mp4';
-import videoDisney from '../../../Static/Video/Disney1.mov';
-import videoDiscovery from '../../../Static/Video/FoodNetwork1.mov';
-import videoHonda from '../../../Static/Video/HONDA1.mp4';
-import videoPantene from '../../../Static/Video/PANTENE1.mp4';
-import videoSchweppes from '../../../Static/Video/Schweppes.mp4';
-import StellaArtois1 from '../../../Static/Video/StellaArtois1.mp4';
 
 const TextoCircular = ({
   mostrarComercial = () => {
@@ -25,45 +16,31 @@ const TextoCircular = ({
         <path d="M -3,55 a 60,60 1 1,1 0,1 z" id="circle" />
         <text>
           <textPath href="#circle" throwIfNamespace={false}>
-            <a href="" onClick={e => mostrarComercial(e)} className="textoLink-Circular">
+            <tspan className="tSpan" onClick={() => mostrarComercial('Gloomy Airs')}>
               &nbsp;&nbsp;&nbsp; GLOOMY AIRS &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e, videoAUDIBLE)}>
-              AUDIBLE &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e, videoPantene)}>
-              PANTENE &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e, videoDisney)}>
-              DISNEY &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e)}>
-              ESPN &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e, videoPARAMOUNT)}>
+            </tspan>
+            <tspan onClick={() => mostrarComercial('Audible')}>AUDIBLE &nbsp;&nbsp;&nbsp;</tspan>
+            <tspan onClick={() => mostrarComercial('Pantene')}>PANTENE &nbsp;&nbsp;&nbsp;</tspan>
+            <tspan onClick={() => mostrarComercial('Disney')}>DISNEY &nbsp;&nbsp;&nbsp;</tspan>
+            <tspan onClick={() => mostrarComercial('Espn')}>ESPN &nbsp;&nbsp;&nbsp;</tspan>
+            <tspan onClick={() => mostrarComercial('Paramount+')}>
               PARAMOUNT+ &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e, videoCOCACOLA)}>
+            </tspan>
+            <tspan onClick={() => mostrarComercial('Coca Cola')}>
               COCA-COLA &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e, videoSchweppes)}>
+            </tspan>
+            <tspan onClick={() => mostrarComercial('Schweppes')}>
               SCHWEPPES &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e, videoDiscovery)}>
+            </tspan>
+            <tspan onClick={() => mostrarComercial('Discovery NF')}>
               DISCOVERY NF &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e)}>
-              YPF &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e, StellaArtois1)}>
+            </tspan>
+            <tspan onClick={() => mostrarComercial('YPF')}>YPF &nbsp;&nbsp;&nbsp;</tspan>
+            <tspan onClick={() => mostrarComercial('Stella Artois')}>
               STELLA ARTOIS &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e, videoHonda)}>
-              HONDA &nbsp;&nbsp;&nbsp;
-            </a>
-            <a href="" onClick={e => mostrarComercial(e)}>
-              INGRAVIDE
-            </a>
+            </tspan>
+            <tspan onClick={() => mostrarComercial('Honda')}>HONDA &nbsp;&nbsp;&nbsp;</tspan>
+            <tspan onClick={() => mostrarComercial('Ingravide')}>INGRAVIDE</tspan>
           </textPath>
         </text>
       </svg>
