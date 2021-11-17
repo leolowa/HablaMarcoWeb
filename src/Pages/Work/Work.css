@@ -176,7 +176,7 @@
   font: 4.641288433382138vw IntegralCF-ExtraBold;
   top: 0;
 }
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 5000px) {
   .Texto-Work {
     top: 30%;
     left: 46%;

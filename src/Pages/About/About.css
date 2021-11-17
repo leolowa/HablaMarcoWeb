@@ -8,7 +8,7 @@
 .color-Texto {
   color: white;
 }
-.textoVersion{
+.textoVersion {
   font: 1.47vw Avenir-Black;
 }
 
@@ -29,7 +29,7 @@
   bottom: -10px;
   left: 0;
 }
-.contenedor-TextoInfo{
+.contenedor-TextoInfo {
   position: absolute;
   width: 25%;
   bottom: -1%;
@@ -42,14 +42,14 @@
   margin-right: 30px;
 }
 .contenedor-Texto {
-  max-width:30%;
+  max-width: 30%;
   top: 41%;
   margin-left: 45%;
   position: absolute;
 }
 .TextoLocutor {
   position: relative;
-  font: normal normal 5.20vw IntegralCF-Bold;
+  font: normal normal 5.2vw IntegralCF-Bold;
 }
 .Text-Voice {
   overflow: hidden;
@@ -64,101 +64,101 @@
   font: 1.2vw Avenir-Book;
   line-height: 23px;
 }
-#español{
+#español {
   opacity: 1;
   transition: all 1s ease-in-out;
 }
-#ingles{
+#ingles {
   opacity: 0;
   transition-delay: 2s;
   transition: all 1s ease-in-out;
 }
 
-@media screen and (max-width:1920px) {
-  .contenedor-Texto{
+@media screen and (max-width: 5000px) {
+  .contenedor-Texto {
     top: 36%;
   }
-  .contenedor-TextoInfo{
+  .contenedor-TextoInfo {
     bottom: 3%;
   }
-  .Text-Voice{
-    top:30px;
+  .Text-Voice {
+    top: 30px;
   }
 }
-@media screen and (max-width:1680px) {
-  .contenedor-Texto{
+@media screen and (max-width: 1680px) {
+  .contenedor-Texto {
     top: 41%;
   }
 }
-@media screen and (max-width:1536px) {
-  .contenedor-Texto{
+@media screen and (max-width: 1536px) {
+  .contenedor-Texto {
     top: 33%;
   }
 }
-@media screen and (max-width:1366px) {
-  .contenedor-Texto{
+@media screen and (max-width: 1366px) {
+  .contenedor-Texto {
     top: 25%;
   }
-  .contenedor-TextoInfo{
+  .contenedor-TextoInfo {
     bottom: 9%;
   }
-  .Text-Voice{
-    top:26px;
+  .Text-Voice {
+    top: 26px;
   }
 }
-@media screen and (max-width:1024px) and (orientation: landscape) {
-  .contenedor-Texto{
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .contenedor-Texto {
     max-width: 36%;
     top: 37%;
     margin-left: 40%;
   }
-  .contenedor-TextoInfo{
+  .contenedor-TextoInfo {
     bottom: 9%;
   }
   .Texto-Info {
     font: 1.5vw Avenir-Book;
   }
-  .Text-Voice{
+  .Text-Voice {
     width: calc(100% - 8vw);
-    top:20px;
+    top: 20px;
   }
 }
-@media screen and (max-width:834px) {
-  .textoVersion{
+@media screen and (max-width: 834px) {
+  .textoVersion {
     font: 3vw Avenir-Black;
   }
-  .contenedor-Texto{
+  .contenedor-Texto {
     max-width: 60%;
-    top:45%;
-    margin-left:22%;
+    top: 45%;
+    margin-left: 22%;
   }
   .Texto-Info {
     font-size: 2.4vw;
   }
-  .Text-Voice{
+  .Text-Voice {
     font: 2vw Avenir-Book;
     width: calc(100% - 29vw);
-    top:17px;
+    top: 17px;
   }
   .TextoLocutor {
     font: normal normal 5.8vw IntegralCF-Bold;
   }
-  .contenedor-TextoInfo{
+  .contenedor-TextoInfo {
     width: 35%;
     bottom: -1%;
     right: 2%;
     height: 40%;
   }
 }
-@media screen and (max-width:480px) and (max-height:812px) {
+@media screen and (max-width: 480px) and (max-height: 812px) {
   .contenedor-LinkBio {
     top: 20px;
     left: 20px;
   }
-  .textoVersion{
+  .textoVersion {
     font: 4vw Avenir-Black;
   }
-  .noSeleccionable{
+  .noSeleccionable {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
   }
@@ -171,40 +171,39 @@
     transform: rotate(-90deg);
   }
   .TextoMarco {
-    font:25vw IntegralCF-Bold;
+    font: 25vw IntegralCF-Bold;
   }
-  .contenedor-Texto{
+  .contenedor-Texto {
     max-width: 60%;
-    top:18.5%;
-    margin-left:5%;
+    top: 18.5%;
+    margin-left: 5%;
   }
   .Texto-Info {
     font-size: 3.5vw;
   }
-  .Text-Voice{
+  .Text-Voice {
     font: 4vw Avenir-Book;
     width: calc(100% - 7vw);
-    top:15px;
+    top: 15px;
   }
   .TextoLocutor {
     font: normal normal 10vw IntegralCF-Bold;
   }
-  .contenedor-TextoInfo{
+  .contenedor-TextoInfo {
     width: 60%;
     bottom: 13%;
     right: 35%;
     height: 40%;
   }
-  .contenedor-Texto{
-    top:21.5%;
+  .contenedor-Texto {
+    top: 21.5%;
   }
 }
-@media screen and (max-width:480px) and (max-height:736px){
-  .contenedor-Texto{
-    top:18.5%;
+@media screen and (max-width: 480px) and (max-height: 736px) {
+  .contenedor-Texto {
+    top: 18.5%;
   }
 }
-
 
 /* @media screen and (min-width:411px) {
   .contenedor-Texto{
