@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import VoiceOvers from '../../Static/voiceovers.gif';
 import iconoEquipamientoUp from '../../Static/iconoEquipamiento.svg';
-import img from '../../Static/firma-mail.png';
 //import Heladera from '../../Static/Circulo-Links/video_heladera.mp4';
 import '../Contacto/Contacto.css';
 
