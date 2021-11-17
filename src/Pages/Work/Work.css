@@ -221,7 +221,7 @@
 @media screen and (max-width: 480px) {
   .Texto-Work {
     position: absolute;
-    top: 49%;
+    top: 42%;
     font-size: 32.641288433382138vw;
     transform: rotate(-90deg);
     left: 22%;
@@ -229,7 +229,7 @@
     -webkit-tap-highlight-color: transparent;
   }
   .contenedor-Links {
-    top: 30%;
+    top: 26%;
     left: calc(100vw - 80.5%);
   }
   img {
@@ -253,6 +253,27 @@
     margin-bottom: 10%;
     width: 90%;
     height: 50%;
+  }
+  .CI-tagsComerciales {
+    position: absolute;
+    width: 100%;
+    top: 18%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .tituloComercial {
+    font: 8.641288433382138vw IntegralCF-ExtraBold;
+    left: 20px;
+    top: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .Texto-Work {
+    top: 47%;
+  }
+  .contenedor-Links {
+    top: 26%;
   }
 }
 @media screen and (max-width: 320px) {
