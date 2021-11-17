@@ -1,6 +1,6 @@
 import React from 'react';
 import HablaMarco from '../../Static/HablaMarco.svg';
-import baileConPerro from '../../Static/Video/baileConPerro.mp4';
+// import baileConPerro from '../../Static/Video/baileConPerro.mp4';
 import './Home.css';
 
 const Home = () => {
@@ -16,11 +16,11 @@ const Home = () => {
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
           </div>
 
-          <div className="contenedorVideoInicio">
+          {/* <div className="contenedorVideoInicio">
             <video className="videoMarcoNadando" autoPlay={true} muted="muted" loop>
               <source type="video/mp4" src={baileConPerro}></source>
             </video>
-          </div>
+          </div> */}
           <div className="circuloRojo-Inicio"></div>
         </div>
       </div>

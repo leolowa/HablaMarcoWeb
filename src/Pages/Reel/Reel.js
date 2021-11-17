@@ -6,11 +6,14 @@ import reelLatam from '../../Static/Sound/habla-marco-reel-latam-2.mp3';
 import reelArg from '../../Static/Sound/habla-marco-reelArg.mp3';
 import {BotonesReel} from './BotonesReel/BotonesReel';
 import ElementoVideo from '../../Components/ElementoVideo/ElementoVideo';
+import Palta from '../../Components/Palta/Palta';
 
 const Reel = () => {
   const [isPlayReel, setIsPlayReel] = useState(false);
   const [isReelLatam, setIsReelLatam] = useState(false);
   const [isReelArg, setIsReelArg] = useState(false);
+  /* ----- Estado apertura palta ----- */
+  const [isPaltaAbierta, setIsPaltaAbierta] = useState(false);
 
   const reproducirReel = idReel => {
     const element = document.querySelector('#playReel');
@@ -25,6 +28,7 @@ const Reel = () => {
         elementoAudio.play();
         setIsReelLatam(true);
         setIsPlayReel(true);
+        setIsPaltaAbierta(true);
       } else {
         setIsReelLatam(false);
         elementoAudio.pause();
@@ -32,6 +36,7 @@ const Reel = () => {
         elementoVideo.style.opacity = '0';
         elementoVideo.pause();
         setIsPlayReel(false);
+        setIsPaltaAbierta(false);
       }
     }
 
@@ -45,6 +50,7 @@ const Reel = () => {
         elementoVideo.play();
         element.classList.add('playReel');
         setIsPlayReel(true);
+        setIsPaltaAbierta(true);
       } else {
         setIsReelArg(false);
         elementoAudio.pause();
@@ -52,6 +58,7 @@ const Reel = () => {
         elementoVideo.style.opacity = '0';
         elementoVideo.pause();
         setIsPlayReel(false);
+        setIsPaltaAbierta(false);
       }
     }
   };
@@ -67,6 +74,11 @@ const Reel = () => {
   const finalizacionAudio = idReel => {
     if (idReel === 'Latam') {
       setIsReelLatam(false);
+      setIsPaltaAbierta(false);
+    }
+    if (idReel === 'Arg') {
+      setIsReelArg(false);
+      setIsPaltaAbierta(false);
     } else {
       setIsReelArg(false);
     }
@@ -84,9 +96,24 @@ const Reel = () => {
             finalizacionVideo();
           }}
         />
-        <h1 id="playReel" className="textoReel">
-          REEL
-        </h1>
+        <div className="CP-Reel">
+          {isPaltaAbierta ? (
+            <h1 id="playReel" className="textoReel ReelIzquierdaA">
+              RE
+            </h1>
+          ) : (
+            <h1 id="playReel" className="textoReel ReelIzquierdaC">
+              RE
+            </h1>
+          )}
+          <div className="CI-Contenedor-Palta">{isPaltaAbierta && <Palta />}</div>
+          {isPaltaAbierta ? (
+            <h1 className="textoReel ReelDerechaA">EL</h1>
+          ) : (
+            <h1 className="textoReel ReelDerechaC">EL</h1>
+          )}
+        </div>
+
         <div className="contenedorBotonesReel">
           <BotonesReel
             isDisabled={isReelArg}
