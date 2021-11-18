@@ -18,16 +18,16 @@
   width: 50%;
   height: 80px;
   cursor: pointer;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.bodyMenu{
+.bodyMenu {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 .iconoCerrar:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .TextoMenu {
@@ -43,7 +43,7 @@
 }
 
 .subrayado::after {
-  content: "";
+  content: '';
   width: 0px;
   height: 5px;
   display: block;
@@ -55,45 +55,44 @@
   width: 100%;
 }
 
-@media screen and (max-width:1920px) {
+@media screen and (max-width: 5000px) {
   .TextoMenu {
     font-size: 8vw;
     line-height: 180px;
   }
 }
-@media screen and (max-width:1366px) {
+@media screen and (max-width: 1366px) {
   .TextoMenu {
     font-size: 6.3vw;
     line-height: 100px;
   }
 }
-@media screen and (max-width:1536px) {
+@media screen and (max-width: 1536px) {
   .TextoMenu {
     font-size: 6.3vw;
     line-height: 120px;
   }
 }
-@media screen and (max-width:480px){
-
+@media screen and (max-width: 480px) {
   .iconoCerrar {
     margin-left: 40px;
     height: 4%;
     -webkit-tap-highlight-color: transparent;
   }
-  .iconoCerrar:hover{
+  .iconoCerrar:hover {
     height: 6%;
   }
-  .bodyMenu{
-    padding-top:2vh;
+  .bodyMenu {
+    padding-top: 2vh;
   }
   .TextoMenu {
-    font-size: 12vw; 
-    line-height:60px;
+    font-size: 12vw;
+    line-height: 60px;
     margin-bottom: 30px;
     margin-right: 30px;
     user-select: none;
   }
-  h1{
+  h1 {
     -webkit-tap-highlight-color: transparent;
   }
 }

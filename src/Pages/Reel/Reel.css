@@ -84,6 +84,7 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  z-index: 10;
 }
 @media screen and (max-width: 480px) {
   .textoReel {
@@ -99,14 +100,14 @@
   /* ====== TEXTO ANIMACION APERTURA PALTA ====== */
 
   .ReelIzquierdaA {
-    left: 22%;
+    left: -4%;
     opacity: 0 !important;
-    transition: all 0.4s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
   }
   .ReelDerechaA {
-    right: 22%;
+    right: -4%;
     opacity: 0 !important;
-    transition: all 0.4s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
   }
 
   /* ====== TEXTO ANIMACION CIERRE PALTA ====== */

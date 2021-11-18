@@ -1,35 +1,25 @@
 import React, {useState} from 'react';
 import VoiceOvers from '../../Static/voiceovers.gif';
 import iconoEquipamientoUp from '../../Static/iconoEquipamiento.svg';
-import iconoEquipamientoDown from '../../Static/iconoEquipamientoDown.svg';
-
 //import Heladera from '../../Static/Circulo-Links/video_heladera.mp4';
 import '../Contacto/Contacto.css';
 
 const Contacto = () => {
   const [isColapsado, setIsColapsado] = useState(false);
 
-  const mostrarTecnología = () => {
-    if (isColapsado !== true) {
-      const elementoColapsable = document.querySelector('.contenedor-TextoTecnologia');
-      elementoColapsable.classList.remove('contenedor-TextoTecnologia-Abierto');
-      setIsColapsado(true);
-    } else {
-      const elementoColapsable = document.querySelector('.contenedor-TextoTecnologia');
-      elementoColapsable.classList.add('contenedor-TextoTecnologia-Abierto');
-      setIsColapsado(false);
-    }
-  };
   return (
     <>
       <div className="body-Contacto">
-        <div className="Texto-InfoContacto-A">
+        <div className="CI-EmailMarco Texto-InfoContacto">
           <a rel="noreferrer" href="mailto:hola@hablamarco.com" className="linksContacto">
             <div className="contenedorEmail">
               <span className="texto-Hola">hola</span>
               <span className="texto-email">@hablamarco.com</span>
             </div>
           </a>
+        </div>
+
+        <div className="CI-ContactoMarco Texto-InfoContacto">
           <a
             rel="noreferrer"
             href="https://api.whatsapp.com/send?phone=5491167485924"
@@ -39,7 +29,8 @@ const Contacto = () => {
             <span className="texto-numeroDeTel"> +54 9 11 6748 5924</span>
           </a>
         </div>
-        <div className="contenedor-InfoContacto-B">
+
+        <div className="CI-InstagramMarco Texto-InfoContacto">
           <a
             rel="noreferrer"
             href="https://www.instagram.com/habla.marco/"
@@ -52,15 +43,20 @@ const Contacto = () => {
             </div>
           </a>
         </div>
+
         <div className="contenedorEquipamiento">
-          <div className="contenedor-TextoTecnologia">
-            <button onClick={() => mostrarTecnología()} className="Texto-Equipamiento">
+          <div
+            className={`contenedor-TextoTecnologia ${
+              isColapsado && 'contenedor-TextoTecnologia-Abierto'
+            }`}
+          >
+            <button onClick={() => setIsColapsado(!isColapsado)} className="Texto-Equipamiento">
               Tecnología
-              {isColapsado ? (
-                <img alt="" className="iconoEquipamientoDown" src={iconoEquipamientoDown}></img>
-              ) : (
-                <img alt="" className="iconoEquipamiento" src={iconoEquipamientoUp}></img>
-              )}
+              <img
+                alt=""
+                className={`${isColapsado ? 'iconoEquipamientoDown' : 'iconoEquipamiento'}`}
+                src={iconoEquipamientoUp}
+              ></img>
             </button>
             <p className="Texto-Tecnologia">
               Antelope Zen Tour synergy core.
@@ -72,12 +68,14 @@ const Contacto = () => {
             </p>
           </div>
         </div>
+
         <div className="contenedor-ImgVoiceOvers">
           <img alt="" className="imagenVoiceOvers" src={VoiceOvers}></img>
         </div>
       </div>
+
       <div className="CI-FraseSutil">
-        <p>Ésta página pertenece a una persona en construcción</p>
+        <p>Esta página pertenece a una persona en construcción</p>
       </div>
     </>
   );

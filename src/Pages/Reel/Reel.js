@@ -106,7 +106,9 @@ const Reel = () => {
               RE
             </h1>
           )}
-          <div className="CI-Contenedor-Palta">{isPaltaAbierta && <Palta />}</div>
+          <div className="CI-Contenedor-Palta">
+            <Palta isPaltaAbierta={isPaltaAbierta} />
+          </div>
           {isPaltaAbierta ? (
             <h1 className="textoReel ReelDerechaA">EL</h1>
           ) : (

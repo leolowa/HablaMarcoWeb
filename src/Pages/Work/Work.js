@@ -1,75 +1,64 @@
 import React, {useState} from 'react';
-import Audible from '../../Static/Circulo-Links/AUDIBLE.svg';
-import CocaCola from '../../Static/Circulo-Links/COCACOLA.svg';
-import Disney from '../../Static/Circulo-Links/DISNEY.svg';
-import espn from '../../Static/Circulo-Links/ESPN.svg';
-import gloomy from '../../Static/Circulo-Links/GLOOMY.svg';
-import ingravide from '../../Static/Circulo-Links/INGRAVIDE.svg';
-import Honda from '../../Static/Circulo-Links/HONDA.svg';
-import Paramount from '../../Static/Circulo-Links/PARAMOUNT.svg';
-import Stella from '../../Static/Circulo-Links/STELLA.svg';
-import Ypf from '../../Static/Circulo-Links/YPF.svg';
-import discovery from '../../Static/Circulo-Links/DISCOVERY.svg';
-import manchaWork from '../../Static/MenuManchaNegro.gif'; /* 
-import CocaColaVideo from '../../Static/Video/CocaCola.mp4';
-import SpriteVideo from '../../Static/Video/Sprite.mp4';
-import FantaVideo from '../../Static/Video/FantaVideo.mp4';
-import AudibleVideo from '../../Static/Video/AudibleVideoSpanish.mp4';
-import LaysVideo from '../../Static/Video/LaysVideo.mp4';
-import PanteneVideo from '../../Static/Video/PanteneVideo.mp4';
-import HondaVideo from '../../Static/Video/HondaVideo.mp4';
-import DisneyVideo from '../../Static/Video/DisneyVideo.mp4';
-import LadysoftVideo from '../../Static/Video/LadysoftVideo.mp4';
-import AveneVideo from '../../Static/Video/AveneVideo.mp4'; */
+import manchaWork from '../../Static/MenuManchaNegro.gif';
 import arregloUrl from './enlacesWork';
-
 import './Work.css';
+import TextoCircular from '../../Components/ElementoVideo/TextoCircular/TextoCircular';
 
 const Work = () => {
-  const [videoSeleccionado, setVideoSeleccionado] = useState({url: '', index: undefined});
-  /* const [cursor, setCursor] = useState(); */
-  function mostrarVideo(url) {
-    const contenedorVideosWork = document.querySelector('.contenedorVideosWork');
+  const [videoSeleccionado, setVideoSeleccionado] = useState({video: '', index: undefined});
+  const [videosDeMarca, setVideosDeMarca] = useState('');
 
+  function mostrarVideo(comercial) {
+    document.querySelector('body').style.overflow = 'hidden';
     setTimeout(() => {
       document.querySelector('.iconoMenu').style.display = 'none';
-    }, 790);
+    }, 450);
+    setVideosDeMarca('');
+    const contenedorVideosWork = document.querySelector('.contenedorVideosWork');
     contenedorVideosWork.classList.add('aperturaComerciales');
     contenedorVideosWork.scrollIntoView();
     document.querySelector('.contenidoVideo').volume = 0.1;
-    document.querySelector('.marcoVideo').style.opacity = 1;
-    cargarVideo(url);
+    document.querySelector('.marcoVideo').classList.add('marcoVideoAbierto');
+    cargarVideo(comercial);
   }
 
   const cerrarComerciales = () => {
-    document.querySelector('.iconoMenu').style.display = 'initial';
-    document.querySelector('.marcoVideo').style.opacity = 0;
+    document.querySelector('.marcoVideo').classList.remove('marcoVideoAbierto');
+    document.querySelector('.iconoMenu').style.transitionDelay = '2s';
+    setTimeout(() => {
+      document.querySelector('.iconoMenu').style.display = 'initial';
+    }, 1500);
     document.querySelector('.contenidoVideo').pause();
+    document.querySelector('.contenedorVideosWork').style.transitionDelay = '1s';
+
     document.querySelector('.contenedorVideosWork').classList.remove('aperturaComerciales');
+    document.querySelector('body').style.overflow = 'initial';
   };
-  const cargarVideo = url => {
-    setVideoSeleccionado({...videoSeleccionado, url: url});
+  const cargarVideo = comercial => {
+    const video = arregloUrl.find(element => {
+      return element.tituloComercial === comercial;
+    });
+    setVideoSeleccionado({...videoSeleccionado, video: video});
   };
 
-  const proximo = proximo => {
+  const proximoVideo = proximo => {
+    setVideosDeMarca('');
     if (proximo !== -1) {
       /* DERECHA */
       if (videoSeleccionado.index === undefined) {
         let proxVideo = {};
-        proxVideo.url = arregloUrl[0];
+        proxVideo.video = arregloUrl[0];
         proxVideo.index = 0;
         setVideoSeleccionado(proxVideo);
       } else {
         if (videoSeleccionado.index < arregloUrl.length - 1) {
-          console.log('existe indice');
           let proxVideo = {};
-          proxVideo.url = arregloUrl[videoSeleccionado.index + 1];
+          proxVideo.video = arregloUrl[videoSeleccionado.index + 1];
           proxVideo.index = videoSeleccionado.index + 1;
           setVideoSeleccionado(proxVideo);
         } else {
-          console.log('superó arreglo');
           let proxVideo = {};
-          proxVideo.url = arregloUrl[0];
+          proxVideo.video = arregloUrl[0];
           proxVideo.index = 0;
           setVideoSeleccionado(proxVideo);
         }
@@ -78,68 +67,79 @@ const Work = () => {
       /* IZQUIERDA */
       if (videoSeleccionado.index === undefined) {
         let proxVideo = {};
-        proxVideo.url = arregloUrl[0];
+        proxVideo.video = arregloUrl[0];
         proxVideo.index = 0;
         setVideoSeleccionado(proxVideo);
       } else {
         if (videoSeleccionado.index < arregloUrl.length - 1) {
-          console.log('existe indice');
           let proxVideo = {};
-          proxVideo.url = arregloUrl[videoSeleccionado.index + 1];
+          proxVideo.video = arregloUrl[videoSeleccionado.index + 1];
           proxVideo.index = videoSeleccionado.index + 1;
           setVideoSeleccionado(proxVideo);
         } else {
-          console.log('superó arreglo');
           let proxVideo = {};
-          proxVideo.url = arregloUrl[0];
+          proxVideo.video = arregloUrl[0];
           proxVideo.index = 0;
           setVideoSeleccionado(proxVideo);
         }
       }
     }
   };
-  /* const obtenerElementoCursor = (elemento) =>{
-        setCursor(elemento);
-        
-    }
-    useEffect(() => {
-        const cursor = document.querySelector('.cursor');
-        obtenerElementoCursor(cursor);
-        document.addEventListener('mousemove', (e) =>{
-            cursor.style.left = e.pageX + 'px';
-            cursor.style.top= e.pageY + 'px';
-        });
-        return () => {
-            document.removeEventListener('mousemove',()=>{})
-        }
-    }) */
 
+  const proximoVideoDeLaMarca = video => {
+    setVideosDeMarca(video);
+  };
   return (
     <div className="work">
       <div id="contenedorVideosWork" className="contenedorVideosWork">
         <div className="marcoVideo">
-          <video key={videoSeleccionado.url} className="contenidoVideo" controls>
-            <source type="video/mp4" src={videoSeleccionado.url}></source>
+          <video
+            key={videosDeMarca ? videosDeMarca.url : videoSeleccionado.video.url}
+            className="contenidoVideo"
+            controls
+          >
+            <source
+              type="video/mp4"
+              src={videosDeMarca ? videosDeMarca.url : videoSeleccionado.video.url}
+            ></source>
           </video>
+          <button
+            onClick={() => cerrarComerciales()}
+            className="botonAccionesVideosComerciales posicionIconoCerrar"
+          >
+            <i className="bi bi-x iconoCerrarComercialesWork"></i>
+          </button>
+          <button
+            onClick={() => proximoVideo(-1)}
+            className="botonAccionesVideosComerciales posicionSiguienteLeft"
+          >
+            <i className="bi bi-arrow-left-short iconoCerrarComercialesWork"></i>
+          </button>
+          <button
+            onClick={() => proximoVideo(1)}
+            className="botonAccionesVideosComerciales posicionSiguienteRight"
+          >
+            <i className="bi bi-arrow-right-short iconoCerrarComercialesWork"></i>
+          </button>
+          {videoSeleccionado.video.otrasUrls && (
+            <div className="CI-tagsComerciales">
+              {videoSeleccionado.video.otrasUrls.map((element, index) => {
+                return (
+                  <p
+                    key={index}
+                    className="tagComerciales"
+                    onClick={() => proximoVideoDeLaMarca(element)}
+                  >
+                    {element.tituloComercial}
+                  </p>
+                );
+              })}
+            </div>
+          )}
         </div>
-        <button
-          onClick={() => cerrarComerciales()}
-          className="botonAccionesVideosComerciales posicionIconoCerrar"
-        >
-          <i className="bi bi-x iconoCerrarComercialesWork"></i>
-        </button>
-        <button
-          onClick={() => proximo(-1)}
-          className="botonAccionesVideosComerciales posicionSiguienteLeft"
-        >
-          <i className="bi bi-arrow-left-short iconoCerrarComercialesWork"></i>
-        </button>
-        <button
-          onClick={() => proximo(1)}
-          className="botonAccionesVideosComerciales posicionSiguienteRight"
-        >
-          <i className="bi bi-arrow-right-short iconoCerrarComercialesWork"></i>
-        </button>
+        <h6 className="tituloComercial">
+          {videoSeleccionado.video.tituloComercial ? videoSeleccionado.video.tituloComercial : ''}
+        </h6>
       </div>
 
       <div className="body-Work">
@@ -160,105 +160,7 @@ const Work = () => {
         <span className="Texto-Work">VOCES</span>
 
         <div className="contenedor-Links rotar">
-          <div>
-            <img
-              id="audible"
-              /* onClick={() => mostrarVideo(AudibleVideo)} */
-              className="audible cursorLink"
-              alt="#"
-              src={Audible}
-            ></img>
-          </div>
-          <div>
-            <img
-              id="avene"
-              /* onClick={() => mostrarVideo(AveneVideo)} */
-              className="avene cursorLink"
-              alt="#"
-              src={Ypf}
-            ></img>
-          </div>
-          <div>
-            <img
-              id="cocacola"
-              /* onClick={() => mostrarVideo(CocaColaVideo)} */
-              className="coca cursorLink"
-              alt="#"
-              src={CocaCola}
-            ></img>
-          </div>
-          <div>
-            <img
-              id="disney"
-              /* onClick={() => mostrarVideo(DisneyVideo)} */
-              className="disney cursorLink"
-              alt="#"
-              src={Disney}
-            ></img>
-          </div>
-          <div>
-            <img
-              id="fanta"
-              /* onClick={() => mostrarVideo(FantaVideo)} */
-              className="fanta cursorLink"
-              alt="#"
-              src={espn}
-            ></img>
-          </div>
-          <div>
-            <img
-              id="ladysoft"
-              /*  onClick={() => mostrarVideo(LadysoftVideo)} */
-              className="ladysoft cursorLink"
-              alt="#"
-              src={gloomy}
-            ></img>
-          </div>
-          <div>
-            <img
-              id="lays"
-              /* onClick={() => mostrarVideo(LaysVideo)} */
-              className="lays cursorLink"
-              alt="#"
-              src={ingravide}
-            ></img>
-          </div>
-          <div>
-            <img
-              id="sprite"
-              /* onClick={() => mostrarVideo(SpriteVideo)} */
-              className="sprite cursorLink"
-              alt="#"
-              src={Paramount}
-            ></img>
-          </div>
-          <div>
-            <img
-              id="honda"
-              /* onClick={() => mostrarVideo(HondaVideo)} */
-              className="honda cursorLink"
-              alt="#"
-              src={Honda}
-            ></img>
-          </div>
-          <div>
-            <img
-              id="pantene"
-              /* onClick={() => mostrarVideo(PanteneVideo)} */
-              className="pantene cursorLink"
-              alt="#"
-              src={Stella}
-            ></img>
-          </div>
-          <div>
-            <img
-              id="fanta"
-              /* onClick={() => mostrarVideo(FantaVideo)} */
-              className="fanta cursorLink"
-              alt="#"
-              src={discovery}
-            ></img>
-          </div>
+          <TextoCircular mostrarComercial={mostrarVideo} />
         </div>
         <div className="cursor"></div>
       </div>

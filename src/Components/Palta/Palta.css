@@ -3,6 +3,9 @@
   width: 100%;
   height: auto;
 }
+.LP-Palta-A {
+  opacity: 1;
+}
 
 /* ========== CONTENEDORES PALTA ==========*/
 
@@ -79,6 +82,10 @@
   height: 90%;
 }
 
+.I-imagenes-palta {
+  display: none;
+}
+
 /* ========== KEYFRAMES ==========*/
 
 /* ----------- IMAGEN PALTA 1 ----------- */
@@ -140,35 +147,6 @@
     opacity: 1;
     transform: rotate(359deg);
   }
-
-  /* 0% {
-    opacity: 1;
-    transform: rotate(50deg);
-  }
-  15% {
-    opacity: 1;
-    transform: rotate(100deg);
-  }
-  30% {
-    opacity: 1;
-    transform: rotate(150deg);
-  }
-  45% {
-    opacity: 1;
-    transform: rotate(200deg);
-  }
-  60% {
-    opacity: 1;
-    transform: rotate(250deg);
-  }
-  80% {
-    opacity: 1;
-    transform: rotate(300deg);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(360deg);
-  } */
 }
 
 /* ----------- IMAGEN PALTA 5 ----------- */
@@ -186,33 +164,5 @@
   100% {
     opacity: 1;
     transform: rotate(359deg);
-  } /* 
-  0% {
-    opacity: 1;
-    transform: rotate(50deg);
   }
-  15% {
-    opacity: 1;
-    transform: rotate(100deg);
-  }
-  30% {
-    opacity: 1;
-    transform: rotate(150deg);
-  }
-  45% {
-    opacity: 1;
-    transform: rotate(200deg);
-  }
-  60% {
-    opacity: 1;
-    transform: rotate(250deg);
-  }
-  80% {
-    opacity: 1;
-    transform: rotate(300deg);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(360deg);
-  } */
 }

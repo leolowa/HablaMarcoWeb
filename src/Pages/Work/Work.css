@@ -5,30 +5,38 @@
 }
 .contenedorVideosWork {
   position: absolute;
+  left: -100vw;
   background-color: black;
-  width: 0;
+  width: 100vw;
   height: 100vh;
   z-index: 3;
-  transition: all 1s;
+  transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
 }
 .aperturaComerciales {
-  width: 100vw !important;
+  left: 0;
+  transition: all 0.5s ease-in;
 }
 .marcoVideo {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 500px;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.5s ease-out;
   transition-delay: 0.5s;
 }
-
+.marcoVideoAbierto {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+  transition-delay: 1.5s;
+}
 .botonAccionesVideosComerciales {
   background: transparent;
   border: none;
@@ -62,7 +70,9 @@
   width: 100%;
   height: 100%;
   outline: none;
+  transition: all 0.1s ease;
 }
+
 .body-Work {
   position: relative;
   display: flex;
@@ -115,145 +125,71 @@
 
 .contenedor-Links {
   position: relative;
-  width: 355px;
-  height: 355px;
+  width: 400px;
+  height: 400px;
   opacity: 1;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cursorLink {
   cursor: pointer;
 }
-.audible {
-  position: absolute;
-  top: 16px;
-  left: 27px;
-  width: 75px;
-  height: 75px;
-  transform: rotate(-42deg);
-}
-.avene {
-  position: absolute;
-  top: -14px;
-  right: 95px;
-  width: 63px;
-  height: 63px;
-  transform: rotate(181deg);
-}
-.coca {
-  position: absolute;
-  bottom: -19px;
-  left: 79px;
-  width: 90px;
-  height: 90px;
-  transform: rotate(155deg);
-}
-
-.disney {
-  position: absolute;
-  width: 96px;
-  height: 96px;
-  bottom: 63px;
-  left: -22px;
-  transform: rotate(-33deg);
-}
-
-.fanta {
-  position: absolute;
-  width: 52px;
-  height: 52px;
-  top: -12px;
-  left: 118px;
-  transform: rotate(-132deg);
-}
-.ladysoft {
-  position: absolute;
-  width: 87px;
-  height: 87px;
-  top: 30px;
-  left: 261px;
-  transform: rotate(-104deg);
-}
-.sprite {
-  position: absolute;
-  width: 61px;
-  height: 61px;
-  top: 130px;
-  left: 315px;
-  transform: rotate(-5deg);
-}
-.honda {
-  position: absolute;
-  width: 77px;
-  height: 77px;
-  top: 294px;
-  left: 202px;
-  transform: rotate(71deg);
-}
-.pantene {
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  top: 215px;
-  left: 275px;
-  transform: rotate(-131deg);
-}
-.lays {
-  position: absolute;
-  width: 47px;
-  height: 47px;
-  top: 111px;
-  left: -9px;
-  transform: rotate(-45deg);
-}
 .rotar {
   animation: rotar 50s linear infinite;
-  /* transform: rotate(50deg) */
+  transform: rotate(50deg);
 }
 
 .rotar:hover {
   animation-play-state: paused;
 }
 
-/* .contenedor-Links img{
-  transition: .2s;
-}
-.cursor{
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: black;
-  transition: .1s;
-  transform: translate(-50%,-50%);
-  pointer-events: none;
-  mix-blend-mode: difference;
-}
-.contenedor-Links img:hover ~ .cursor{
-  transform: scale(6);
-} */
-/* @keyframes rotar {
+@keyframes rotar {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
-@media screen and (max-width: 1920px) {
+}
+.CI-tagsComerciales {
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  display: flex;
+}
+.tagComerciales {
+  color: white;
+  font: 15px IntegralCF-Medium;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.tagComerciales:hover {
+  transform: scale(1.2);
+}
+.tituloComercial {
+  color: rgba(255, 255, 255, 0.301);
+  position: absolute;
+  font: 4.641288433382138vw IntegralCF-ExtraBold;
+  top: 0;
+}
+@media screen and (max-width: 5000px) {
   .Texto-Work {
     top: 30%;
-    left: 51%;
+    left: 46%;
   }
   .contenedor-Links {
-    top: 32%;
-    left: calc(100vw - 112%);
+    top: 30.5%;
+    left: calc(100vw - 115.29%);
   }
 }
 @media screen and (max-width: 1366px) {
   .Texto-Work {
     top: 30%;
-    left: 45%;
+    left: 46%;
   }
   .contenedor-Links {
     top: 22%;
@@ -262,28 +198,39 @@
 }
 @media screen and (max-width: 1024px) {
   .Texto-Work {
-    top: 32%;
+    top: 25%;
     font-size: 15.641288433382138vw;
-    left: 48%;
+    left: 41%;
   }
   .contenedor-Links {
     top: 19%;
-    left: calc(100vw - 128.5%);
+    left: calc(100vw - 132.5%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .Texto-Work {
+    top: 40%;
+    font-size: 16.641288433382138vw;
+    left: 37%;
+  }
+  .contenedor-Links {
+    top: 30%;
+    left: calc(100vw - 138.5%);
   }
 }
 @media screen and (max-width: 480px) {
   .Texto-Work {
     position: absolute;
     top: 42%;
-    font-size: 30.641288433382138vw;
+    font-size: 32.641288433382138vw;
     transform: rotate(-90deg);
-    left: 35%;
+    left: 22%;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
   }
   .contenedor-Links {
-    top: 30%;
-    left: calc(100vw - 92.5%);
+    top: 26%;
+    left: calc(100vw - 80.5%);
   }
   img {
     user-select: none;
@@ -306,5 +253,40 @@
     margin-bottom: 10%;
     width: 90%;
     height: 50%;
+  }
+  .CI-tagsComerciales {
+    position: absolute;
+    width: 100%;
+    top: 18%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .tituloComercial {
+    font: 8.641288433382138vw IntegralCF-ExtraBold;
+    left: 20px;
+    top: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .Texto-Work {
+    top: 47%;
+  }
+  .contenedor-Links {
+    top: 26%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .Texto-Work {
+    top: 49%;
+    font-size: 30.641288433382138vw;
+    transform: rotate(-90deg);
+    left: 26%;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .contenedor-Links {
+    top: 23.5%;
+    left: 30%;
   }
 }
