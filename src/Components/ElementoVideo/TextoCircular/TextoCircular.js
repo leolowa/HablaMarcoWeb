@@ -6,10 +6,6 @@ const TextoCircular = ({
     console.log('Componente no recibió función.');
   },
 }) => {
-  const funcionLink = e => {
-    e.preventDefault();
-    alert('Hizo Click');
-  };
   return (
     <div className="CP-TextoCircular">
       <svg viewBox="0 0 115 115">

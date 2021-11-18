@@ -1,48 +1,123 @@
-.contenedorReel{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 0;
-    display: flex;
+.contenedorReel {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.estilosVideoReel {
+  opacity: 1;
+  z-index: 0;
+  transition: all 1s ease-in-out;
+}
+
+.playReel {
+  transition: all 1s ease-in-out !important;
+  opacity: 0.3 !important;
+  display: flex;
+  align-items: center;
+  place-content: center;
+}
+
+/* ====== ANIMACION PALTA ====== */
+
+.CP-Reel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  place-content: center;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  /* background-color: red; */
+}
+
+.CI-Contenedor-Palta {
+  position: absolute;
+  padding-right: 3%;
+  padding-left: 5%;
+}
+
+/* ====== TEXTO ANIMACION APERTURA PALTA ====== */
+
+.ReelIzquierdaA {
+  left: 22%;
+  opacity: 0.3 !important;
+  transition: all 1s ease-in-out !important;
+}
+.ReelDerechaA {
+  right: 22%;
+  opacity: 0.3 !important;
+  transition: all 1s ease-in-out !important;
+}
+
+/* ====== TEXTO ANIMACION CIERRE PALTA ====== */
+
+.ReelIzquierdaC {
+  align-items: center;
+  left: 28%;
+}
+.ReelDerechaC {
+  align-items: center;
+  right: 30%;
+}
+
+/* ====== FIN ANIMACION PALTA ====== */
+
+.textoReel {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  font: 14.641288433382138vw IntegralCF-ExtraBold;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+.contenedorBotonesReel {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 10;
+}
+@media screen and (max-width: 480px) {
+  .textoReel {
+    margin-left: 2%;
+    font: 28vw IntegralCF-ExtraBold;
+  }
+  .contenedorBotonesReel {
+    bottom: 60px;
+    right: -2%;
     justify-content: center;
+  }
+
+  /* ====== TEXTO ANIMACION APERTURA PALTA ====== */
+
+  .ReelIzquierdaA {
+    left: -4%;
+    opacity: 0 !important;
+    transition: all 0.3s ease-in-out !important;
+  }
+  .ReelDerechaA {
+    right: -4%;
+    opacity: 0 !important;
+    transition: all 0.3s ease-in-out !important;
+  }
+
+  /* ====== TEXTO ANIMACION CIERRE PALTA ====== */
+
+  .ReelIzquierdaC {
     align-items: center;
-    background-color:white;
-}
-.estilosVideoReel{
-    opacity: 1;
-    z-index: 0;
-    transition: all 1s ease-in-out;
-}
-
-.playReel{
-    transition: all 1s ease-in-out !important;
-    opacity: .3 !important;
-}
-.textoReel{
-    position: absolute;
-    z-index: 2;
-    text-align: center;
-    font: 14.641288433382138vw IntegralCF-ExtraBold;
-    opacity: 1;
-    transition: all 1s ease-in-out;
-}
-
-.contenedorBotonesReel{
-    position: absolute;
-    bottom: 40px;
-    right: 0;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-}
-@media screen and (max-width:480px) {
-    .textoReel{
-        margin-left: 2%;
-        font: 28vw IntegralCF-ExtraBold;
-    }
-    .contenedorBotonesReel{
-        bottom: 60px;
-        right: -2%;
-        justify-content: center;
-    }
+    left: 7%;
+  }
+  .ReelDerechaC {
+    align-items: center;
+    right: 10%;
+  }
 }

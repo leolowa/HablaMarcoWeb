@@ -47,33 +47,29 @@ export const App = () => {
       <Menu tipoIconoMenu={tipoIconoMenu} />
 
       <section id="home">
-        {' '}
-        <Home />{' '}
+        <Home />
       </section>
       <section className="slideBlanco"></section>
 
       <section id="work">
-        {' '}
-        <Work />{' '}
+        <Work />
       </section>
       <section className="slideBlanco"></section>
 
       <section id="reel">
-        {' '}
-        <Reel />{' '}
+        <Reel />
       </section>
+
       <section className="slideBlanco"></section>
 
       <div id="iconoBlanco" style={{background: 'black'}}>
         <section className="slideNegro"></section>
         <section id="about">
-          {' '}
-          <About />{' '}
+          <About />
         </section>
         <section className="slideNegro"></section>
         <section id="contacto">
-          {' '}
-          <Contacto />{' '}
+          <Contacto />
         </section>
       </div>
     </div>

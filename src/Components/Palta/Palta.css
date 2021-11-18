@@ -1,0 +1,167 @@
+/* ========== LAYOUT PADRE ==========*/
+.LP-Palta {
+  width: 100%;
+  height: auto;
+}
+.LP-Palta-A {
+  opacity: 1;
+}
+
+/* ========== CONTENEDORES PALTA ==========*/
+
+.CP-Palta {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 50px 1fr 50px;
+  /* background-color: red; */
+}
+.CI-Palta {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 10px 200px 200px 10px;
+  /* background-color: red; */
+}
+
+/* ========== IMAGENES PALTA ==========*/
+
+.I-Palta1 {
+  grid-column: 2/3;
+  grid-row: 2/4;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  animation: Palta1;
+  animation-delay: 0.5s;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: step-start;
+  animation-timing-function: 5ms ease-in-out cubic-bezier(1.872, 1.824, 1.765, 1);
+  animation-fill-mode: forwards;
+  background-repeat: no-repeat;
+}
+
+.I-Palta4 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  opacity: 0;
+  animation: Palta4;
+  animation-delay: 1.5s;
+  animation-duration: 4.5s;
+  animation-timing-function: linear infinite;
+  animation-timing-function: cubic-bezier(0.185, 0.135, 0.115, 0.186);
+  animation-iteration-count: infinite;
+}
+
+.I-Palta5 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 0;
+  animation: Palta5;
+  animation-delay: 1.5s;
+  animation-duration: 4.5s;
+  animation-timing-function: linear infinite;
+  animation-timing-function: cubic-bezier(0.185, 0.135, 0.115, 0.186);
+  animation-iteration-count: infinite;
+}
+
+.I-imagen-palta-4 {
+  height: 90%;
+}
+.I-imagen-palta-5 {
+  height: 90%;
+}
+
+.I-imagenes-palta {
+  display: none;
+}
+
+/* ========== KEYFRAMES ==========*/
+
+/* ----------- IMAGEN PALTA 1 ----------- */
+
+@keyframes Palta1 {
+  0% {
+    opacity: 0.1;
+    background-image: url(../../Static/Palta/1.png);
+    animation-timing-function: cubic-bezier(0.185, 0.135, 0.115, 0.186);
+    background-size: contain;
+  }
+
+  15% {
+    opacity: 0.5;
+    background-image: url(../../Static/Palta/1.png);
+    background-size: contain;
+  }
+  30% {
+    opacity: 0.5;
+    background-image: url(../../Static/Palta/1.png);
+    animation-timing-function: cubic-bezier(0.185, 0.135, 0.115, 0.186);
+    background-size: contain;
+  }
+
+  45% {
+    opacity: 1;
+    background-image: url(../../Static/Palta/1.png);
+    background-size: contain;
+  }
+  60% {
+    background-image: url(../../Static/Palta/2.png);
+    background-size: contain;
+  }
+  75% {
+    background-image: url(../../Static/Palta/3.png);
+    background-size: contain;
+  }
+  85% {
+    background-image: url(../../Static/Palta/4.png);
+    background-size: contain;
+  }
+  100% {
+  }
+}
+
+/* ----------- IMAGEN PALTA 4 ----------- */
+
+@keyframes Palta4 {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(359deg);
+  }
+}
+
+/* ----------- IMAGEN PALTA 5 ----------- */
+
+@keyframes Palta5 {
+  0% {
+    opacity: 1;
+
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(359deg);
+  }
+}
