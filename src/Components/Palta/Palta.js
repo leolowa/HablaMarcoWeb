@@ -14,17 +14,17 @@ const Palta = ({isPaltaAbierta = false}) => {
         <div className="CP-Palta">
           <div className="CI-Palta">
             <div className="I-Palta1">
-              <img className="I-imagenes-palta" src={Palta1} />
-              <img className="I-imagenes-palta" src={Palta2} />
-              <img className="I-imagenes-palta" src={Palta3} />
-              <img className="I-imagenes-palta" src={Palta6} />
+              <img alt="" className="I-imagenes-palta" src={Palta1} />
+              <img alt="" className="I-imagenes-palta" src={Palta2} />
+              <img alt="" className="I-imagenes-palta" src={Palta3} />
+              <img alt="" className="I-imagenes-palta" src={Palta6} />
             </div>
 
             <div className="I-Palta4">
-              <img className="I-imagen-palta-4" src={Palta4} />
+              <img alt="" className="I-imagen-palta-4" src={Palta4} />
             </div>
             <div className="I-Palta5">
-              <img className="I-imagen-palta-5" src={Palta5} />
+              <img alt="" className="I-imagen-palta-5" src={Palta5} />
             </div>
           </div>
         </div>
