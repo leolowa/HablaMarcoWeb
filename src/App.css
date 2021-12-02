@@ -115,6 +115,10 @@ section {
   background-color: black;
   height: 30vh;
 }
+.CI-SliderNegros {
+  background-color: black;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
 @media screen and (max-width: 480px) {
   .contenedorIconoMenu {
     -webkit-tap-highlight-color: transparent;
