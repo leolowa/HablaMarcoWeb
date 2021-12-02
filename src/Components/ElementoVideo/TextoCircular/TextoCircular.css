@@ -8,7 +8,7 @@
 }
 .CP-TextoCircular {
   margin: 80px auto;
-  font: 0.29rem Avenir-Medium;
+  font: 0.31rem Avenir-Medium;
 }
 .CP-TextoCircular svg {
   overflow: visible;
@@ -23,13 +23,7 @@
   fill: black;
   cursor: pointer;
 }
-/* .tSpan {
-  transition: all 0.5s ease-in-out;
-}
-.tSpan:hover {
-  transition: all 0.5s ease-in-out;
-  font: 0.4rem Avenir-Medium;
-} */
+
 @media screen and (max-width: 480px) {
   .CP-TextoCircular {
     font: 0.292rem Avenir-Medium;

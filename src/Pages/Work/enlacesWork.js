@@ -16,6 +16,7 @@ import videoPantene2 from '../../Static/Video/PANTENE2.mp4';
 import videoSchweppes from '../../Static/Video/Schweppes.mp4';
 import StellaArtois1 from '../../Static/Video/StellaArtois1.mp4';
 import StellaArtois2 from '../../Static/Video/StellaNoire.mp4';
+import Ford from '../../Static/Video/Ford.mp4';
 
 const urlVideo = [
   {
@@ -94,8 +95,8 @@ const urlVideo = [
     tituloComercial: 'Ingravide',
   },
   {
-    url: '',
-    tituloComercial: 'Gloomy Airs',
+    url: Ford,
+    tituloComercial: 'Ford',
   },
 ];
 

@@ -12,8 +12,8 @@ const TextoCircular = ({
         <path d="M -3,55 a 60,60 1 1,1 0,1 z" id="circle" />
         <text>
           <textPath href="#circle" throwIfNamespace={false}>
-            <tspan className="tSpan" onClick={() => mostrarComercial('Gloomy Airs')}>
-              &nbsp;&nbsp;&nbsp; GLOOMY AIRS &nbsp;&nbsp;&nbsp;
+            <tspan className="tSpan" onClick={() => mostrarComercial('Ford')}>
+              &nbsp;&nbsp;&nbsp; FORD &nbsp;&nbsp;&nbsp;
             </tspan>
             <tspan onClick={() => mostrarComercial('Audible')}>AUDIBLE &nbsp;&nbsp;&nbsp;</tspan>
             <tspan onClick={() => mostrarComercial('Pantene')}>PANTENE &nbsp;&nbsp;&nbsp;</tspan>
@@ -36,7 +36,7 @@ const TextoCircular = ({
               STELLA ARTOIS &nbsp;&nbsp;&nbsp;
             </tspan>
             <tspan onClick={() => mostrarComercial('Honda')}>HONDA &nbsp;&nbsp;&nbsp;</tspan>
-            <tspan onClick={() => mostrarComercial('Ingravide')}>INGRAVIDE</tspan>
+            <tspan onClick={() => mostrarComercial('Ingravide')}>INGRAVIDO</tspan>
           </textPath>
         </text>
       </svg>
