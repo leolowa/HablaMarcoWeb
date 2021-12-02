@@ -33,8 +33,8 @@
   align-items: center;
   place-content: center;
   animation: Palta1;
-  animation-delay: 0.5s;
-  animation-duration: 1.2s;
+  animation-delay: 0.2s;
+  animation-duration: 0.7s;
   animation-iteration-count: 1;
   animation-timing-function: step-start;
   animation-timing-function: 5ms ease-in-out cubic-bezier(1.872, 1.824, 1.765, 1);
@@ -52,7 +52,7 @@
   place-content: center;
   opacity: 0;
   animation: Palta4;
-  animation-delay: 1.5s;
+  animation-delay: 0.8s;
   animation-duration: 4.5s;
   animation-timing-function: linear infinite;
   animation-timing-function: cubic-bezier(0.185, 0.135, 0.115, 0.186);
@@ -68,7 +68,7 @@
   margin-top: 20px;
   opacity: 0;
   animation: Palta5;
-  animation-delay: 1.5s;
+  animation-delay: 0.8s;
   animation-duration: 4.5s;
   animation-timing-function: linear infinite;
   animation-timing-function: cubic-bezier(0.185, 0.135, 0.115, 0.186);
