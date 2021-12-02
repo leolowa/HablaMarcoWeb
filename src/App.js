@@ -21,9 +21,10 @@ export const App = () => {
   };
 
   useEffect(() => {
-    const tag = document.querySelectorAll('#iconoBlanco');
+    const tag = document.querySelector('#iconoBlanco');
 
     const callback = entries => {
+      console.log(entries);
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           tipoIconoMenu('blanco');
@@ -33,10 +34,11 @@ export const App = () => {
       });
     };
     const options = {
-      threshold: 0.25,
+      threshold: [0.3],
     };
     const observer = new IntersectionObserver(callback, options);
-    tag.forEach(elemento => observer.observe(elemento));
+    /* tag.forEach(elemento => observer.observe(elemento)); */
+    observer.observe(tag);
   });
 
   return (
