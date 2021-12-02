@@ -8,7 +8,6 @@ import Contacto from './Pages/Contacto/Contacto';
 import Reel from './Pages/Reel/Reel';
 import iconoMenuNegro from './Static/MenuManchaNegro.gif';
 import iconoMenuBlanco from './Static/MANCHA-MENU-BLANCA.gif';
-import Palta from './Components/Palta/Palta';
 
 export const App = () => {
   const [iconoMenu, setIconoMenu] = useState(false);
@@ -48,21 +47,17 @@ export const App = () => {
       <Menu tipoIconoMenu={tipoIconoMenu} />
 
       <section id="home">
-        {' '}
-        <Home />{' '}
+        <Home />
       </section>
       <section className="slideBlanco"></section>
 
       <section id="work">
-        {' '}
-        <Work />{' '}
+        <Work />
       </section>
       <section className="slideBlanco"></section>
 
       <section id="reel">
-        {' '}
-        {/* <Palta /> */}
-        <Reel />{' '}
+        <Reel />
       </section>
 
       <section className="slideBlanco"></section>
@@ -70,17 +65,13 @@ export const App = () => {
       <div id="iconoBlanco" style={{background: 'black'}}>
         <section className="slideNegro"></section>
         <section id="about">
-          {' '}
-          <About />{' '}
+          <About />
         </section>
         <section className="slideNegro"></section>
         <section id="contacto">
-          {' '}
-          <Contacto />{' '}
+          <Contacto />
         </section>
       </div>
     </div>
   );
 };
-
-/* className="animate__animated animate__fadeIn animate__slow" */
