@@ -72,6 +72,9 @@ export const App = () => {
           <Contacto />
         </section>
       </div>
+      <div className="CI-FraseSutil">
+        <p>Esta página pertenece a una persona en construcción</p>
+      </div>
     </div>
   );
 };
