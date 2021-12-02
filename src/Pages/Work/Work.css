@@ -35,7 +35,7 @@
 .marcoVideoAbierto {
   opacity: 1;
   transition: opacity 0.5s ease-in;
-  transition-delay: 1.5s;
+  transition-delay: 0.5s;
 }
 .botonAccionesVideosComerciales {
   background: transparent;

@@ -36,7 +36,7 @@ const TextoCircular = ({
               STELLA ARTOIS &nbsp;&nbsp;&nbsp;
             </tspan>
             <tspan onClick={() => mostrarComercial('Honda')}>HONDA &nbsp;&nbsp;&nbsp;</tspan>
-            <tspan onClick={() => mostrarComercial('Ingravide')}>INGRAVIDO</tspan>
+            <tspan onClick={() => mostrarComercial('Ingravido')}>INGRAVIDO</tspan>
           </textPath>
         </text>
       </svg>
