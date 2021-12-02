@@ -1,0 +1,227 @@
+.CP-Voces {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 450px 1fr;
+  grid-template-rows: 1fr 450px 1fr;
+  overflow: hidden;
+}
+
+.contenedorVideosWork {
+  position: absolute;
+  left: -100vw;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+.aperturaComerciales {
+  left: 0;
+  transition: all 0.5s ease-in;
+}
+.marcoVideo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 500px;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  transition-delay: 0.5s;
+}
+.marcoVideoAbierto {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+  transition-delay: 0.5s;
+}
+.botonAccionesVideosComerciales {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.posicionIconoCerrar {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.posicionSiguienteLeft {
+  position: absolute;
+  left: 5%;
+}
+.posicionSiguienteRight {
+  position: absolute;
+  right: 5%;
+}
+.iconoCerrarComercialesWork {
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  font-size: 70px;
+  transition: all 0.5s ease-in-out;
+}
+.iconoCerrarComercialesWork:hover {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+.contenidoVideo {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  transition: all 0.1s ease;
+}
+.CI-TextoVoces {
+  grid-column: 2/5;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.Texto-Voces {
+  position: absolute;
+  right: -2.5%;
+  font: 14.641288433382138vw IntegralCF-ExtraBold;
+  color: black;
+}
+
+.CI-TextoCircular {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 25px;
+}
+.rotar {
+  animation: rotar 50s linear infinite;
+  transform: rotate(50deg);
+}
+
+.rotar:hover {
+  animation-play-state: paused;
+}
+.contenedorVerMas {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  width: 90px;
+  height: 60px;
+  cursor: pointer;
+}
+.textoMas {
+  position: absolute;
+  top: 60%;
+  left: -40px;
+  color: black;
+  font: 20px IntegralCF-Medium;
+}
+.botonMas {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.manchaWork {
+  width: 50px;
+  height: 50px;
+}
+.botonMas {
+  position: absolute;
+  top: -10px;
+  left: 30px;
+}
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.CI-VerMas {
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  .CP-Voces {
+    grid-template-columns: 1fr 500px 1fr;
+    grid-template-rows: 1fr 500px 1fr;
+  }
+  .CI-TextoCircular {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 55px;
+    /* margin: 0; */
+  }
+  .Texto-Voces {
+    transform: rotate(-90deg);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 33.641288433382138vw;
+    right: -23%;
+    top: 36%;
+  }
+  .iconoCerrarComercialesWork {
+    font-size: 40px;
+    transition: all 0.5s ease-in-out;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .contenedorVideosWork {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    opacity: 1;
+  }
+  .marcoVideo {
+    margin-bottom: 10%;
+    width: 90%;
+    height: 50%;
+  }
+  .CI-tagsComerciales {
+    position: absolute;
+    width: 100%;
+    top: 18%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .tituloComercial {
+    font: 8.641288433382138vw IntegralCF-ExtraBold;
+    left: 20px;
+    top: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .Texto-Voces {
+    right: -13%;
+    top: 40%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .CP-Voces {
+    grid-template-columns: 1fr 400px 1fr;
+    grid-template-rows: 1fr 400px 1fr;
+  }
+  .Texto-Voces {
+    right: -20%;
+    top: 40%;
+  }
+}

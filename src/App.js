@@ -8,6 +8,7 @@ import Contacto from './Pages/Contacto/Contacto';
 import Reel from './Pages/Reel/Reel';
 import iconoMenuNegro from './Static/MenuManchaNegro.gif';
 import iconoMenuBlanco from './Static/MANCHA-MENU-BLANCA.gif';
+import Voces from './Pages/Voces/Voces';
 
 export const App = () => {
   const [iconoMenu, setIconoMenu] = useState(false);
@@ -54,7 +55,8 @@ export const App = () => {
       <section className="slideBlanco"></section>
 
       <section id="work">
-        <Work />
+        {/* <Work /> */}
+        <Voces></Voces>
       </section>
       <section className="slideBlanco"></section>
 

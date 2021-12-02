@@ -24,8 +24,31 @@
   cursor: pointer;
 }
 
+.CI-tagsComerciales {
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  display: flex;
+}
+.tagComerciales {
+  color: white;
+  font: 15px IntegralCF-Medium;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.tagComerciales:hover {
+  transform: scale(1.2);
+}
+.tituloComercial {
+  color: rgba(255, 255, 255, 0.301);
+  position: absolute;
+  font: 4.641288433382138vw IntegralCF-ExtraBold;
+  top: 0;
+}
+
 @media screen and (max-width: 480px) {
   .CP-TextoCircular {
-    font: 0.292rem Avenir-Medium;
+    font: 0.307rem Avenir-Medium;
   }
 }
