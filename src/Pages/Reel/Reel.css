@@ -46,13 +46,13 @@
 
 .ReelIzquierdaA {
   left: 22%;
-  opacity: 0.3 !important;
-  transition: all 1s ease-in-out !important;
+  opacity: 0.2 !important;
+  transition: all 0.8s ease-in-out !important;
 }
 .ReelDerechaA {
   right: 22%;
-  opacity: 0.3 !important;
-  transition: all 1s ease-in-out !important;
+  opacity: 0.2 !important;
+  transition: all 0.8s ease-in-out !important;
 }
 
 /* ====== TEXTO ANIMACION CIERRE PALTA ====== */
@@ -102,12 +102,12 @@
   .ReelIzquierdaA {
     left: -4%;
     opacity: 0 !important;
-    transition: all 0.3s ease-in-out !important;
+    transition: all 2ms ease-in-out !important;
   }
   .ReelDerechaA {
     right: -4%;
     opacity: 0 !important;
-    transition: all 0.3s ease-in-out !important;
+    transition: all 2ms ease-in-out !important;
   }
 
   /* ====== TEXTO ANIMACION CIERRE PALTA ====== */

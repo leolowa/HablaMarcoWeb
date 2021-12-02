@@ -17,7 +17,14 @@ const Home = () => {
           </div>
 
           <div className="contenedorVideoInicio">
-            <video playsInline className="videoMarcoNadando" autoPlay={true} muted="muted" loop>
+            <video
+              playsInline
+              className="videoMarcoNadando"
+              preload="auto"
+              autoPlay={true}
+              muted="muted"
+              loop
+            >
               <source type="video/mp4" src={baileConPerro}></source>
             </video>
           </div>
