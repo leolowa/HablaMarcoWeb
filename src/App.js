@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import Home from './Pages/Home/Home';
 import Menu from './Pages/Menu/Menu';
-import Work from './Pages/Work/Work';
 import About from './Pages/About/About';
 import Contacto from './Pages/Contacto/Contacto';
 import Reel from './Pages/Reel/Reel';
@@ -55,7 +54,6 @@ export const App = () => {
       <section className="slideBlanco"></section>
 
       <section id="work">
-        {/* <Work /> */}
         <Voces></Voces>
       </section>
       <section className="slideBlanco"></section>

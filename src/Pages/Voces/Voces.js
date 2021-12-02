@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './Voces.css';
 import manchaWork from '../../Static/MenuManchaNegro.gif';
 import TextoCircular from '../../Components/ElementoVideo/TextoCircular/TextoCircular';
-import arregloUrl from '../Work/enlacesWork';
+import arregloUrl from './enlacesWork';
 
 const Voces = () => {
   const [videoSeleccionado, setVideoSeleccionado] = useState({video: '', index: undefined});
