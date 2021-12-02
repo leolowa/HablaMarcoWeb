@@ -64,7 +64,7 @@ const Contacto = () => {
               Sennheiser mkh 416.
               <br /> Neumann TLM 103.
               <br />
-              Mac Mini.
+              Mac Mini M1.
             </p>
           </div>
         </div>
