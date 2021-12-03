@@ -142,6 +142,7 @@
   top: -10px;
   left: 30px;
 }
+
 @keyframes rotar {
   from {
     transform: rotate(0deg);
@@ -167,7 +168,6 @@
     align-items: center;
     margin-top: 40px;
     margin-left: 55px;
-    /* margin: 0; */
   }
   .Texto-Voces {
     transform: rotate(-90deg);

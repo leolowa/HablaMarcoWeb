@@ -1,7 +1,8 @@
 import React from 'react';
-import HablaMarco from '../../Static/HablaMarco.svg';
-import baileConPerro from '../../Static/Video/baileConPerro.mp4';
 import './Home.css';
+import HablaMarco from '../../Static/HablaMarco.svg';
+/* import baileConPerro from '../../Static/Video/baileConPerro.mp4'; */
+import gifBaileConPerro from '../../Static/baileConPerroTest.gif';
 
 const Home = () => {
   return (
@@ -17,9 +18,10 @@ const Home = () => {
           </div>
 
           <div className="contenedorVideoInicio">
-            <video playsInline className="videoMarcoNadando" autoPlay={true} muted loop>
+            {/* <video playsInline className="videoMarcoNadando" autoPlay={true} muted loop>
               <source type="video/mp4" src={baileConPerro}></source>
-            </video>
+            </video> */}
+            <img alt="" src={gifBaileConPerro} className="gifHome"></img>
           </div>
           <div className="circuloRojo-Inicio"></div>
         </div>
