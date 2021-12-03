@@ -85,10 +85,10 @@
 }
 
 .contenedorVideoInicio {
-  height: 798px;
+  height: 598px;
   position: absolute;
   overflow: hidden;
-  right: 25%;
+  right: 30%;
 }
 
 .circuloRojo-Inicio {
@@ -102,7 +102,7 @@
 .gifHome {
   width: 100%;
   height: 100%;
-  min-height: 800px;
+  min-height: 600px;
   min-width: 100%;
 }
 @keyframes fade {
@@ -116,14 +116,14 @@
 }
 @media screen and (max-width: 1400px) {
   .contenedorVideoInicio {
-    height: 599px;
+    height: 498px;
     position: absolute;
     overflow: hidden;
   }
   .gifHome {
     width: 100%;
     height: 100%;
-    min-height: 600px;
+    min-height: 500px;
     min-width: 100%;
   }
   .circuloRojo-Inicio {
