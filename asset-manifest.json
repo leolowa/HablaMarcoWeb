@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/HablaMarcoWeb/static/css/main.ccd49284.chunk.css",
-    "main.js": "/HablaMarcoWeb/static/js/main.940cdb07.chunk.js",
-    "main.js.map": "/HablaMarcoWeb/static/js/main.940cdb07.chunk.js.map",
+    "main.css": "/HablaMarcoWeb/static/css/main.eda56a7c.chunk.css",
+    "main.js": "/HablaMarcoWeb/static/js/main.72100e07.chunk.js",
+    "main.js.map": "/HablaMarcoWeb/static/js/main.72100e07.chunk.js.map",
     "runtime-main.js": "/HablaMarcoWeb/static/js/runtime-main.6edc2827.js",
     "runtime-main.js.map": "/HablaMarcoWeb/static/js/runtime-main.6edc2827.js.map",
     "static/js/2.35752e73.chunk.js": "/HablaMarcoWeb/static/js/2.35752e73.chunk.js",
     "static/js/2.35752e73.chunk.js.map": "/HablaMarcoWeb/static/js/2.35752e73.chunk.js.map",
     "index.html": "/HablaMarcoWeb/index.html",
-    "static/css/main.ccd49284.chunk.css.map": "/HablaMarcoWeb/static/css/main.ccd49284.chunk.css.map",
+    "static/css/main.eda56a7c.chunk.css.map": "/HablaMarcoWeb/static/css/main.eda56a7c.chunk.css.map",
     "static/js/2.35752e73.chunk.js.LICENSE.txt": "/HablaMarcoWeb/static/js/2.35752e73.chunk.js.LICENSE.txt",
     "static/media/Palta.css": "/HablaMarcoWeb/static/media/4.59d5d3ec.png",
     "static/media/4-1-1.b8533b73.png": "/HablaMarcoWeb/static/media/4-1-1.b8533b73.png",
@@ -22,6 +22,7 @@
     "static/media/FoodNetwork1.aec371ce.mov": "/HablaMarcoWeb/static/media/FoodNetwork1.aec371ce.mov",
     "static/media/FoodNetwork2.8fde09f1.mov": "/HablaMarcoWeb/static/media/FoodNetwork2.8fde09f1.mov",
     "static/media/FoodNetwork3.87c94b4a.mov": "/HablaMarcoWeb/static/media/FoodNetwork3.87c94b4a.mov",
+    "static/media/Ford.09ec0c2e.mp4": "/HablaMarcoWeb/static/media/Ford.09ec0c2e.mp4",
     "static/media/HONDA1.6fedebb1.mp4": "/HablaMarcoWeb/static/media/HONDA1.6fedebb1.mp4",
     "static/media/HONDA2.e0a19ab9.mp4": "/HablaMarcoWeb/static/media/HONDA2.e0a19ab9.mp4",
     "static/media/HONDA3.6eefe020.mp4": "/HablaMarcoWeb/static/media/HONDA3.6eefe020.mp4",
@@ -35,7 +36,7 @@
     "static/media/Sprite.32c16b02.mp4": "/HablaMarcoWeb/static/media/Sprite.32c16b02.mp4",
     "static/media/StellaArtois1.8daedfab.mp4": "/HablaMarcoWeb/static/media/StellaArtois1.8daedfab.mp4",
     "static/media/StellaNoire.8b792fcb.mp4": "/HablaMarcoWeb/static/media/StellaNoire.8b792fcb.mp4",
-    "static/media/baileConPerro.8906588c.mp4": "/HablaMarcoWeb/static/media/baileConPerro.8906588c.mp4",
+    "static/media/baileConPerroTest.1a1531f8.gif": "/HablaMarcoWeb/static/media/baileConPerroTest.1a1531f8.gif",
     "static/media/ButtonImg.css": "/HablaMarcoWeb/static/media/boton_About.85bc2b48.gif",
     "static/media/flechaMenu.767b2e01.svg": "/HablaMarcoWeb/static/media/flechaMenu.767b2e01.svg",
     "static/media/habla-marco-reel-latam-2.a8afe4d9.mp3": "/HablaMarcoWeb/static/media/habla-marco-reel-latam-2.a8afe4d9.mp3",
@@ -46,7 +47,7 @@
   "entrypoints": [
     "static/js/runtime-main.6edc2827.js",
     "static/js/2.35752e73.chunk.js",
-    "static/css/main.ccd49284.chunk.css",
-    "static/js/main.940cdb07.chunk.js"
+    "static/css/main.eda56a7c.chunk.css",
+    "static/js/main.72100e07.chunk.js"
   ]
 }
