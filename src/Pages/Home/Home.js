@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import HablaMarco from '../../Static/HablaMarco.svg';
 /* import baileConPerro from '../../Static/Video/baileConPerro.mp4'; */
-import gifBaileConPerro from '../../Static/baileConPerroTest.gif';
+import gifBaileConPerro from '../../Static/Video/baileConPerro.gif';
 
 const Home = () => {
   return (
