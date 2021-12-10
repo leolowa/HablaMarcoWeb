@@ -8,30 +8,27 @@ import Palta4 from '../../Static/Palta/4-1-1.png';
 import Palta5 from '../../Static/Palta/4-2-2.png';
 
 const Palta = ({isPaltaAbierta = false}) => {
-  if (isPaltaAbierta) {
-    return (
-      <div className="LP-Palta">
-        <div className="CP-Palta">
-          <div className="CI-Palta">
-            <div className="I-Palta1">
-              <img className="I-imagenes-palta" src={Palta1} alt="" />
-              <img className="I-imagenes-palta" src={Palta2} alt="" />
-              <img className="I-imagenes-palta" src={Palta3} alt="" />
-              <img className="I-imagenes-palta" src={Palta6} alt="" />
-            </div>
+  return (
+    <div className="LP-Palta">
+      <div className="CP-Palta">
+        <div className="CI-Palta">
+          <div className={`${isPaltaAbierta ? 'I-Palta1' : 'I-Palta1Cierre'}`}>
+            <img className="I-imagenes-palta" src={Palta1} alt="" />
+            <img className="I-imagenes-palta" src={Palta2} alt="" />
+            <img className="I-imagenes-palta" src={Palta3} alt="" />
+            <img className="I-imagenes-palta" src={Palta6} alt="" />
+          </div>
 
-            <div className="I-Palta4">
-              <img className="I-imagen-palta-4" src={Palta4} alt="" />
-            </div>
-            <div className="I-Palta5">
-              <img className="I-imagen-palta-5" src={Palta5} alt="" />
-            </div>
+          <div className={`${isPaltaAbierta ? 'I-Palta4' : 'I-Palta4Cierre'}`}>
+            <img className="I-imagen-palta-4" src={Palta4} alt="" />
+          </div>
+          <div className={`${isPaltaAbierta ? 'I-Palta5' : 'I-Palta5Cierre'}`}>
+            <img className="I-imagen-palta-5" src={Palta5} alt="" />
           </div>
         </div>
       </div>
-    );
-  }
-  return <div className="LP-Palta"></div>;
+    </div>
+  );
 };
 
 export default Palta;
