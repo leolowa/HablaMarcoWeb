@@ -47,12 +47,12 @@
 .ReelIzquierdaA {
   left: 22%;
   opacity: 0.2 !important;
-  transition: all 0.8s ease-in-out !important;
+  transition: all 0.7s ease-in-out !important;
 }
 .ReelDerechaA {
   right: 22%;
   opacity: 0.2 !important;
-  transition: all 0.8s ease-in-out !important;
+  transition: all 0.7s ease-in-out !important;
 }
 
 /* ====== TEXTO ANIMACION CIERRE PALTA ====== */

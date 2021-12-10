@@ -83,6 +83,9 @@ const Reel = () => {
       setIsReelArg(false);
     }
   };
+  const finalizaAudio = idReel => {
+    console.log('ejecuto onEndend');
+  };
   return (
     <React.Fragment>
       <div className="contenedorReel">
@@ -134,11 +137,13 @@ const Reel = () => {
         </div>
         <audio
           onPause={() => finalizacionAudio('Latam')}
+          onEnded={() => finalizaAudio()}
           id="audioLatam"
           src={`${reelLatam}#t=0,29.8`}
         ></audio>
         <audio
           onPause={() => finalizacionAudio('Arg')}
+          onEnded={() => finalizaAudio()}
           id="audioArg"
           src={`${reelArg}#t=0,29.8`}
         ></audio>
