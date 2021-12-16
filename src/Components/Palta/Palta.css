@@ -85,7 +85,7 @@
   place-content: center;
   animation: Palta1Cierre;
   animation-delay: 0.1s;
-  animation-duration: 0.4s;
+  animation-duration: 0.5s;
   animation-iteration-count: 1;
   animation-timing-function: step-start;
   animation-timing-function: 5ms ease-in-out cubic-bezier(1.872, 1.824, 1.765, 1);
