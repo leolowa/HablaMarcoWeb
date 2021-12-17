@@ -6,9 +6,10 @@
   grid-template-columns: 1fr 450px 1fr;
   grid-template-rows: 1fr 450px 1fr;
   overflow: hidden;
+  position: relative;
 }
 
-.contenedorVideosWork {
+/* .contenedorVideosWork {
   position: absolute;
   left: -100vw;
   background-color: black;
@@ -20,9 +21,27 @@
   justify-content: center;
   align-items: center;
   opacity: 1;
+} */
+.contenedorVideosWork {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -1;
 }
 .aperturaComerciales {
-  left: 0;
+  opacity: 1;
+  z-index: 1;
   transition: all 0.5s ease-in;
 }
 .marcoVideo {
@@ -206,7 +225,7 @@
   .tituloComercial {
     font: 8.641288433382138vw IntegralCF-ExtraBold;
     left: 20px;
-    top: 5%;
+    top: 5% !important;
   }
 }
 @media screen and (max-width: 375px) {
