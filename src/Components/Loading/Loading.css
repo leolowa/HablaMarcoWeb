@@ -1,0 +1,91 @@
+.progress {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: none;
+  position: relative;
+  margin: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translateZ(0px);
+  display: inline-block;
+}
+.activated:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -50%;
+  background: black;
+  animation: turn 4s linear forwards;
+  -moz-animation: turn 4s linear forwards;
+  -webkit-animation: turn 4s linear forwards;
+  animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -webkit-animation-delay: 4s;
+  transform-origin: 100% 50%;
+  z-index: 1;
+}
+.activated:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: black;
+  -moz-animation: turn 4s linear forwards;
+  -webkit-animation: turn 4s linear forwards;
+  -o-animation: turn 4s linear forwards;
+  -ms-animation: turn 4s linear forwards;
+  animation: turn 4s linear forwards;
+  transform-origin: 0% 50%;
+  z-index: 2;
+}
+
+@-moz-keyframes turn {
+  99.9% {
+    transform: rotate(180deg);
+    background: black;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@-webkit-keyframes turn {
+  99.9% {
+    transform: rotate(180deg);
+    background: black;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@-o-keyframes turn {
+  99.9% {
+    transform: rotate(180deg);
+    background: black;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@-ms-keyframes turn {
+  99.9% {
+    transform: rotate(180deg);
+    background: black;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@keyframes turn {
+  99.9% {
+    transform: rotate(180deg);
+    background: black;
+  }
+  100% {
+    background: #fff;
+  }
+}

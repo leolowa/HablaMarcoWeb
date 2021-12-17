@@ -8,6 +8,7 @@ import Reel from './Pages/Reel/Reel';
 import iconoMenuNegro from './Static/MenuManchaNegro.gif';
 import iconoMenuBlanco from './Static/MANCHA-MENU-BLANCA.gif';
 import Voces from './Pages/Voces/Voces';
+import Loading from './Components/Loading/Loading';
 
 export const App = () => {
   const [iconoMenu, setIconoMenu] = useState(false);
@@ -37,46 +38,58 @@ export const App = () => {
       threshold: [0.3],
     };
     const observer = new IntersectionObserver(callback, options);
-    /* tag.forEach(elemento => observer.observe(elemento)); */
     observer.observe(tag);
   });
 
-  return (
-    <div id="App">
-      <div onClick={() => abrirMenu()} className="contenedorIconoMenu">
-        <img className="iconoMenu" alt="" src={iconoMenu ? iconoMenuBlanco : iconoMenuNegro}></img>
+  if (false) {
+    return (
+      <div className="preloading">
+        {/* <div className="preloading-CirculoBlanco"></div> */}
+        <Loading></Loading>
       </div>
-      <Menu tipoIconoMenu={tipoIconoMenu} />
+    );
+  } else {
+    return (
+      <div id="App">
+        <div onClick={() => abrirMenu()} className="contenedorIconoMenu">
+          <img
+            className="iconoMenu"
+            alt=""
+            src={iconoMenu ? iconoMenuBlanco : iconoMenuNegro}
+          ></img>
+        </div>
+        <Menu tipoIconoMenu={tipoIconoMenu} />
 
-      <section id="home">
-        <Home />
-      </section>
-      <section className="slideBlanco"></section>
-
-      <section id="work">
-        <Voces></Voces>
-      </section>
-      <section className="slideBlanco"></section>
-
-      <section id="reel">
-        <Reel />
-      </section>
-
-      <section className="slideBlanco"></section>
-
-      <div id="iconoBlanco" className="CI-SliderNegros">
-        <section className="slideNegro"></section>
-        <section id="about">
-          <About />
+        <section id="home">
+          <Home />
         </section>
-        <section className="slideNegro"></section>
-        <section id="contacto">
-          <Contacto />
+        <section className="slideBlanco"></section>
+
+        <section id="work">
+          <Voces></Voces>
         </section>
+        <section className="slideBlanco"></section>
+
+        <section id="reel">
+          <Reel />
+        </section>
+
+        <section className="slideBlanco"></section>
+
+        <div id="iconoBlanco" className="CI-SliderNegros">
+          <section className="slideNegro"></section>
+          <section id="about">
+            <About />
+          </section>
+          <section className="slideNegro"></section>
+          <section id="contacto">
+            <Contacto />
+          </section>
+        </div>
+        <div className="CI-FraseSutil">
+          <p>Esta página pertenece a una persona en construcción</p>
+        </div>
       </div>
-      <div className="CI-FraseSutil">
-        <p>Esta página pertenece a una persona en construcción</p>
-      </div>
-    </div>
-  );
+    );
+  }
 };

@@ -21,7 +21,7 @@ const Home = () => {
             {/* <video playsInline className="videoMarcoNadando" autoPlay={true} muted loop>
               <source type="video/mp4" src={baileConPerro}></source>
             </video> */}
-            <img alt="" src={gifBaileConPerro} className="gifHome"></img>
+            <img alt="" src={gifBaileConPerro} className="gifHome" id="gifHome"></img>
           </div>
           <div className="circuloRojo-Inicio"></div>
         </div>
