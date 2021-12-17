@@ -125,6 +125,7 @@ section {
 }
 .slideBlanco {
   height: 35vh;
+  background-color: rgb(255, 255, 255);
 }
 .slideNegro {
   background-color: black;
