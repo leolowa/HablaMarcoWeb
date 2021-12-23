@@ -11,7 +11,7 @@ const SliderLowa = ({children}) => {
     slidesToShow: 8,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 6000,
+    speed: 4000,
     autoplaySpeed: 0,
     cssEase: 'linear',
     /* adaptiveHeight: true, */
