@@ -31,22 +31,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   position: absolute;
   z-index: 3;
-}
-.botonHome {
-  margin: 10px;
-  width: 100px;
-  height: 100px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-}
-.manchaHome {
-  width: 80px;
-  height: 80px;
 }
 
 .contenedor-Marca {
@@ -90,7 +77,10 @@
   overflow: hidden;
   right: 30%;
 }
-
+.videoMarcoInicio {
+  max-width: 500px;
+  max-height: 500px;
+}
 .circuloRojo-Inicio {
   width: 350px;
   height: 350px;
