@@ -3,6 +3,7 @@ import './Voces.css';
 import manchaWork from '../../Static/MenuManchaNegro.gif';
 import TextoCircular from '../../Components/ElementoVideo/TextoCircular/TextoCircular';
 import arregloUrl from './enlacesWork';
+import SliderLowa from '../../Components/SliderLowa/SliderLowa';
 
 const Voces = () => {
   const [videoSeleccionado, setVideoSeleccionado] = useState({video: '', index: undefined});
@@ -159,24 +160,27 @@ const Voces = () => {
       <div className="CI-TextoVoces">
         <span className="Texto-Voces">VOCES</span>
       </div>
-      <div className="CI-TextoCircular " /* "CI-TextoCircular rotar" */>
-        {/* <TextoCircular mostrarComercial={mostrarVideo} /> */}
-
-        <tspan className="tSpan" onClick={() => mostrarVideo('Ford')}>
-          FORD
-        </tspan>
-        <tspan onClick={() => mostrarVideo('Audible')}>AUDIBLE </tspan>
-        <tspan onClick={() => mostrarVideo('Pantene')}>PANTENE </tspan>
-        <tspan onClick={() => mostrarVideo('Disney')}>DISNEY </tspan>
-        <tspan onClick={() => mostrarVideo('Espn')}>ESPN </tspan>
-        <tspan onClick={() => mostrarVideo('Paramount+')}>PARAMOUNT+ </tspan>
-        <tspan onClick={() => mostrarVideo('Coca Cola')}>COCA-COLA </tspan>
-        <tspan onClick={() => mostrarVideo('Schweppes')}>SCHWEPPES </tspan>
-        <tspan onClick={() => mostrarVideo('Discovery NF')}>DISCOVERY NF </tspan>
-        <tspan onClick={() => mostrarVideo('YPF')}>YPF </tspan>
-        <tspan onClick={() => mostrarVideo('Stella Artois')}>STELLA ARTOIS</tspan>
-        <tspan onClick={() => mostrarVideo('Honda')}>HONDA &nbsp;&nbsp;&nbsp;</tspan>
-        <tspan onClick={() => mostrarVideo('Ingravido')}>INGRAVIDO</tspan>
+      <div className="CI-TextoCircular rotar">
+        <TextoCircular mostrarComercial={mostrarVideo} />
+      </div>
+      <div className="CI-Trabajos-Mobile">
+        <SliderLowa>
+          <tspan className="tSpan" onClick={() => mostrarVideo('Ford')}>
+            FORD
+          </tspan>
+          <tspan onClick={() => mostrarVideo('Audible')}>AUDIBLE </tspan>
+          <tspan onClick={() => mostrarVideo('Pantene')}>PANTENE </tspan>
+          <tspan onClick={() => mostrarVideo('Disney')}>DISNEY </tspan>
+          <tspan onClick={() => mostrarVideo('Espn')}>ESPN </tspan>
+          <tspan onClick={() => mostrarVideo('Paramount+')}>PARAMOUNT+ </tspan>
+          <tspan onClick={() => mostrarVideo('Coca Cola')}>COCA-COLA </tspan>
+          <tspan onClick={() => mostrarVideo('Schweppes')}>SCHWEPPES </tspan>
+          <tspan onClick={() => mostrarVideo('Discovery NF')}>DISCOVERY NF </tspan>
+          <tspan onClick={() => mostrarVideo('YPF')}>YPF </tspan>
+          <tspan onClick={() => mostrarVideo('Stella Artois')}>STELLA ARTOIS</tspan>
+          <tspan onClick={() => mostrarVideo('Honda')}>HONDA &nbsp;&nbsp;&nbsp;</tspan>
+          <tspan onClick={() => mostrarVideo('Ingravido')}>INGRAVIDO</tspan>
+        </SliderLowa>
       </div>
     </div>
   );

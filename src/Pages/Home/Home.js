@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import HablaMarco from '../../Static/HablaMarco.svg';
 import baileConPerro from '../../Static/Video/baileConPerro.mp4';
+
 /* import gifBaileConPerro from '../../Static/Video/baileConPerro.gif'; */
 
 const Home = () => {
@@ -18,7 +19,16 @@ const Home = () => {
           </div>
 
           <div className="contenedorVideoInicio">
-            <video className="videoMarcoInicio" playsInline autoPlay muted loop>
+            <video
+              className="videoMarcoInicio"
+              preload="yes"
+              controls={false}
+              playsInline={true}
+              autoPlay
+              muted
+              loop
+              playsinline={true}
+            >
               <source type="video/mp4" src={baileConPerro}></source>
             </video>
 

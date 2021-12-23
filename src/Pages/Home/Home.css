@@ -35,6 +35,10 @@
   position: absolute;
   z-index: 3;
 }
+.manchaHome {
+  width: 80px;
+  height: 80px;
+}
 
 .contenedor-Marca {
   width: 380px;
