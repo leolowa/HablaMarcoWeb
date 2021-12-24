@@ -19,7 +19,22 @@ const Home = () => {
           </div>
 
           <div className="contenedorVideoInicio">
-            <video
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `
+                <video
+                  loop
+                  muted
+                  autoplay
+                  playsinline
+                  src="${baileConPerro}"
+                  class="videoMarcoInicio"
+                />,
+                `,
+              }}
+            ></div>
+
+            {/* <video
               className="videoMarcoInicio"
               preload="yes"
               controls={false}
@@ -30,7 +45,7 @@ const Home = () => {
               playsinline={true}
             >
               <source type="video/mp4" src={baileConPerro}></source>
-            </video>
+            </video> */}
 
             {/* <img alt="" src={gifBaileConPerro} className="gifHome" id="gifHome"></img> */}
           </div>
