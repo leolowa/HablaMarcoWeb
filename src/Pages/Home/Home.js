@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './Home.css';
 import HablaMarco from '../../Static/HablaMarco.svg';
 import baileConPerro from '../../Static/Video/baileConPerro.mp4';
@@ -7,10 +7,10 @@ import baileConPerro from '../../Static/Video/baileConPerro.mp4';
 
 const Home = () => {
   const elementoVideo = useRef();
+  const [isUsarImagen, setisUsarImagen] = useState(false);
   useEffect(() => {
     console.log(elementoVideo);
     const player = elementoVideo.current.children[0];
-    console.log(player);
     if (player) {
       // set the video attributes using javascript as per the
       // webkit Policy
@@ -31,7 +31,7 @@ const Home = () => {
             .catch(() => {
               // if promise fails, hide the video and fallback to <img> tag
               console.log('falló');
-              /* setShouldUseImage(true); */
+              setisUsarImagen(true);
             });
         }
       }, 0);
@@ -48,23 +48,30 @@ const Home = () => {
           <div className="contenedor-Scroll">
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
           </div>
+          {!isUsarImagen ? (
+            <div
+              ref={elementoVideo}
+              className="contenedorVideoInicio"
+              dangerouslySetInnerHTML={{
+                __html: `
+      <video
+        loop
+        muted
+        autoplay
+        playsinline
+        src="${baileConPerro}"
+        class="videoMarcoInicio"
+      />,
+      `,
+              }}
+            ></div>
+          ) : (
+            <div ref={elementoVideo} className="contenedorVideoInicio">
+              <img alt="" src={baileConPerro}></img>
+            </div>
+          )}
 
-          <div
-            ref={elementoVideo}
-            className="contenedorVideoInicio"
-            dangerouslySetInnerHTML={{
-              __html: `
-                <video
-                  loop
-                  muted
-                  autoplay
-                  playsinline
-                  src="${baileConPerro}"
-                  class="videoMarcoInicio"
-                />,
-                `,
-            }}
-          ></div>
+          <img alt="" src={baileConPerro}></img>
 
           {/* <video
               className="videoMarcoInicio"
