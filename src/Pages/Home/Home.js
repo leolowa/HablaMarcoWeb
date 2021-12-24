@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import './Home.css';
 import HablaMarco from '../../Static/HablaMarco.svg';
 import baileConPerro from '../../Static/Video/baileConPerro.mp4';
@@ -6,6 +6,37 @@ import baileConPerro from '../../Static/Video/baileConPerro.mp4';
 /* import gifBaileConPerro from '../../Static/Video/baileConPerro.gif'; */
 
 const Home = () => {
+  const elementoVideo = useRef();
+  useEffect(() => {
+    console.log(elementoVideo);
+    const player = elementoVideo.current.children[0];
+    console.log(player);
+    if (player) {
+      // set the video attributes using javascript as per the
+      // webkit Policy
+      player.controls = false;
+      player.playsinline = true;
+      player.muted = true;
+      player.setAttribute('muted', ''); // leave no stones unturned :)
+      player.autoplay = true;
+
+      // Let's wait for an event loop tick and be async.
+      setTimeout(() => {
+        // player.play() might return a promise but it's not guaranteed crossbrowser.
+        const promise = player.play();
+        // let's play safe to ensure that if we do have a promise
+        if (promise.then) {
+          promise
+            .then(() => {})
+            .catch(() => {
+              // if promise fails, hide the video and fallback to <img> tag
+              console.log('falló');
+              /* setShouldUseImage(true); */
+            });
+        }
+      }, 0);
+    }
+  }, [elementoVideo]);
   return (
     <React.Fragment>
       <div className="Home">
@@ -18,10 +49,11 @@ const Home = () => {
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
           </div>
 
-          <div className="contenedorVideoInicio">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `
+          <div
+            ref={elementoVideo}
+            className="contenedorVideoInicio"
+            dangerouslySetInnerHTML={{
+              __html: `
                 <video
                   loop
                   muted
@@ -31,10 +63,10 @@ const Home = () => {
                   class="videoMarcoInicio"
                 />,
                 `,
-              }}
-            ></div>
+            }}
+          ></div>
 
-            {/* <video
+          {/* <video
               className="videoMarcoInicio"
               preload="yes"
               controls={false}
@@ -47,8 +79,7 @@ const Home = () => {
               <source type="video/mp4" src={baileConPerro}></source>
             </video> */}
 
-            {/* <img alt="" src={gifBaileConPerro} className="gifHome" id="gifHome"></img> */}
-          </div>
+          {/* <img alt="" src={gifBaileConPerro} className="gifHome" id="gifHome"></img> */}
           <div className="circuloRojo-Inicio"></div>
         </div>
       </div>

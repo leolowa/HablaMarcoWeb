@@ -76,6 +76,7 @@
 }
 
 .contenedorVideoInicio {
+  background-color: white;
   height: 598px;
   position: absolute;
   overflow: hidden;
@@ -169,4 +170,8 @@
     left: 0;
     right: 0;
   }
+}
+.imgBailePerro {
+  width: 100%;
+  height: 100%;
 }

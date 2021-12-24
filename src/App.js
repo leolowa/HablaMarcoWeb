@@ -11,6 +11,7 @@ import Voces from './Pages/Voces/Voces';
 import Loading from './Components/Loading/Loading';
 
 export const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [iconoMenu, setIconoMenu] = useState(false);
   const abrirMenu = () => {
     const menu = document.querySelector('.Menu');
@@ -22,74 +23,81 @@ export const App = () => {
   };
 
   useEffect(() => {
-    const tag = document.querySelector('#iconoBlanco');
+    if (!isLoading) {
+      const tag = document.querySelector('#iconoBlanco');
 
-    const callback = entries => {
-      console.log(entries);
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          tipoIconoMenu('blanco');
-        } else {
-          tipoIconoMenu('negro');
-        }
-      });
-    };
-    const options = {
-      threshold: [0.3],
-    };
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(tag);
+      const callback = entries => {
+        console.log(entries);
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tipoIconoMenu('blanco');
+          } else {
+            tipoIconoMenu('negro');
+          }
+        });
+      };
+      const options = {
+        threshold: [0.3],
+      };
+      const observer = new IntersectionObserver(callback, options);
+      observer.observe(tag);
+    }
   });
+  useEffect(() => {
+    setTimeout(() => {
+      console.log('ejecutó');
+      setIsLoading(false);
+    }, 8000);
+  }, []);
 
-  if (false) {
-    return (
-      <div className="preloading">
-        {/* <div className="preloading-CirculoBlanco"></div> */}
-        <Loading></Loading>
-      </div>
-    );
-  } else {
-    return (
-      <div id="App">
-        <div onClick={() => abrirMenu()} className="contenedorIconoMenu">
-          <img
-            className="iconoMenu"
-            alt=""
-            src={iconoMenu ? iconoMenuBlanco : iconoMenuNegro}
-          ></img>
+  return (
+    <div id="App">
+      {false ? (
+        <div className={isLoading ? 'preloading' : 'preloading preloading-end'}>
+          <Loading></Loading>
         </div>
-        <Menu tipoIconoMenu={tipoIconoMenu} />
+      ) : (
+        <React.Fragment>
+          <div onClick={() => abrirMenu()} className="contenedorIconoMenu">
+            <img
+              className="iconoMenu"
+              alt=""
+              src={iconoMenu ? iconoMenuBlanco : iconoMenuNegro}
+            ></img>
+          </div>
+          <Menu tipoIconoMenu={tipoIconoMenu} />
 
-        <section id="home">
-          <Home />
-        </section>
-        <section className="slideBlanco"></section>
-
-        <section id="work">
-          <Voces></Voces>
-        </section>
-        <section className="slideBlanco"></section>
-
-        <section id="reel">
-          <Reel />
-        </section>
-
-        <section className="slideBlanco"></section>
-
-        <div id="iconoBlanco" className="CI-SliderNegros">
-          <section className="slideNegro"></section>
-          <section id="about">
-            <About />
+          <section id="home">
+            <Home />
           </section>
-          <section className="slideNegro"></section>
-          <section id="contacto">
-            <Contacto />
+          <section className="slideBlanco"></section>
+
+          <section id="work">
+            <Voces></Voces>
           </section>
-        </div>
-        <div className="CI-FraseSutil">
-          <p>Esta página pertenece a una persona en construcción</p>
-        </div>
-      </div>
-    );
-  }
+          <section className="slideBlanco"></section>
+
+          <section id="reel">
+            <Reel />
+          </section>
+
+          <section className="slideBlanco"></section>
+
+          <div id="iconoBlanco" className="CI-SliderNegros">
+            <section className="slideNegro"></section>
+            <section id="about">
+              <About />
+            </section>
+            <section className="slideNegro"></section>
+            <section id="contacto">
+              <Contacto />
+            </section>
+          </div>
+          <div className="CI-FraseSutil">
+            <p>Esta página pertenece a una persona en construcción</p>
+          </div>
+        </React.Fragment>
+      )}
+    </div>
+  );
 };
