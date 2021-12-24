@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/HablaMarcoWeb/static/css/main.806890f6.chunk.css",
-    "main.js": "/HablaMarcoWeb/static/js/main.411b790f.chunk.js",
-    "main.js.map": "/HablaMarcoWeb/static/js/main.411b790f.chunk.js.map",
+    "main.js": "/HablaMarcoWeb/static/js/main.ad27f51a.chunk.js",
+    "main.js.map": "/HablaMarcoWeb/static/js/main.ad27f51a.chunk.js.map",
     "runtime-main.js": "/HablaMarcoWeb/static/js/runtime-main.6edc2827.js",
     "runtime-main.js.map": "/HablaMarcoWeb/static/js/runtime-main.6edc2827.js.map",
     "static/css/2.faf0b744.chunk.css": "/HablaMarcoWeb/static/css/2.faf0b744.chunk.css",
@@ -53,6 +53,6 @@
     "static/css/2.faf0b744.chunk.css",
     "static/js/2.b059e153.chunk.js",
     "static/css/main.806890f6.chunk.css",
-    "static/js/main.411b790f.chunk.js"
+    "static/js/main.ad27f51a.chunk.js"
   ]
 }
