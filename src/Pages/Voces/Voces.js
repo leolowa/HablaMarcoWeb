@@ -163,7 +163,7 @@ const Voces = () => {
       <div className="CI-TextoCircular rotar">
         <TextoCircular mostrarComercial={mostrarVideo} />
       </div>
-      {/* <div className="CI-Trabajos-Mobile">
+      <div className="CI-Trabajos-Mobile">
         <SliderLowa>
           <tspan className="tSpan" onClick={() => mostrarVideo('Ford')}>
             FORD
@@ -181,7 +181,7 @@ const Voces = () => {
           <tspan onClick={() => mostrarVideo('Honda')}>HONDA &nbsp;&nbsp;&nbsp;</tspan>
           <tspan onClick={() => mostrarVideo('Ingravido')}>INGRAVIDO</tspan>
         </SliderLowa>
-      </div> */}
+      </div>
     </div>
   );
 };
