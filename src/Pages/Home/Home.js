@@ -17,7 +17,7 @@ const Home = () => {
       player.controls = false;
       player.playsinline = true;
       player.muted = true;
-      player.setAttribute('muted', ''); // leave no stones unturned :)
+      player.setAttribute('muted', ''); // leave no stones unturned 🙂
       player.autoplay = true;
 
       // Let's wait for an event loop tick and be async.
@@ -71,22 +71,6 @@ const Home = () => {
             </div>
           )}
 
-          <img alt="" src={baileConPerro}></img>
-
-          {/* <video
-              className="videoMarcoInicio"
-              preload="yes"
-              controls={false}
-              playsInline={true}
-              autoPlay
-              muted
-              loop
-              playsinline={true}
-            >
-              <source type="video/mp4" src={baileConPerro}></source>
-            </video> */}
-
-          {/* <img alt="" src={gifBaileConPerro} className="gifHome" id="gifHome"></img> */}
           <div className="circuloRojo-Inicio"></div>
         </div>
       </div>
