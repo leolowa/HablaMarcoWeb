@@ -47,7 +47,7 @@ export const App = () => {
     setTimeout(() => {
       console.log('ejecutó');
       setIsLoading(false);
-    }, 8000);
+    }, 3000);
   }, []);
 
   return (
