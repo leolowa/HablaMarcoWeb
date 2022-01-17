@@ -52,7 +52,7 @@ export const App = () => {
 
   return (
     <div id="App">
-      {isLoading ? (
+      {false ? (
         <div className={isLoading ? 'preloading' : 'preloading preloading-end'}>
           <Loading></Loading>
         </div>

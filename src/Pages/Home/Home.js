@@ -49,11 +49,14 @@ const Home = () => {
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
           </div>
           {!isUsarImagen ? (
-            <div
-              ref={elementoVideo}
-              className="contenedorVideoInicio"
-              dangerouslySetInnerHTML={{
-                __html: `
+            <React.Fragment>
+              <p className="AvisoDeTag">Video en tag Video</p>
+
+              <div
+                ref={elementoVideo}
+                className="contenedorVideoInicio"
+                dangerouslySetInnerHTML={{
+                  __html: `
       <video
         loop
         muted
@@ -63,10 +66,12 @@ const Home = () => {
         class="videoMarcoInicio"
       />,
       `,
-              }}
-            ></div>
+                }}
+              ></div>
+            </React.Fragment>
           ) : (
             <div ref={elementoVideo} className="contenedorVideoInicio">
+              <p className="AvisoDeTag">Video en tag Img</p>
               <img alt="" src={baileConPerro}></img>
             </div>
           )}
