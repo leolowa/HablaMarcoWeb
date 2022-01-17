@@ -77,7 +77,7 @@ const Home = () => {
           )} */}
           <div ref={elementoVideo} className="contenedorVideoInicio">
             <p className="AvisoDeTag">Video en tag Img</p>
-            <img alt="" src={baileConPerro}></img>
+            <img alt="" className="imgVideo" src={baileConPerro}></img>
           </div>
           <div className="circuloRojo-Inicio"></div>
         </div>
