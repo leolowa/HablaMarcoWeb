@@ -8,7 +8,7 @@ import baileConPerro from '../../Static/Video/baileConPerro.mp4';
 const Home = () => {
   const elementoVideo = useRef();
   const [isUsarImagen, setisUsarImagen] = useState(false);
-  useEffect(() => {
+  /* useEffect(() => {
     console.log(elementoVideo);
     const player = elementoVideo.current.children[0];
     if (player) {
@@ -36,7 +36,7 @@ const Home = () => {
         }
       }, 0);
     }
-  }, [elementoVideo]);
+  }, [elementoVideo]); */
   return (
     <React.Fragment>
       <div className="Home">
@@ -72,7 +72,7 @@ const Home = () => {
           ) : (
             <div ref={elementoVideo} className="contenedorVideoInicio">
               <p className="AvisoDeTag">Video en tag Img</p>
-              <img alt="" className="imgVideo" src={baileConPerro}></img>
+              {/* <img alt=""  className="imgVideo"src={baileConPerro}></img> */}
             </div>
           )}
           {/* <div ref={elementoVideo} className="contenedorVideoInicio">
