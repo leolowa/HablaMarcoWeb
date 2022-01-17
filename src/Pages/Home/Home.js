@@ -8,7 +8,7 @@ import baileConPerro from '../../Static/Video/baileConPerro.mp4';
 const Home = () => {
   const elementoVideo = useRef();
   const [isUsarImagen, setisUsarImagen] = useState(false);
-  /* useEffect(() => {
+  useEffect(() => {
     console.log(elementoVideo);
     const player = elementoVideo.current.children[0];
     if (player) {
@@ -36,7 +36,7 @@ const Home = () => {
         }
       }, 0);
     }
-  }, [elementoVideo]); */
+  }, [elementoVideo]);
   return (
     <React.Fragment>
       <div className="Home">
@@ -48,7 +48,7 @@ const Home = () => {
           <div className="contenedor-Scroll">
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
           </div>
-          {/* {!isUsarImagen ? (
+          {!isUsarImagen ? (
             <React.Fragment>
               <p className="AvisoDeTag">Video en tag Video</p>
 
@@ -72,13 +72,12 @@ const Home = () => {
           ) : (
             <div ref={elementoVideo} className="contenedorVideoInicio">
               <p className="AvisoDeTag">Video en tag Img</p>
-              <img alt="" src={baileConPerro}></img>
+              <img alt="" className="imgVideo" src={baileConPerro}></img>
             </div>
-          )} */}
-          <div ref={elementoVideo} className="contenedorVideoInicio">
-            <p className="AvisoDeTag">Video en tag Img</p>
+          )}
+          {/* <div ref={elementoVideo} className="contenedorVideoInicio">
             <img alt="" className="imgVideo" src={baileConPerro}></img>
-          </div>
+          </div> */}
           <div className="circuloRojo-Inicio"></div>
         </div>
       </div>
