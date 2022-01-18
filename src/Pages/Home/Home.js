@@ -5,27 +5,20 @@ import baileConPerro from '../../Static/Video/baileConPerro.mp4';
 
 import baileConPerroGif from '../../Static/Video/baileConPerro.gif';
 
-/* import gifBaileConPerro from '../../Static/Video/baileConPerro.gif'; */
-
 const Home = () => {
   const elementoVideo = useRef();
   const [isUsarImagen, setisUsarImagen] = useState(false);
-  const [setIsUsarGif, setSetIsUsarGif] = useState(false);
-  const [isIphone, setIsIphone] = useState(false);
-  /* console.log('Iphone');
-  console.log(isMobileIPhone);
-  console.log('Android');
-  console.log(isMobileAndroid); */
+  const [isUsarGif, setIsUsarGif] = useState(false);
 
   useEffect(() => {
     const userAgent = navigator.userAgent;
     console.log(userAgent);
-    /* console.log(userAgent.split('OS')[1].split('_')[0]); */
 
     const isMobileIPhone = userAgent.indexOf('iPhone');
     const isMobileAndroid = userAgent.indexOf('Android');
+    console.log(isMobileIPhone);
+    console.log(isMobileAndroid);
 
-    /* console.log(elementoVideo); */
     if (isMobileAndroid !== -1) {
       const player = elementoVideo.current.children[0];
       if (player) {
@@ -57,12 +50,10 @@ const Home = () => {
 
     if (isMobileIPhone !== -1) {
       let version = userAgent.split('OS')[1].split('_')[0];
-      setIsIphone(true);
+      console.log(version);
       if (version < 12) {
         console.log('Versión Menor a 12');
-        setSetIsUsarGif(true);
-      } else {
-        console.log('Versión Mayor a 12');
+        setIsUsarGif(true);
         setisUsarImagen(true);
       }
     }
@@ -78,13 +69,12 @@ const Home = () => {
           <div className="contenedor-Scroll">
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
           </div>
-          {
-            /* isIphone && !isUsarImagen */ false ? (
-              <div
-                ref={elementoVideo}
-                className="contenedorVideoInicio"
-                dangerouslySetInnerHTML={{
-                  __html: `
+          {!isUsarImagen ? (
+            <div
+              ref={elementoVideo}
+              className="contenedorVideoInicio"
+              dangerouslySetInnerHTML={{
+                __html: `
       <video
         loop
         muted
@@ -94,18 +84,17 @@ const Home = () => {
         class="videoMarcoInicio"
       />,
       `,
-                }}
-              ></div>
-            ) : (
-              <div ref={elementoVideo} className="contenedorVideoInicio">
-                <img
-                  alt=""
-                  className="imgVideo"
-                  src={true ? baileConPerroGif : baileConPerro}
-                ></img>
-              </div>
-            )
-          }
+              }}
+            ></div>
+          ) : (
+            <div ref={elementoVideo} className="contenedorVideoInicio">
+              <img
+                alt=""
+                className="imgVideo"
+                src={isUsarGif ? baileConPerroGif : baileConPerro}
+              ></img>
+            </div>
+          )}
 
           <div className="circuloRojo-Inicio"></div>
         </div>
