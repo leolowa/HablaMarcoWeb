@@ -11,6 +11,7 @@ const Home = () => {
   const elementoVideo = useRef();
   const [isUsarImagen, setisUsarImagen] = useState(false);
   const [setIsUsarGif, setSetIsUsarGif] = useState(false);
+  const [isIphone, setIsIphone] = useState(false);
   /* console.log('Iphone');
   console.log(isMobileIPhone);
   console.log('Android');
@@ -56,6 +57,7 @@ const Home = () => {
 
     if (isMobileIPhone !== -1) {
       let version = userAgent.split('OS')[1].split('_')[0];
+      setIsIphone(true);
       if (version < 12) {
         console.log('Versión Menor a 12');
         setSetIsUsarGif(true);
@@ -76,12 +78,13 @@ const Home = () => {
           <div className="contenedor-Scroll">
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
           </div>
-          {!isUsarImagen ? (
-            <div
-              ref={elementoVideo}
-              className="contenedorVideoInicio"
-              dangerouslySetInnerHTML={{
-                __html: `
+          {
+            /* isIphone && !isUsarImagen */ false ? (
+              <div
+                ref={elementoVideo}
+                className="contenedorVideoInicio"
+                dangerouslySetInnerHTML={{
+                  __html: `
       <video
         loop
         muted
@@ -91,17 +94,18 @@ const Home = () => {
         class="videoMarcoInicio"
       />,
       `,
-              }}
-            ></div>
-          ) : (
-            <div ref={elementoVideo} className="contenedorVideoInicio">
-              <img
-                alt=""
-                className="imgVideo"
-                src={setIsUsarGif ? baileConPerroGif : baileConPerro}
-              ></img>
-            </div>
-          )}
+                }}
+              ></div>
+            ) : (
+              <div ref={elementoVideo} className="contenedorVideoInicio">
+                <img
+                  alt=""
+                  className="imgVideo"
+                  src={true ? baileConPerroGif : baileConPerro}
+                ></img>
+              </div>
+            )
+          }
 
           <div className="circuloRojo-Inicio"></div>
         </div>
