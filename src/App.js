@@ -22,7 +22,7 @@ export const App = () => {
     else setIconoMenu(false);
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (!isLoading) {
       const tag = document.querySelector('#iconoBlanco');
 
@@ -42,7 +42,7 @@ export const App = () => {
       const observer = new IntersectionObserver(callback, options);
       observer.observe(tag);
     }
-  });
+  }); */
   useEffect(() => {
     setTimeout(() => {
       console.log('ejecutó');
