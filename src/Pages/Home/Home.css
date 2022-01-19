@@ -76,7 +76,8 @@
 }
 
 .contenedorVideoInicio {
-  background-color: white;
+  /* max-width: 100px; */
+  background-color: rgb(240, 3, 3);
   height: 598px;
   position: absolute;
   overflow: hidden;

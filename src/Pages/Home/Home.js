@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './Home.css';
 import HablaMarco from '../../Static/HablaMarco.svg';
-import baileConPerro from '../../Static/Video/baileConPerro.mp4';
+import baileConPerro from '../../Static/Video/baileConPerro1.mp4';
 
 import baileConPerroGif from '../../Static/Video/baileConPerro.gif';
 
