@@ -12,12 +12,9 @@ const Home = () => {
 
   useEffect(() => {
     const userAgent = navigator.userAgent;
-    console.log(userAgent);
 
     const isMobileIPhone = userAgent.indexOf('iPhone');
     const isMobileAndroid = userAgent.indexOf('Android');
-    console.log(isMobileIPhone);
-    console.log(isMobileAndroid);
 
     if (isMobileAndroid !== -1) {
       const player = elementoVideo.current.children[0];

@@ -27,7 +27,6 @@ export const App = () => {
       const tag = document.querySelector('#iconoBlanco');
 
       const callback = entries => {
-        console.log(entries);
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             tipoIconoMenu('blanco');
