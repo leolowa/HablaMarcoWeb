@@ -54,11 +54,11 @@ export const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoadingClass(false);
-    }, 3500);
+    }, 4000);
 
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
+    }, 4500);
   }, []);
 
   return (

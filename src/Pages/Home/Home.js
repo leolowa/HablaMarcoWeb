@@ -5,11 +5,7 @@ import baileConPerro from '../../Static/Video/baileConPerro1.mp4';
 
 import baileConPerroGif from '../../Static/Video/baileConPerro.gif';
 
-const Home = ({
-  eventoCargaDeVideo = () => {
-    console.log('');
-  },
-}) => {
+const Home = () => {
   const elementoVideo = useRef();
   const [isUsarImagen, setisUsarImagen] = useState(false);
   const [isUsarGif, setIsUsarGif] = useState(false);
@@ -20,9 +16,6 @@ const Home = ({
     const isMobileIPhone = userAgent.indexOf('iPhone');
     const isMobileAndroid = userAgent.indexOf('Android');
 
-    /* player.addEventListener('loadeddata', event => {
-      eventoCargaDeVideo(true);
-    }); */
     if (isMobileAndroid !== -1) {
       const player = elementoVideo.current.children[0];
 
@@ -34,7 +27,6 @@ const Home = ({
         player.muted = true;
         player.setAttribute('muted', ''); // leave no stones unturned
         player.autoplay = true;
-
         // Let's wait for an event loop tick and be async.
         setTimeout(() => {
           // player.play() might return a promise but it's not guaranteed crossbrowser.
@@ -62,7 +54,7 @@ const Home = ({
         setisUsarImagen(true);
       }
     }
-  }, [elementoVideo, eventoCargaDeVideo]);
+  }, [elementoVideo]);
   return (
     <React.Fragment>
       <div className="Home">
