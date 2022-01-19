@@ -19,16 +19,13 @@ const Home = ({
 
     const isMobileIPhone = userAgent.indexOf('iPhone');
     const isMobileAndroid = userAgent.indexOf('Android');
-    const player = elementoVideo.current.children[0];
-    player.controls = false;
-    player.playsinline = true;
-    player.muted = true;
-    player.setAttribute('muted', '');
-    player.autoplay = true;
+
     /* player.addEventListener('loadeddata', event => {
       eventoCargaDeVideo(true);
     }); */
     if (isMobileAndroid !== -1) {
+      const player = elementoVideo.current.children[0];
+
       if (player) {
         // set the video attributes using javascript as per the
         // webkit Policy
@@ -65,9 +62,6 @@ const Home = ({
         setisUsarImagen(true);
       }
     }
-    return () => {
-      player.removeEventListener('loadeddata', event => {});
-    };
   }, [elementoVideo, eventoCargaDeVideo]);
   return (
     <React.Fragment>
