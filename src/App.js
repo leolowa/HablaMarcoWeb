@@ -51,13 +51,7 @@ export const App = () => {
     }
   }, [isLoading]);
 
-  const eventoCargaDeVideo = respuesta => {
-    console.log(respuesta);
-    if (respuesta) {
-      renderizarWeb();
-    }
-  };
-  const renderizarWeb = () => {
+  useEffect(() => {
     setTimeout(() => {
       setIsLoadingClass(false);
     }, 3500);
@@ -65,7 +59,8 @@ export const App = () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 4000);
-  };
+  }, []);
+
   return (
     <div id="App">
       <React.Fragment>
@@ -85,7 +80,7 @@ export const App = () => {
         <Menu tipoIconoMenu={tipoIconoMenu} />
 
         <section id="home">
-          <Home eventoCargaDeVideo={eventoCargaDeVideo} />
+          <Home />
         </section>
         <section className="slideBlanco"></section>
 
