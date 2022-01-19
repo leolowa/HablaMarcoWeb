@@ -1,7 +1,7 @@
 .preloading {
   width: 100%;
   min-height: 100vh;
-  background-color: black;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@
 .preloading-CirculoBlanco {
   width: 50px;
   height: 50px;
-  background-color: white;
+  background-color: black;
   border-radius: 50%;
 }
 

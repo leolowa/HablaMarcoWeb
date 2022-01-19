@@ -47,12 +47,12 @@ export const App = () => {
     setTimeout(() => {
       console.log('ejecutó');
       setIsLoading(false);
-    }, 3000);
+    }, 3300);
   }, []);
 
   return (
     <div id="App">
-      {false ? (
+      {isLoading ? (
         <div className={isLoading ? 'preloading' : 'preloading preloading-end'}>
           <Loading></Loading>
         </div>
