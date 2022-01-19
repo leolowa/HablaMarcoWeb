@@ -82,6 +82,13 @@
   overflow: hidden;
   right: 30%;
 }
+.contenedorGifInicio {
+  background-color: white;
+  height: 595px;
+  position: absolute;
+  overflow: hidden;
+  right: 30%;
+}
 .videoMarcoInicio {
   max-width: 500px;
   max-height: 500px;
@@ -107,6 +114,12 @@
   font-size: 30px;
 } */
 .imgVideo {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  object-fit: contain;
+}
+.imgGif {
   width: 100%;
   max-width: 300px;
   height: 100%;
@@ -164,6 +177,16 @@
     overflow: hidden;
     right: 40%;
     top: 15%;
+  }
+  .contenedorGifInicio {
+    height: 435px;
+    position: absolute;
+    overflow: hidden;
+    right: 40%;
+    top: 10%;
+  }
+  .imgGif {
+    min-height: 460px;
   }
   .gifHome {
     min-height: 0;

@@ -65,7 +65,6 @@ const Home = () => {
           <div className="contenedor-Marca">
             <img alt="" className="Marca" src={HablaMarco}></img>
           </div>
-
           <div className="contenedor-Scroll">
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
           </div>
@@ -75,27 +74,29 @@ const Home = () => {
               className="contenedorVideoInicio"
               dangerouslySetInnerHTML={{
                 __html: `
-      <video
-        loop
-        muted
-        autoplay
-        playsinline
-        src="${baileConPerro}"
-        class="videoMarcoInicio"
-      />,
-      `,
+                        <video
+                          loop
+                          muted
+                          autoplay
+                          playsinline
+                          src="${baileConPerro}"
+                          class="videoMarcoInicio"
+                        />,
+                        `,
               }}
             ></div>
           ) : (
-            <div ref={elementoVideo} className="contenedorVideoInicio">
+            <div
+              ref={elementoVideo}
+              className={isUsarGif ? 'contenedorGifInicio' : 'contenedorVideoInicio'}
+            >
               <img
                 alt=""
-                className="imgVideo"
+                className={isUsarGif ? 'imgGif' : 'imgVideo'}
                 src={isUsarGif ? baileConPerroGif : baileConPerro}
               ></img>
             </div>
           )}
-
           <div className="circuloRojo-Inicio"></div>
         </div>
       </div>
