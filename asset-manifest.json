@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/HablaMarcoWeb/static/css/main.1a35186d.chunk.css",
-    "main.js": "/HablaMarcoWeb/static/js/main.0f0f9a6f.chunk.js",
-    "main.js.map": "/HablaMarcoWeb/static/js/main.0f0f9a6f.chunk.js.map",
+    "main.css": "/HablaMarcoWeb/static/css/main.0386e8e3.chunk.css",
+    "main.js": "/HablaMarcoWeb/static/js/main.3f40be38.chunk.js",
+    "main.js.map": "/HablaMarcoWeb/static/js/main.3f40be38.chunk.js.map",
     "runtime-main.js": "/HablaMarcoWeb/static/js/runtime-main.6edc2827.js",
     "runtime-main.js.map": "/HablaMarcoWeb/static/js/runtime-main.6edc2827.js.map",
     "static/css/2.faf0b744.chunk.css": "/HablaMarcoWeb/static/css/2.faf0b744.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.b059e153.chunk.js.map": "/HablaMarcoWeb/static/js/2.b059e153.chunk.js.map",
     "index.html": "/HablaMarcoWeb/index.html",
     "static/css/2.faf0b744.chunk.css.map": "/HablaMarcoWeb/static/css/2.faf0b744.chunk.css.map",
-    "static/css/main.1a35186d.chunk.css.map": "/HablaMarcoWeb/static/css/main.1a35186d.chunk.css.map",
+    "static/css/main.0386e8e3.chunk.css.map": "/HablaMarcoWeb/static/css/main.0386e8e3.chunk.css.map",
     "static/js/2.b059e153.chunk.js.LICENSE.txt": "/HablaMarcoWeb/static/js/2.b059e153.chunk.js.LICENSE.txt",
     "static/media/Palta.css": "/HablaMarcoWeb/static/media/4.59d5d3ec.png",
     "static/media/4-1-1.b8533b73.png": "/HablaMarcoWeb/static/media/4-1-1.b8533b73.png",
@@ -39,8 +39,8 @@
     "static/media/StellaArtois1.8daedfab.mp4": "/HablaMarcoWeb/static/media/StellaArtois1.8daedfab.mp4",
     "static/media/StellaNoire.8b792fcb.mp4": "/HablaMarcoWeb/static/media/StellaNoire.8b792fcb.mp4",
     "static/media/YPF.383ee7d9.mp4": "/HablaMarcoWeb/static/media/YPF.383ee7d9.mp4",
-    "static/media/baileConPerro.8906588c.mp4": "/HablaMarcoWeb/static/media/baileConPerro.8906588c.mp4",
     "static/media/baileConPerro.cab98ac2.gif": "/HablaMarcoWeb/static/media/baileConPerro.cab98ac2.gif",
+    "static/media/baileConPerro1.60c3fffa.mp4": "/HablaMarcoWeb/static/media/baileConPerro1.60c3fffa.mp4",
     "static/media/ButtonImg.css": "/HablaMarcoWeb/static/media/boton_About.85bc2b48.gif",
     "static/media/flechaMenu.767b2e01.svg": "/HablaMarcoWeb/static/media/flechaMenu.767b2e01.svg",
     "static/media/habla-marco-reel-latam-2.a8afe4d9.mp3": "/HablaMarcoWeb/static/media/habla-marco-reel-latam-2.a8afe4d9.mp3",
@@ -53,7 +53,7 @@
     "static/js/runtime-main.6edc2827.js",
     "static/css/2.faf0b744.chunk.css",
     "static/js/2.b059e153.chunk.js",
-    "static/css/main.1a35186d.chunk.css",
-    "static/js/main.0f0f9a6f.chunk.js"
+    "static/css/main.0386e8e3.chunk.css",
+    "static/js/main.3f40be38.chunk.js"
   ]
 }
