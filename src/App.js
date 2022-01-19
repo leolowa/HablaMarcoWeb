@@ -14,6 +14,7 @@ export const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingClass, setIsLoadingClass] = useState(true);
   const [iconoMenu, setIconoMenu] = useState(false);
+
   const abrirMenu = () => {
     const menu = document.querySelector('.Menu');
     menu.style.width = '100%';
@@ -24,6 +25,9 @@ export const App = () => {
   };
 
   useEffect(() => {
+    const tagBody = document.querySelector('body');
+    tagBody.style.overflow = 'hidden';
+
     if (!isLoading) {
       const tag = document.querySelector('#iconoBlanco');
 
@@ -42,7 +46,11 @@ export const App = () => {
       const observer = new IntersectionObserver(callback, options);
       observer.observe(tag);
     }
-  });
+    if (!isLoading) {
+      tagBody.style.overflow = 'scroll';
+    }
+  }, [isLoading]);
+
   const eventoCargaDeVideo = respuesta => {
     console.log(respuesta);
     if (respuesta) {
