@@ -12,6 +12,7 @@ import Loading from './Components/Loading/Loading';
 
 export const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingClass, setIsLoadingClass] = useState(true);
   const [iconoMenu, setIconoMenu] = useState(false);
   const abrirMenu = () => {
     const menu = document.querySelector('.Menu');
@@ -42,61 +43,69 @@ export const App = () => {
       observer.observe(tag);
     }
   });
-  useEffect(() => {
+  const eventoCargaDeVideo = respuesta => {
+    console.log(respuesta);
+    if (respuesta) {
+      renderizarWeb();
+    }
+  };
+  const renderizarWeb = () => {
     setTimeout(() => {
-      console.log('ejecutó');
-      setIsLoading(false);
-    }, 3300);
-  }, []);
+      setIsLoadingClass(false);
+    }, 3500);
 
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+  };
   return (
     <div id="App">
-      {isLoading ? (
-        <div className={isLoading ? 'preloading' : 'preloading preloading-end'}>
-          <Loading></Loading>
+      <React.Fragment>
+        {isLoading && (
+          <div className={isLoadingClass ? 'preloading' : 'preloading preloading-end'}>
+            <Loading></Loading>
+          </div>
+        )}
+
+        <div onClick={() => abrirMenu()} className="contenedorIconoMenu">
+          <img
+            className="iconoMenu"
+            alt=""
+            src={iconoMenu ? iconoMenuBlanco : iconoMenuNegro}
+          ></img>
         </div>
-      ) : (
-        <React.Fragment>
-          <div onClick={() => abrirMenu()} className="contenedorIconoMenu">
-            <img
-              className="iconoMenu"
-              alt=""
-              src={iconoMenu ? iconoMenuBlanco : iconoMenuNegro}
-            ></img>
-          </div>
-          <Menu tipoIconoMenu={tipoIconoMenu} />
+        <Menu tipoIconoMenu={tipoIconoMenu} />
 
-          <section id="home">
-            <Home />
+        <section id="home">
+          <Home eventoCargaDeVideo={eventoCargaDeVideo} />
+        </section>
+        <section className="slideBlanco"></section>
+
+        <section id="work">
+          <Voces></Voces>
+        </section>
+        <section className="slideBlanco"></section>
+
+        <section id="reel">
+          <Reel />
+        </section>
+
+        <section className="slideBlanco"></section>
+
+        <div id="iconoBlanco" className="CI-SliderNegros">
+          <section className="slideNegro"></section>
+          <section id="about">
+            <About />
           </section>
-          <section className="slideBlanco"></section>
-
-          <section id="work">
-            <Voces></Voces>
+          <section className="slideNegro"></section>
+          <section id="contacto">
+            <Contacto />
           </section>
-          <section className="slideBlanco"></section>
-
-          <section id="reel">
-            <Reel />
-          </section>
-
-          <section className="slideBlanco"></section>
-
-          <div id="iconoBlanco" className="CI-SliderNegros">
-            <section className="slideNegro"></section>
-            <section id="about">
-              <About />
-            </section>
-            <section className="slideNegro"></section>
-            <section id="contacto">
-              <Contacto />
-            </section>
-          </div>
-          <div className="CI-FraseSutil">
-            <p>Esta página pertenece a una persona en construcción</p>
-          </div>
-        </React.Fragment>
-      )}
+        </div>
+        <div className="CI-FraseSutil">
+          <p>Esta página pertenece a una persona en construcción</p>
+        </div>
+      </React.Fragment>
     </div>
   );
 };

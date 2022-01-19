@@ -5,7 +5,11 @@ import baileConPerro from '../../Static/Video/baileConPerro.mp4';
 
 import baileConPerroGif from '../../Static/Video/baileConPerro.gif';
 
-const Home = () => {
+const Home = ({
+  eventoCargaDeVideo = () => {
+    console.log('');
+  },
+}) => {
   const elementoVideo = useRef();
   const [isUsarImagen, setisUsarImagen] = useState(false);
   const [isUsarGif, setIsUsarGif] = useState(false);
@@ -15,9 +19,12 @@ const Home = () => {
 
     const isMobileIPhone = userAgent.indexOf('iPhone');
     const isMobileAndroid = userAgent.indexOf('Android');
+    const player = elementoVideo.current.children[0];
 
+    player.addEventListener('loadeddata', event => {
+      eventoCargaDeVideo(true);
+    });
     if (isMobileAndroid !== -1) {
-      const player = elementoVideo.current.children[0];
       if (player) {
         // set the video attributes using javascript as per the
         // webkit Policy
@@ -54,7 +61,10 @@ const Home = () => {
         setisUsarImagen(true);
       }
     }
-  }, [elementoVideo]);
+    return () => {
+      player.removeEventListener('loadeddata', event => {});
+    };
+  }, [elementoVideo, eventoCargaDeVideo]);
   return (
     <React.Fragment>
       <div className="Home">

@@ -5,13 +5,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   opacity: 1;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
 }
 .preloading-end {
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   opacity: 0;
-  display: none;
+  z-index: -10;
 }
 .preloading-CirculoBlanco {
   width: 50px;
