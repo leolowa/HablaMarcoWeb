@@ -207,6 +207,9 @@
     right: -23%;
     top: 36%;
   }
+  .posicionIconoCerrar {
+    top: 10%;
+  }
   .iconoCerrarComercialesWork {
     font-size: 40px;
     transition: all 0.5s ease-in-out;
@@ -221,14 +224,13 @@
     opacity: 1;
   }
   .marcoVideo {
-    margin-bottom: 10%;
     width: 90%;
     height: 50%;
   }
   .CI-tagsComerciales {
     position: absolute;
     width: 100%;
-    top: 18%;
+    top: 23% !important;
     left: 0;
     display: flex;
     justify-content: center;
@@ -236,7 +238,7 @@
   .tituloComercial {
     font: 8.641288433382138vw IntegralCF-ExtraBold;
     left: 20px;
-    top: 5% !important;
+    top: 15% !important;
   }
 }
 @media screen and (max-width: 375px) {

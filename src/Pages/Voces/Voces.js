@@ -10,14 +10,14 @@ const Voces = () => {
   const [videosDeMarca, setVideosDeMarca] = useState('');
 
   function mostrarVideo(comercial) {
+    const contenedorVideosWork = document.querySelector('.contenedorVideosWork');
+    contenedorVideosWork.classList.add('aperturaComerciales');
+    contenedorVideosWork.scrollIntoView();
     document.querySelector('body').style.overflow = 'hidden';
     setTimeout(() => {
       document.querySelector('.iconoMenu').style.display = 'none';
     }, 450);
     setVideosDeMarca('');
-    const contenedorVideosWork = document.querySelector('.contenedorVideosWork');
-    contenedorVideosWork.classList.add('aperturaComerciales');
-    contenedorVideosWork.scrollIntoView();
     document.querySelector('.contenidoVideo').volume = 0.1;
     document.querySelector('.marcoVideo').classList.add('marcoVideoAbierto');
     cargarVideo(comercial);
