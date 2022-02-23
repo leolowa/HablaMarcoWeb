@@ -94,7 +94,17 @@
   top: 0;
   font: 1.32vw/1.8vw Avenir-Medium;
   color: white;
+  opacity: 1;
+  transition: all 1s ease-in-out;
 }
+.Texto-Tecnologia-Cerrado {
+  top: 0;
+  font: 1.32vw/1.8vw Avenir-Medium;
+  color: white;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
 .contenedor-TextoTecnologia {
   height: 100%;
   max-height: 0;
@@ -104,7 +114,7 @@
 }
 .contenedor-TextoTecnologia-Abierto {
   max-height: 50%;
-  bottom: 0;
+  bottom: 10;
 }
 .contenedor-ImgVoiceOvers {
   grid-column: 2/3;

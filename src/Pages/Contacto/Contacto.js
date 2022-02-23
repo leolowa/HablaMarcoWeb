@@ -58,7 +58,7 @@ const Contacto = () => {
                 src={iconoEquipamientoUp}
               ></img>
             </button>
-            <p className="Texto-Tecnologia">
+            <p className={`${!isColapsado ? 'Texto-Tecnologia-Cerrado' : 'Texto-Tecnologia'}`}>
               Antelope Zen Tour synergy core.
               <br />
               Sennheiser mkh 416.
