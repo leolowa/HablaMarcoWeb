@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './Home.css';
 import HablaMarco from '../../Static/HablaMarco.svg';
-import baileConPerro from '../../Static/Video/baileConPerro1.mp4';
+import baileConPerro from '../../Static/Video/videoPerro.mp4';
 
 import baileConPerroGif from '../../Static/Video/baileConPerro.gif';
 
@@ -36,7 +36,7 @@ const Home = () => {
             promise
               .then(() => {})
               .catch(() => {
-                // if promise fails, hide the video and fallback to <img> tag
+                // ifte promise fails, hide the video and fallback to <img> tag
                 console.log('falló');
                 setisUsarImagen(true);
               });
