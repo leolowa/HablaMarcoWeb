@@ -180,6 +180,7 @@ const Voces = () => {
           <tspan onClick={() => mostrarVideo('Stella Artois')}>STELLA ARTOIS</tspan>
           <tspan onClick={() => mostrarVideo('Honda')}>HONDA &nbsp;&nbsp;&nbsp;</tspan>
           <tspan onClick={() => mostrarVideo('Ingravido')}>INGRAVIDO</tspan>
+          <tspan onClick={() => mostrarVideo('ESPN')}>ESPN</tspan>
         </SliderLowa>
       </div>
     </div>

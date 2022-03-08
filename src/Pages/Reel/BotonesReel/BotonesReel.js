@@ -1,7 +1,5 @@
 import React from 'react';
 import iconoPause from '../../../Static/iconoPause.svg';
-import reelLatam from '../../../Static/Sound/habla-marco-reel-latam-2.mp3';
-import reelArg from '../../../Static/Sound/habla-marco-reelArg.mp3';
 
 export const BotonesReel = ({
   onPlay,
@@ -12,9 +10,9 @@ export const BotonesReel = ({
 }) => {
   const descargarArchivoReel = tipo => {
     if (tipo === 'ReelLatam') {
-      return reelLatam;
+      return 'https://hablamarco.com/sound/habla-marco-reel-latam.mp3';
     } else {
-      return reelArg;
+      return 'https://hablamarco.com/sound/habla-marco-reel-arg.mp3';
     }
   };
   return (
@@ -29,7 +27,12 @@ export const BotonesReel = ({
 
       <div className="reelDescarga">
         <h6 className="Texto-Reel">{TextoReel}</h6>
-        <a href={tipoReel} download={descargarArchivoReel(tipoReel)} className="botonReelPlay">
+        <a
+          download={`${tipoReel}.mp3`}
+          href={descargarArchivoReel(tipoReel)}
+          target="_blank"
+          className="botonReelPlay"
+        >
           <i className="bi bi-arrow-down iconoDescarga"></i>
         </a>
       </div>
