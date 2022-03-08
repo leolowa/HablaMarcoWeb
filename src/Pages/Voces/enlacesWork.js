@@ -98,14 +98,6 @@ const urlVideo = [
     tituloComercial: 'Paramount+',
   },
   {
-    url: '',
-    tituloComercial: 'YPF',
-  },
-  {
-    url: '',
-    tituloComercial: 'Ingravido',
-  },
-  {
     url: Ford,
     tituloComercial: 'Ford',
   },
