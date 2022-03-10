@@ -1,51 +1,46 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Voces.css';
 import manchaWork from '../../Static/MenuManchaNegro.gif';
 import TextoCircular from '../../Components/ElementoVideo/TextoCircular/TextoCircular';
 import arregloUrl from './enlacesWork';
 import SliderLowa from '../../Components/SliderLowa/SliderLowa';
+import ContenedorVideoVoces from './ContenedorVideoVoces';
 
 const Voces = () => {
-  const [videoSeleccionado, setVideoSeleccionado] = useState({video: '', index: undefined});
-  const [videosDeMarca, setVideosDeMarca] = useState('');
+  const [videoSeleccionado, setVideoSeleccionado] = useState();
+  // const [videosDeMarca, setVideosDeMarca] = useState('');
+
+  useEffect(() => {
+    const contenedorVideosWork = document.querySelector('.contenedorVideosWork');
+
+    if (videoSeleccionado && contenedorVideosWork) {
+      contenedorVideosWork.classList.add('aperturaComerciales');
+      // document.querySelector('body').style.overflow = 'hidden';
+      document.querySelector('.iconoMenu').style.display = 'none';
+
+      // setVideosDeMarca('');
+
+      contenedorVideosWork.focus();
+    }
+    return () => {};
+  }, [videoSeleccionado]);
 
   function mostrarVideo(comercial) {
-    const contenedorVideosWork = document.querySelector('.contenedorVideosWork');
-    contenedorVideosWork.classList.add('aperturaComerciales');
-    contenedorVideosWork.scrollIntoView();
-    document.querySelector('body').style.overflow = 'hidden';
-    setTimeout(() => {
-      document.querySelector('.iconoMenu').style.display = 'none';
-    }, 450);
-    setVideosDeMarca('');
-    document.querySelector('.contenidoVideo').volume = 0.1;
-    document.querySelector('.marcoVideo').classList.add('marcoVideoAbierto');
-    cargarVideo(comercial);
-    contenedorVideosWork.focus();
-  }
-
-  const cerrarComerciales = () => {
-    document.querySelector('.marcoVideo').classList.remove('marcoVideoAbierto');
-    document.querySelector('.iconoMenu').style.transitionDelay = '2s';
-    setTimeout(() => {
-      document.querySelector('.iconoMenu').style.display = 'initial';
-    }, 1500);
-    document.querySelector('.contenidoVideo').pause();
-    document.querySelector('.contenedorVideosWork').style.transitionDelay = '1s';
-
-    document.querySelector('.contenedorVideosWork').classList.remove('aperturaComerciales');
-    document.querySelector('body').style.overflow = 'initial';
-  };
-  const cargarVideo = comercial => {
-    console.log(comercial);
     const video = arregloUrl.find(
       element => element.tituloComercial.toLowerCase() === comercial.toLowerCase()
     );
     setVideoSeleccionado({...videoSeleccionado, video: video});
+  }
+
+  const cerrarComerciales = () => {
+    setVideoSeleccionado();
   };
+  // const cargarVideo = comercial => {
+
+  // };
 
   const proximoVideo = proximo => {
-    setVideosDeMarca('');
+    // setVideosDeMarca('');
     if (proximo !== -1) {
       /* DERECHA */
       if (videoSeleccionado.index === undefined) {
@@ -90,15 +85,14 @@ const Voces = () => {
   };
 
   const proximoVideoDeLaMarca = video => {
-    setVideosDeMarca(video);
+    setVideoSeleccionado(video);
   };
   const escucharTeclaEsc = e => {
     if (e.keyCode === 27) {
       cerrarComerciales();
     }
   };
-  console.log(videosDeMarca);
-  console.log(videoSeleccionado);
+
   return (
     <div className="CP-Voces">
       <div
@@ -107,55 +101,18 @@ const Voces = () => {
         onKeyUp={e => escucharTeclaEsc(e)}
         tabIndex="-1"
       >
-        <div className="marcoVideo">
-          <video
-            key={videosDeMarca ? videosDeMarca.url : videoSeleccionado.video.url}
-            className="contenidoVideo"
-            controls
-          >
-            <source
-              type="video/mp4"
-              src={videosDeMarca ? videosDeMarca.url : videoSeleccionado.video.url}
-            ></source>
-          </video>
-          <button
-            onClick={() => cerrarComerciales()}
-            className="botonAccionesVideosComerciales posicionIconoCerrar"
-          >
-            <i className="bi bi-x iconoCerrarComercialesWork"></i>
-          </button>
-          <button
-            onClick={() => proximoVideo(-1)}
-            className="botonAccionesVideosComerciales posicionSiguienteLeft"
-          >
-            <i className="bi bi-arrow-left-short iconoCerrarComercialesWork"></i>
-          </button>
-          <button
-            onClick={() => proximoVideo(1)}
-            className="botonAccionesVideosComerciales posicionSiguienteRight"
-          >
-            <i className="bi bi-arrow-right-short iconoCerrarComercialesWork"></i>
-          </button>
-          {videoSeleccionado.video.otrasUrls && (
-            <div className="CI-tagsComerciales">
-              {videoSeleccionado.video.otrasUrls.map((element, index) => {
-                return (
-                  <p
-                    key={index}
-                    className="tagComerciales"
-                    onClick={() => proximoVideoDeLaMarca(element)}
-                  >
-                    {element.tituloComercial}
-                  </p>
-                );
-              })}
-            </div>
-          )}
-        </div>
-        <h6 className="tituloComercial">
-          {videoSeleccionado.video.tituloComercial ? videoSeleccionado.video.tituloComercial : ''}
-        </h6>
+        {videoSeleccionado && (
+          <ContenedorVideoVoces
+            proximoVideo={proximoVideo}
+            proximoVideoDeLaMarca={proximoVideoDeLaMarca}
+            escucharTeclaEsc={escucharTeclaEsc}
+            // videosDeMarca={videosDeMarca}
+            cerrarComerciales={cerrarComerciales}
+            videoSeleccionado={videoSeleccionado}
+          />
+        )}
       </div>
+
       <div className="CI-VerMas">
         <div className="contenedorVerMas">
           <div className="botonMas">

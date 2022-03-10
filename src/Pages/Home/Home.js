@@ -1,9 +1,10 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './Home.css';
 import HablaMarco from '../../Static/HablaMarco.svg';
-import baileConPerro from '../../Static/Video/videoPerro2.mp4';
-
-import baileConPerroGif from '../../Static/Video/baileConPerro.gif';
+// import baileConPerro from '../../Static/Video/videoPerro2.mp4';
+const baileConPerro = 'http://hablamarco.com/static/media/HONDA1.6fedebb1.mp4';
+const baileConPerroGif = 'http://hablamarco.com/static/media/HONDA1.6fedebb1.mp4';
+// import baileConPerroGif from '../../Static/Video/baileConPerro.gif';
 
 const Home = () => {
   const elementoVideo = useRef();
