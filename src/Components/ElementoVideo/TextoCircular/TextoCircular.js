@@ -11,7 +11,7 @@ const TextoCircular = ({
       <svg viewBox="0 0 115 115">
         <path d="M -3,55 a 60,60 1 1,1 0,1 z" id="circle" />
         <text>
-          <textPath href="#circle" throwIfNamespace={false}>
+          <textPath href="#circle">
             <tspan className="tSpan" onClick={() => mostrarComercial('Ford')}>
               &nbsp;&nbsp;&nbsp; FORD &nbsp;&nbsp;&nbsp;
             </tspan>

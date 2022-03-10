@@ -31,6 +31,7 @@ export const BotonesReel = ({
           download={`${tipoReel}.mp3`}
           href={descargarArchivoReel(tipoReel)}
           target="_blank"
+          rel="noreferrer"
           className="botonReelPlay"
         >
           <i className="bi bi-arrow-down iconoDescarga"></i>

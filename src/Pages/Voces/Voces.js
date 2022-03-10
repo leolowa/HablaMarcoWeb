@@ -21,6 +21,7 @@ const Voces = () => {
     document.querySelector('.contenidoVideo').volume = 0.1;
     document.querySelector('.marcoVideo').classList.add('marcoVideoAbierto');
     cargarVideo(comercial);
+    contenedorVideosWork.focus();
   }
 
   const cerrarComerciales = () => {
@@ -36,9 +37,10 @@ const Voces = () => {
     document.querySelector('body').style.overflow = 'initial';
   };
   const cargarVideo = comercial => {
-    const video = arregloUrl.find(element => {
-      return element.tituloComercial === comercial;
-    });
+    console.log(comercial);
+    const video = arregloUrl.find(
+      element => element.tituloComercial.toLowerCase() === comercial.toLowerCase()
+    );
     setVideoSeleccionado({...videoSeleccionado, video: video});
   };
 
@@ -90,9 +92,21 @@ const Voces = () => {
   const proximoVideoDeLaMarca = video => {
     setVideosDeMarca(video);
   };
+  const escucharTeclaEsc = e => {
+    if (e.keyCode === 27) {
+      cerrarComerciales();
+    }
+  };
+  console.log(videosDeMarca);
+  console.log(videoSeleccionado);
   return (
     <div className="CP-Voces">
-      <div id="contenedorVideosWork" className="contenedorVideosWork">
+      <div
+        id="contenedorVideosWork"
+        className="contenedorVideosWork"
+        onKeyUp={e => escucharTeclaEsc(e)}
+        tabIndex="-1"
+      >
         <div className="marcoVideo">
           <video
             key={videosDeMarca ? videosDeMarca.url : videoSeleccionado.video.url}
@@ -168,10 +182,10 @@ const Voces = () => {
           <tspan className="tSpan" onClick={() => mostrarVideo('Ford')}>
             FORD
           </tspan>
+          <tspan onClick={() => mostrarVideo('ESPN')}>ESPN</tspan>
           <tspan onClick={() => mostrarVideo('Audible')}>AUDIBLE </tspan>
           <tspan onClick={() => mostrarVideo('Pantene')}>PANTENE </tspan>
           <tspan onClick={() => mostrarVideo('Disney')}>DISNEY </tspan>
-          <tspan onClick={() => mostrarVideo('Espn')}>ESPN </tspan>
           <tspan onClick={() => mostrarVideo('Paramount+')}>PARAMOUNT+ </tspan>
           <tspan onClick={() => mostrarVideo('Coca Cola')}>COCA-COLA </tspan>
           <tspan onClick={() => mostrarVideo('Schweppes')}>SCHWEPPES </tspan>
@@ -180,7 +194,6 @@ const Voces = () => {
           <tspan onClick={() => mostrarVideo('Stella Artois')}>STELLA ARTOIS</tspan>
           <tspan onClick={() => mostrarVideo('Honda')}>HONDA &nbsp;&nbsp;&nbsp;</tspan>
           <tspan onClick={() => mostrarVideo('Ingravido')}>INGRAVIDO</tspan>
-          <tspan onClick={() => mostrarVideo('ESPN')}>ESPN</tspan>
         </SliderLowa>
       </div>
     </div>

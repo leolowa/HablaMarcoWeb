@@ -1,3 +1,4 @@
+import ESPN from '../../Static/Video/ESPN.mp4';
 import videoAUDIBLE from '../../Static/Video/AUDIBLE_1.mp4';
 import videoAUDIBLE2 from '../../Static/Video/AUDIBLE2.mp4';
 import videoPARAMOUNT from '../../Static/Video/Paramount+.mp4';
@@ -17,18 +18,17 @@ import videoSchweppes from '../../Static/Video/Schweppes.mp4';
 import StellaArtois1 from '../../Static/Video/StellaArtois1.mp4';
 import StellaArtois2 from '../../Static/Video/StellaNoire.mp4';
 import ypf from '../../Static/Video/YPF.mp4';
-import espn from '../../Static/Video/espn.mp4';
 import ingravido from '../../Static/Video/INGRAVIDO.mp4';
 import Ford from '../../Static/Video/Ford.mp4';
 
 const urlVideo = [
   {
-    url: ypf,
-    tituloComercial: 'YPF',
+    url: ESPN,
+    tituloComercial: 'Espn',
   },
   {
-    url: espn,
-    tituloComercial: 'ESPN',
+    url: ypf,
+    tituloComercial: 'YPF',
   },
   {
     url: ingravido,
