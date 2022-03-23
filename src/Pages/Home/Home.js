@@ -1,61 +1,9 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React from 'react';
 import './Home.css';
 import HablaMarco from '../../Static/HablaMarco.svg';
-// import baileConPerro from '../../Static/Video/videoPerro2.mp4';
-const baileConPerro = 'http://hablamarco.com/static/media/HONDA1.6fedebb1.mp4';
-const baileConPerroGif = 'http://hablamarco.com/static/media/HONDA1.6fedebb1.mp4';
-// import baileConPerroGif from '../../Static/Video/baileConPerro.gif';
+import baileConPerro from '../../Static/Video/videoPerro2.mp4';
 
 const Home = () => {
-  const elementoVideo = useRef();
-  const [isUsarImagen, setisUsarImagen] = useState(false);
-  const [isUsarGif, setIsUsarGif] = useState(false);
-
-  useEffect(() => {
-    const userAgent = navigator.userAgent;
-
-    const isMobileIPhone = userAgent.indexOf('iPhone');
-    const isMobileAndroid = userAgent.indexOf('Android');
-
-    if (isMobileAndroid !== -1) {
-      const player = elementoVideo.current.children[0];
-
-      if (player) {
-        // set the video attributes using javascript as per the
-        // webkit Policy
-        player.controls = false;
-        player.playsinline = true;
-        player.muted = true;
-        player.setAttribute('muted', ''); // leave no stones unturned
-        player.autoplay = true;
-        // Let's wait for an event loop tick and be async.
-        setTimeout(() => {
-          // player.play() might return a promise but it's not guaranteed crossbrowser.
-          const promise = player.play();
-          // let's play safe to ensure that if we do have a promise
-          if (promise.then) {
-            promise
-              .then(() => {})
-              .catch(() => {
-                // ifte promise fails, hide the video and fallback to <img> tag
-                console.log('falló');
-                setisUsarImagen(true);
-              });
-          }
-        }, 0);
-      }
-    }
-
-    if (isMobileIPhone !== -1) {
-      let version = userAgent.split('OS')[1].split('_')[0];
-      console.log(version);
-      if (version < 12) {
-        console.log('Versión Menor a 12');
-        setIsUsarGif(true);
-        setisUsarImagen(true);
-      }
-    }
-  }, [elementoVideo]);
   return (
     <React.Fragment>
       <div className="Home">
@@ -66,35 +14,18 @@ const Home = () => {
           <div className="contenedor-Scroll">
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
           </div>
-          {!isUsarImagen ? (
-            <div
-              ref={elementoVideo}
-              className="contenedorVideoInicio"
-              dangerouslySetInnerHTML={{
-                __html: `
-                        <video
-                          loop
-                          muted
-                          autoplay
-                          playsinline
-                          src="${baileConPerro}"
-                          class="videoMarcoInicio"
-                        />,
-                        `,
-              }}
-            ></div>
-          ) : (
-            <div
-              ref={elementoVideo}
-              className={isUsarGif ? 'contenedorGifInicio' : 'contenedorVideoInicio'}
-            >
-              <img
-                alt=""
-                className={isUsarGif ? 'imgGif' : 'imgVideo'}
-                src={isUsarGif ? baileConPerroGif : baileConPerro}
-              ></img>
-            </div>
-          )}
+
+          <div className="contenedorVideoInicio">
+            <video
+              loop
+              muted
+              autoPlay
+              playsInline
+              src={baileConPerro}
+              className="videoMarcoInicio"
+            />
+          </div>
+
           <div className="circuloRojo-Inicio"></div>
         </div>
       </div>

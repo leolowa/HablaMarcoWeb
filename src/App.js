@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Home from './Pages/Home/Home';
 import Menu from './Pages/Menu/Menu';
@@ -8,11 +8,8 @@ import Reel from './Pages/Reel/Reel';
 import iconoMenuNegro from './Static/MenuManchaNegro.gif';
 import iconoMenuBlanco from './Static/MANCHA-MENU-BLANCA.gif';
 import Voces from './Pages/Voces/Voces';
-import Loading from './Components/Loading/Loading';
 
-export const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isLoadingClass, setIsLoadingClass] = useState(true);
+const App = () => {
   const [iconoMenu, setIconoMenu] = useState(false);
 
   const abrirMenu = () => {
@@ -24,52 +21,9 @@ export const App = () => {
     else setIconoMenu(false);
   };
 
-  useEffect(() => {
-    const tagBody = document.querySelector('body');
-    tagBody.style.overflow = 'hidden';
-
-    if (!isLoading) {
-      const tag = document.querySelector('#iconoBlanco');
-
-      const callback = entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            tipoIconoMenu('blanco');
-          } else {
-            tipoIconoMenu('negro');
-          }
-        });
-      };
-      const options = {
-        threshold: [0.3],
-      };
-      const observer = new IntersectionObserver(callback, options);
-      observer.observe(tag);
-    }
-    if (!isLoading) {
-      tagBody.style.overflow = 'scroll';
-    }
-  }, [isLoading]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoadingClass(false);
-    }, 4000);
-
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 4500);
-  }, []);
-
   return (
     <div id="App">
       <React.Fragment>
-        {isLoading && (
-          <div className={isLoadingClass ? 'preloading' : 'preloading preloading-end'}>
-            <Loading></Loading>
-          </div>
-        )}
-
         <div onClick={() => abrirMenu()} className="contenedorIconoMenu">
           <img
             className="iconoMenu"
@@ -112,3 +66,4 @@ export const App = () => {
     </div>
   );
 };
+export default App;
