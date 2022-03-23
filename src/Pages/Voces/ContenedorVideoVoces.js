@@ -15,15 +15,10 @@ const ContenedorVideoVoces = ({
   useLayoutEffect(() => {
     return () => {
       document.querySelector('.marcoVideo').classList.remove('marcoVideoAbierto');
-      //   document.querySelector('.iconoMenu').style.transitionDelay = '2s';
-
       document.querySelector('.iconoMenu').style.display = 'initial';
-
-      //   document.querySelector('.contenidoVideo').pause();
-      document.querySelector('.contenedorVideosWork').style.transitionDelay = '1s';
-
+      document.querySelector('.contenedorVideosWork').style.transitionDelay = '0.3s';
       document.querySelector('.contenedorVideosWork').classList.remove('aperturaComerciales');
-      //   document.querySelector('body').style.overflow = 'initial';
+      document.querySelector('body').style.overflow = 'scroll';
     };
   }, []);
   return (

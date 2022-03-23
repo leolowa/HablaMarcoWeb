@@ -1,10 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './Home.css';
 import HablaMarco from '../../Static/HablaMarco.svg';
-// import baileConPerro from '../../Static/Video/videoPerro2.mp4';
-const baileConPerro = 'http://hablamarco.com/static/media/HONDA1.6fedebb1.mp4';
-const baileConPerroGif = 'http://hablamarco.com/static/media/HONDA1.6fedebb1.mp4';
-// import baileConPerroGif from '../../Static/Video/baileConPerro.gif';
+import baileConPerro from '../../Static/Video/videoPerro2.mp4';
+import baileConPerroGif from '../../Static/Video/baileConPerro.gif';
 
 const Home = () => {
   const elementoVideo = useRef();
@@ -60,18 +58,21 @@ const Home = () => {
     <React.Fragment>
       <div className="Home">
         <div id="home" className="body-Home animate__animated animate__fadeIn">
-          <div className="contenedor-Marca">
-            <img alt="" className="Marca" src={HablaMarco}></img>
-          </div>
-          <div className="contenedor-Scroll">
+          <div className="relative">
+            <div className="contenedor-Marca">
+              <img alt="" className="Marca" src={HablaMarco}></img>
+            </div>
+            {/* <div className="contenedor-Scroll">
             <i className="bi bi-caret-down-fill icono-Scroll"></i>
-          </div>
-          {!isUsarImagen ? (
-            <div
-              ref={elementoVideo}
-              className="contenedorVideoInicio"
-              dangerouslySetInnerHTML={{
-                __html: `
+          </div> */}
+
+            <div className="circuloRojo-Inicio"></div>
+            {!isUsarImagen ? (
+              <div
+                ref={elementoVideo}
+                className="contenedorVideoInicio"
+                dangerouslySetInnerHTML={{
+                  __html: `
                         <video
                           loop
                           muted
@@ -79,23 +80,24 @@ const Home = () => {
                           playsinline
                           src="${baileConPerro}"
                           class="videoMarcoInicio"
+                          
                         />,
                         `,
-              }}
-            ></div>
-          ) : (
-            <div
-              ref={elementoVideo}
-              className={isUsarGif ? 'contenedorGifInicio' : 'contenedorVideoInicio'}
-            >
-              <img
-                alt=""
-                className={isUsarGif ? 'imgGif' : 'imgVideo'}
-                src={isUsarGif ? baileConPerroGif : baileConPerro}
-              ></img>
-            </div>
-          )}
-          <div className="circuloRojo-Inicio"></div>
+                }}
+              ></div>
+            ) : (
+              <div
+                ref={elementoVideo}
+                className={isUsarGif ? 'contenedorGifInicio' : 'contenedorVideoInicio'}
+              >
+                <img
+                  alt=""
+                  className={isUsarGif ? 'imgGif' : 'imgVideo'}
+                  src={isUsarGif ? baileConPerroGif : baileConPerro}
+                ></img>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </React.Fragment>
