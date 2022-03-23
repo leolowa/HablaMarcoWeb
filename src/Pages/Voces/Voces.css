@@ -43,7 +43,7 @@
 .aperturaComerciales {
   opacity: 1;
   z-index: 1;
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
 }
 .marcoVideo {
   display: flex;
@@ -154,8 +154,8 @@
   background-color: transparent;
 }
 .manchaWork {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 .botonMas {
   position: absolute;

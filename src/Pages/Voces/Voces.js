@@ -15,11 +15,8 @@ const Voces = () => {
 
     if (videoSeleccionado && contenedorVideosWork) {
       contenedorVideosWork.classList.add('aperturaComerciales');
-      // document.querySelector('body').style.overflow = 'hidden';
+      document.querySelector('body').style.overflow = 'hidden';
       document.querySelector('.iconoMenu').style.display = 'none';
-
-      // setVideosDeMarca('');
-
       contenedorVideosWork.focus();
     }
     return () => {};

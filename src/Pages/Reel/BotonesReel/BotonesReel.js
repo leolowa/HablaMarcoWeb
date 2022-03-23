@@ -30,7 +30,6 @@ export const BotonesReel = ({
         <a
           download={`${tipoReel}.mp3`}
           href={descargarArchivoReel(tipoReel)}
-          target="_blank"
           rel="noreferrer"
           className="botonReelPlay"
         >
