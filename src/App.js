@@ -39,7 +39,7 @@ const App = () => {
         <section className="slideBlanco"></section>
 
         <section id="work">
-          <Voces></Voces>
+          <Voces />
         </section>
         <section className="slideBlanco"></section>
 

@@ -372,3 +372,41 @@
     font-size: 2rem;
   }
 }
+@media (orientation: landscape) {
+  .contenedor-InfoContacto-B {
+    margin-top: 200px;
+    padding-left: 100px;
+  }
+  .contenedorEmail {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: initial;
+  }
+  .texto-Hola {
+    font-size: 4.8rem;
+    line-height: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .texto-email {
+    font-size: 3rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .Texto-Equipamiento {
+    font-size: 2rem;
+  }
+  .Texto-Tecnologia {
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    margin-top: 10px;
+  }
+  .contenedor-ImgVoiceOvers {
+    padding-bottom: 20px;
+  }
+}

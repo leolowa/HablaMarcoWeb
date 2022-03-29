@@ -1,63 +1,58 @@
 .Home {
   width: 100vw;
   height: 100vh;
-  position: relative;
-  z-index: 1;
-}
-
-.noScroll {
-  overflow: hidden;
-}
-.contenedorCerrarVideoHome {
-  position: absolute;
-  outline: none;
-  border: none;
-  z-index: 2;
-}
-
-.iconoCerrar {
-  font-size: 50px;
-  color: rgba(0, 0, 0, 0.5);
-}
-.videoNube {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
+  display: flex;
+  flex-direction: row;
 }
 
 .body-Home {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  z-index: 3;
 }
-.manchaHome {
-  width: 80px;
-  height: 80px;
-}
-
-.contenedor-Marca {
-  width: 380px;
-  height: 150px;
+.contenedor-central {
+  gap: 50px;
+  width: 80%;
+  height: 500px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  overflow: hidden;
 }
-
 .Marca {
-  font-size: 80px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
 }
-
-.contenedor-Contestadora {
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
-  cursor: pointer;
+.contenedor-Marca {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 150px;
+  width: 55%;
+  overflow: hidden;
+}
+.contenedor-circulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  aspect-ratio: 1/1;
+  width: 45%;
+  height: 500px;
+  overflow: hidden;
+}
+.circulo {
+  max-width: 300px;
+  width: 60%;
+  height: 60%;
+  opacity: 0.6;
 }
 
 .contenedor-Scroll {
@@ -68,63 +63,29 @@
   opacity: 0;
   animation: fade 3.5s linear;
   animation-iteration-count: infinite;
-  z-index: 3;
-}
-.texto-Scroll {
-  font-size: 15px;
-  text-align: center;
 }
 
-.contenedorVideoInicio {
-  /* max-width: 100px; */
-  height: 598px;
+.contenedor-video-perro {
   position: absolute;
-  overflow: hidden;
-  right: 30%;
+  top: 60%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  aspect-ratio: 16/9;
+  z-index: -1;
 }
-.contenedorGifInicio {
-  background-color: white;
-  height: 595px;
-  position: absolute;
-  overflow: hidden;
-  right: 30%;
+.contenedor-video-perro-cel {
+  visibility: collapse;
 }
+
 .videoMarcoInicio {
   aspect-ratio: 16/9;
-  max-height: 500px;
-}
-.circuloRojo-Inicio {
-  width: 350px;
-  height: 350px;
-  background-color: rgba(255, 0, 0, 0.6);
-  border-radius: 50%;
-  position: absolute;
-  right: 20%;
-}
-.gifHome {
   width: 100%;
   height: 100%;
-  min-height: 600px;
-  min-width: 100%;
+  max-height: 600px;
 }
-/* .AvisoDeTag {
-  background-color: aqua;
-  position: absolute;
-  top: 5%;
-  font-size: 30px;
-} */
-.imgVideo {
-  width: 100%;
-  max-width: 300px;
-  height: 100%;
-  object-fit: contain;
-}
-.imgGif {
-  width: 100%;
-  max-width: 300px;
-  height: 100%;
-  object-fit: contain;
-}
+
 @keyframes fade {
   0%,
   30% {
@@ -134,68 +95,100 @@
     opacity: 1;
   }
 }
-@media screen and (max-width: 1400px) {
-  .contenedorVideoInicio {
-    height: 498px;
-    position: absolute;
-    overflow: hidden;
-  }
-  .gifHome {
+
+@media screen and (max-width: 560px) {
+  .body-Home {
     width: 100%;
-    height: 100%;
-    min-height: 500px;
-    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .circuloRojo-Inicio {
-    width: 300px;
-    height: 300px;
-    right: 15%;
+  .contenedor-central {
+    gap: 10px;
+    width: 100%;
+  }
+  .contenedor-Marca {
+    width: 40%;
+  }
+  .Marca {
+    width: 150px;
+  }
+  .contenedor-circulo {
+    width: 50%;
+    justify-content: center;
+  }
+  .contenedor-video-perro {
+    top: 60%;
+    left: 55%;
+    transform: translate(-50%, -50%);
   }
 }
 @media screen and (max-width: 480px) {
-  .videoMarcoInicio {
-    aspect-ratio: 16/9;
-    max-height: 510px;
-    position: relative;
-    left: 30%;
-  }
-  .contenedor-Scroll {
-    left: 10%;
-  }
-  .Marca {
-    width: 80%;
-  }
-  .circuloRojo-Inicio {
-    width: 150px;
-    height: 150px;
-  }
-  .contenedor-Scroll {
-    bottom: 75px;
+  .Home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
   }
 
-  .contenedorGifInicio {
-    height: 435px;
+  .body-Home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedor-central {
+    gap: 00px;
+    width: 100%;
+  }
+  .Marca {
+    width: 250px;
+  }
+  .contenedor-Marca {
+    width: 60%;
+  }
+  .circulo {
+    max-width: 500px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.6;
+  }
+  .contenedor-circulo {
+    width: 40%;
+    justify-content: center;
+  }
+
+  .videoMarcoInicio {
+    position: relative;
+    top: 0%;
+    aspect-ratio: 9/16;
+    width: 100%;
+    height: 100vh;
+    max-height: 1920px;
+  }
+  .contenedor-video-perro {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 9/16;
     overflow: hidden;
-    right: 40%;
-    top: 10%;
-  }
-  .imgGif {
-    min-height: 460px;
-  }
-  .gifHome {
-    min-height: 0;
-    height: 500px;
+    width: 100%;
+    height: 100%;
   }
 }
-@media screen and (max-width: 360px) {
-  .contenedor-Scroll {
-    bottom: 60px;
-  }
-}
-@media screen and (max-width: 320px) {
-  .contenedor-Scroll {
-    left: 0;
-    right: 0;
+@media (orientation: landscape) and (max-height: 480px) {
+  .contenedor-video-perro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 9/16;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
   }
 }

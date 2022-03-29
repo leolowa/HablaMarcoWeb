@@ -7,22 +7,8 @@
   grid-template-rows: 1fr 450px 1fr;
   overflow: hidden;
   position: relative;
-  background-color: rgb(255, 255, 255);
 }
 
-/* .contenedorVideosWork {
-  position: absolute;
-  left: -100vw;
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
-  z-index: 3;
-  transition: all 0.5s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-} */
 .contenedorVideosWork {
   position: absolute;
   top: 0;
@@ -256,5 +242,40 @@
   .Texto-Voces {
     right: -20%;
     top: 40%;
+  }
+}
+
+@media (orientation: landscape) {
+  .CP-Voces {
+    overflow: initial;
+  }
+
+  .CI-VerMas {
+    position: absolute;
+    width: 100vw;
+    top: 50px;
+  }
+  .contenedorVerMas {
+    display: flex;
+    position: absolute;
+    left: 30px;
+    width: 90px;
+    height: 60px;
+    cursor: pointer;
+  }
+  .CI-TextoVoces {
+    grid-column: 2/5;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .Texto-Voces {
+    position: absolute;
+    right: 0;
+    font: 14.641288433382138vw IntegralCF-ExtraBold;
+    color: black;
+    overflow: initial;
   }
 }

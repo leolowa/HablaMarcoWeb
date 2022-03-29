@@ -23,47 +23,49 @@ const ContenedorVideoVoces = ({
   }, []);
   return (
     <React.Fragment>
-      <div className="marcoVideo">
-        <video key={videoSeleccionado?.video?.url} className="contenidoVideo" controls>
-          <source type="video/mp4" src={videoSeleccionado?.video?.url}></source>
-        </video>
-        <button
-          onClick={() => cerrarComerciales()}
-          className="botonAccionesVideosComerciales posicionIconoCerrar"
-        >
-          <i className="bi bi-x iconoCerrarComercialesWork"></i>
-        </button>
-        <button
-          onClick={() => proximoVideo(-1)}
-          className="botonAccionesVideosComerciales posicionSiguienteLeft"
-        >
-          <i className="bi bi-arrow-left-short iconoCerrarComercialesWork"></i>
-        </button>
-        <button
-          onClick={() => proximoVideo(1)}
-          className="botonAccionesVideosComerciales posicionSiguienteRight"
-        >
-          <i className="bi bi-arrow-right-short iconoCerrarComercialesWork"></i>
-        </button>
-        {videoSeleccionado.video.otrasUrls && (
-          <div className="CI-tagsComerciales">
-            {videoSeleccionado.video.otrasUrls.map((element, index) => {
-              return (
-                <p
-                  key={index}
-                  className="tagComerciales"
-                  onClick={() => proximoVideoDeLaMarca(element)}
-                >
-                  {element.tituloComercial}
-                </p>
-              );
-            })}
-          </div>
-        )}
+      <div className="contenedorVideosWork">
+        <div className="marcoVideo">
+          <video key={videoSeleccionado?.video?.url} className="contenidoVideo" controls>
+            <source type="video/mp4" src={videoSeleccionado?.video?.url}></source>
+          </video>
+          <button
+            onClick={() => cerrarComerciales()}
+            className="botonAccionesVideosComerciales posicionIconoCerrar"
+          >
+            <i className="bi bi-x iconoCerrarComercialesWork"></i>
+          </button>
+          <button
+            onClick={() => proximoVideo(-1)}
+            className="botonAccionesVideosComerciales posicionSiguienteLeft"
+          >
+            <i className="bi bi-arrow-left-short iconoCerrarComercialesWork"></i>
+          </button>
+          <button
+            onClick={() => proximoVideo(1)}
+            className="botonAccionesVideosComerciales posicionSiguienteRight"
+          >
+            <i className="bi bi-arrow-right-short iconoCerrarComercialesWork"></i>
+          </button>
+          {videoSeleccionado.video.otrasUrls && (
+            <div className="CI-tagsComerciales">
+              {videoSeleccionado.video.otrasUrls.map((element, index) => {
+                return (
+                  <p
+                    key={index}
+                    className="tagComerciales"
+                    onClick={() => proximoVideoDeLaMarca(element)}
+                  >
+                    {element.tituloComercial}
+                  </p>
+                );
+              })}
+            </div>
+          )}
+        </div>
+        <h6 className="tituloComercial">
+          {videoSeleccionado.video.tituloComercial ? videoSeleccionado.video.tituloComercial : ''}
+        </h6>
       </div>
-      <h6 className="tituloComercial">
-        {videoSeleccionado.video.tituloComercial ? videoSeleccionado.video.tituloComercial : ''}
-      </h6>
     </React.Fragment>
   );
 };

@@ -1,55 +1,55 @@
 .contenedorSubReel {
-    margin-left: 10px;
-    margin-right: 30px; /* TODO: Revisar margen */
-    display: flex;
-    justify-content: center;
-  }
-  .botonReelPlay{
-    border: none;
-    background: transparent;
-    outline: none;
-    color: black;
-  }
-  .iconoReel {
-    font-size: 30px;
-    cursor: pointer;
-    transition: all .3s;
-  }
-  .iconoReel:hover{
-    font-size: 33px;
-    transition: all .3s;
-  }
-  
+  margin-left: 10px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+}
+.botonReelPlay {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: black;
+}
+.iconoReel {
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.iconoReel:hover {
+  font-size: 33px;
+  transition: all 0.3s;
+}
+
+.reelDescarga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+.iconoDescarga {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.iconoDescarga:hover {
+  font-size: 23px;
+  transition: all 0.3s;
+}
+
+.Texto-Reel {
+  margin-left: 10px;
+  font: 22px Avenir-Medium;
+}
+@media screen and (max-width: 480px) {
   .reelDescarga {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: auto;
+    width: 100%;
   }
-  .iconoDescarga {
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    transition: all .3s;
-  }
-  .iconoDescarga:hover{
-    font-size: 23px;
-    transition: all .3s;
-  }
-  
   .Texto-Reel {
-    margin-left: 10px;
-    font: 22px Avenir-Medium;
+    font: 15px Avenir-Medium;
   }
-  @media screen and (max-width:480px) {
-    .reelDescarga {
-      width: max-content;
-    }
-    .Texto-Reel {
-      font: 15px Avenir-Medium;
-    }
-    .iconoReel:hover{
-      font-size: 30px;
-    }
+  .iconoReel:hover {
+    font-size: 30px;
   }
+}

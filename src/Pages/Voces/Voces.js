@@ -26,15 +26,13 @@ const Voces = () => {
     const video = arregloUrl.find(
       element => element.tituloComercial.toLowerCase() === comercial.toLowerCase()
     );
+    document.querySelector('#work').scrollIntoView();
     setVideoSeleccionado({...videoSeleccionado, video: video});
   }
 
   const cerrarComerciales = () => {
     setVideoSeleccionado();
   };
-  // const cargarVideo = comercial => {
-
-  // };
 
   const proximoVideo = proximo => {
     // setVideosDeMarca('');
@@ -92,12 +90,7 @@ const Voces = () => {
 
   return (
     <div className="CP-Voces">
-      <div
-        id="contenedorVideosWork"
-        className="contenedorVideosWork"
-        onKeyUp={e => escucharTeclaEsc(e)}
-        tabIndex="-1"
-      >
+      <div id="contenedorVideosWork" onKeyUp={e => escucharTeclaEsc(e)} tabIndex="-1">
         {videoSeleccionado && (
           <ContenedorVideoVoces
             proximoVideo={proximoVideo}
